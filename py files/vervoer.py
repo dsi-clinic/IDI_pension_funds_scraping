@@ -1,6 +1,3 @@
-'''Note: Will be rewritten to use regular expressions, and automatically fetch pdf.
-Does not work with current PDF.'''
-
 '''Setup'''
 #Import modules
 import pdfplumber
@@ -9,6 +6,8 @@ import pandas as pd
 
 #Opens file as instance of .PDF class
 pdf = pdfplumber.open("vervoer.pdf")
+
+
 
 '''Create list of entries'''
 #Fills list with strings containing the text of each page
@@ -23,64 +22,41 @@ tabs2 = " ".join(tabs)
 #Splits breaks in string into a list of strings
 tabs3 = tabs2.splitlines()
 
-#Further splits and strips entries, creating a list of lists.
-tabs4 = [] 
-for tab in tabs3:
-    tab = tab.strip() #(tab is one string)
-    tabs4.append(tab.split('  ')) #Appends strings split by any amount of space (tab is a list of every word that was in the string)
 
-#Entries in each individual list turned into one big list
-tabs4=sum(tabs4, [])
 
-'''Formatting'''
-#Remove empty strings in tabs 4
-for tab in tabs4:
-    if tab == '' or tab == ' ' or tab == '  ' or tab == '   ':
-        tabs4.remove(tab)
+'''Create and apply Regex'''
+#Create regex, looking for 2 sets of groups of words followed by numbers, or a dash
+pattern = re.compile("(?P<l_key>[A-Za-z\s,]+?)\s+(?P<l_value>([\d\.]+( [\d\.]+)*,?)|(-))\s+(?P<r_key>[A-Za-z\s,]+?)\s+(?P<r_value>([\d\.]+( [\d\.]+)*,?)|(-))")
 
-#Remove heading (Investment overview as of 12/31/2024)
-for tab in tabs4:
-    if tab == 'Overzicht beleggingen per 31-12-2024':
-        tabs4.remove(tab)
 
-#Remove heading (Page)
-for tab in tabs4:
-    if 'Pagina' in tab:
-        tabs4.remove(tab)
-
-#Remove heading (Market Value)
-for tab in tabs4:
-    if 'Marktwaarde' in tab:
-        tabs4.remove(tab)
-
-#Removes first 13 entries (indicies 0-12)
-tabs4 = tabs4[13:]
-
-#If string is not empty, append to new list
+#Create two empty lists so that the order may be maintained
+tabs4 = []
 tabs5 = []
-for tab in tabs4:
-    if tab != '':
-        tabs5.append(tab)
+for tab in tabs3:
+    #Apply matches to list
+    var = pattern.search(tab.strip())
+    try:
+        tabs4.append(var.group(1,2))
+        tabs5.append(var.group(6,7))
+    except:
+        pass
+#Combine list
+tabs6 = tabs4 + tabs5
 
-#Delete several explanatory entries
-del tabs5[19:23]
+tabs7 = []
+#Filter out entries with comma or - (not filtered out before so that lines with only one valid entry would not be discredited)
+for tab in tabs6:
+    var = re.search("(?!\d+?[,-])\d+?", tab[1])
+    if var:
+        print(var)
+        tabs7.append(tab)
 
-'''Creating and exporting dataframes'''
-#Creates list of lists containing every fourth entry in tabs5 (dataframe)
-chunks = [tabs5[i:i+4] for i in range(0, len(tabs5), 4)]
-chunks = chunks[:1494]
 
-#Organizes dataframe into columns
-table = pd.DataFrame(chunks, columns=['1', '2', '3', '4'])
 
-#Format columns 1 and 2 into table
-shares = table[['1', '2']].copy()
-shares.columns = ['issuer name', 'marketvalue x €1000']
 
-#Format columns 3 and 4 into table
-fixed_income_securities = table[['3', '4']].copy()
-fixed_income_securities.columns = ['issuer name', 'marketvalue x €1000']
+'''Create Dataframe and export'''
+#Create two column dataframe
+df=pd.DataFrame(tabs7, columns=["Company", "Market Value (x €1.000)"])
 
-#Save tables as csv files
-shares.to_csv('vervoershares.csv')
-fixed_income_securities.to_csv('vervoerfixedincome.csv')
+#export
+df.to_csv("vervoer.csv")
