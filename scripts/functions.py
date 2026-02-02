@@ -47,7 +47,6 @@ def get_pdf(filename, page, link_button, browser, path=None, download=True):
     url = popup_info.value.url 
     r = requests.get(url)
 
-
     if download == True:
         #Setup filename
         filename = "raw_" + filename + ".pdf"
@@ -75,32 +74,3 @@ def get_pdf(filename, page, link_button, browser, path=None, download=True):
 
     return pdf
 
-
-def pdf_download(filename, page, link_button, browser, path=None):
-    #Clicks link_button and stores info
-    with page.expect_popup() as popup_info:
-        link_button.click()
-    
-    #Grabs url and ensures it is able to be accessed
-    url = popup_info.value.url 
-    r = requests.get(url)
-
-    #Setup filename
-    filename = "raw_" + filename + ".pdf"
-
-    #Run create_path if path not provided
-    if not path:
-        path = create_path(filename)
-
-    #Write pdf data to directory
-    with open(path/filename, 'wb') as f: #wb = with binary
-        for chunk in r.iter_content(chunk_size=8192): #chunk size to slow download speed (avoid errors)
-            if chunk:
-                f.write(chunk)
-
-    #Close browser
-    browser.close()
-
-    #Returns pdf object in pdfplumber
-    pdf = pdfplumber.open(path/filename)
-    return pdf

@@ -28,7 +28,7 @@ def scrape_vervoer(download):
     playwright = sync_playwright().start()
 
     #Establish page and browser
-    browser = playwright.chromium.launch(headless=False, slow_mo=500)
+    browser = playwright.chromium.launch(headless=True, slow_mo=500, channel="chromium")
     page = browser.new_page()
 
     #Go to page that leads to PDF
@@ -98,5 +98,5 @@ def scrape_vervoer(download):
     df.to_csv(path/file_final)
 
 if __name__ == "__main__":
-    download = input("Download pdf? (True or False)")
+    download = bool(input("Download pdf? (True or False)"))
     scrape_vervoer(download)

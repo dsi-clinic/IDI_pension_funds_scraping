@@ -1,83 +1,89 @@
-#What all needs to go in main:
-
-#Input to determine wether to call functions with download
-'''
-Current idea:
-Input 1 for download, 2 for no download
-
-If 1: use that as input in functions
-try: run function
-try: switch variable, run it without download
-except: switch variable back, log error message, move on
-
-If 2:
-try: run function without download
-excepct: log and pass
-
-'''
-
-#recurring functions need to be written on outside docs
-
-
-
-'''Python Modules'''
+'''Imports'''
+#Python modules
 import datetime
 import re
 from pathlib import Path
 import io
+import warnings
 
-'''External Modules'''
+#External Modules
 from playwright.sync_api import sync_playwright
 import pdfplumber
 import pandas as pd
 import requests
 
+#Custom Module
 import scripts.functions as functions
-#import importlib
-#import sys
-#sys.path.append("data")
 
+
+'''Setup'''
+
+#Supress warnings. (For debug purposes, comment this line.)
+warnings.filterwarnings('ignore')
+
+
+#Dictionary of module:function (Note that the scripts.___ is important for python to find directory)
 import_list = {
     "scripts.vervoer":"scrape_vervoer"
     }
 
 
+#Input used for download
+download = bool(input("Download pdf? (True or False)"))
+#message used to track progress/debug (Ideally will be replaced with log system in future)
+message = ""
 
-
-#download = bool(input("Download pdf? (True or False)"))
-download = True
-
+'''Run Scripts'''
 
 if download == True:
     for x in import_list:
+
+        #Import the module
+        module_x=__import__(x, fromlist=[None])
         
+        #Get function object
+        function_x=getattr(module_x, import_list[x])
+
+        try:
+            #Run function
+            function_x(download)
+
+            message = "Succesfully ran " + import_list[x] + " with download."
+        except:
+            try:
+                #Run function without download
+                download = False
+                function_x(download)
+
+                #Reset download to True
+                download = True
+                
+                message = "Ran " + import_list[x] + " without download."
+            except:
+                #Error message.
+                message = "Unable to run " + import_list[x]
+                pass
+
+        #print message
+        print(message)
+
+elif download == False:
+    for x in import_list:
+
+        #Import the module
+        module_x=__import__(x, fromlist=[None])
         
+        #Get function object
+        function_x=getattr(module_x, import_list[x])
 
-        y=__import__(x)
-        #print(y) #<module 'scripts' (namespace) from ['c:\\Users\\Jackie\\Documents\\myprojects\\WW Schoolwork and docs\\ghub\\IDI_pensions_funds_scraping\\scripts']>
-        #z.import_list[x](download)
-        z=getattr(y, import_list[x])
-        #z
-        z(download)
+        try:
+            #Run function
+            function_x(download)
+            message = "Succesfully ran " + import_list[x] + " without download."
+        except:
+            #Error message.
+            message = "Unable to run " + import_list[x]
+            pass
 
-        
-        #try:
-            #download = True
-            #run scrape_i
-        #scripts_list[i](download)
-        
-        #try:
-            #donwload = False
-
-        #except:
-            #pass
-
-
-
-
-
-
-#download = input("Download pdf? (True or False)")
-
-#import scripts.vervoer as vervoer
-#vervoer.scrape_vervoer(download)
+        #print message
+        print(message)
