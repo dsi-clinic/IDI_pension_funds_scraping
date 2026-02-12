@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+#folder for experimentation/notes (must be created in local files)
+no_track/
+
+#workspace files
+*.code-workspace
+
+#Logs
+*.log
+
+#Don't track scraped data (Date folders remain empty, won't be tracked either)
+#*.tsv
+#*.csv
+#*.pdf
