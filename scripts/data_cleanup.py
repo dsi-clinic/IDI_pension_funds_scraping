@@ -95,12 +95,10 @@ for directory in list:
 
 
             '''Remove files'''
+            #For remaining entry in a given group, piece together directory and try to delete
             for entry in g:
                 remove_directory = os.path.join(directory + "/" + entry[0])
-                #log remove directory?
                 try:
-                    #os.rmdir(remove_directory)
-                    #print(remove_directory)
                     shutil.rmtree(remove_directory, ignore_errors=True)
                 except Exception as e:
                     print(e)

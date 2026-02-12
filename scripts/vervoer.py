@@ -5,6 +5,7 @@ import re
 #External Modules
 from playwright.sync_api import sync_playwright
 import pandas as pd
+import pdfplumber
 
 #If run from main, imports from scripts folder. Else, imports locally.
 if __name__ != "__main__":
@@ -43,8 +44,8 @@ def scrape_vervoer():
     link_button = page.get_by_role('link', name="overzicht van onze beleggingen (pdf)") #likely to break here on future updates of website
 
     #Get PDF
-    pdf = functions.get_pdf(filename, page, link_button, browser, path)
-
+    pdf_path = functions.get_pdf(filename, page, link_button, browser, path)
+    pdf = pdfplumber.open(pdf_path)
 
 
 

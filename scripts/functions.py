@@ -27,7 +27,7 @@ def create_path(name="no_name"):
 
 
 '''
-Download pdf and return open instance of pdfplumber pdf class ASSUMING you have defined link_button as the link that will open google pdf preview.
+Download pdf and path ASSUMING you have defined link_button as the link that will open google pdf preview.
 filename = org (Ex: vervoer, danica, etc)
 page = browser page (playwright)
 link_button = button to be clicked (playwright)
@@ -50,19 +50,20 @@ def get_pdf(filename, page, link_button, browser, path=None):
     if not path:
         path = create_path(filename)
 
+    pdf_path = path/filename
+
     #Write pdf data to directory
-    with open(path/filename, 'wb') as f: #wb = with binary
+    with open(pdf_path, 'wb') as f: #wb = with binary
         for chunk in r.iter_content(chunk_size=8192): #chunk size to slow download speed (avoid errors)
             if chunk:
                 f.write(chunk)
-        
-        #Returns pdf object in pdfplumber
-        pdf = pdfplumber.open(path/filename)
 
     #Close browser
     browser.close()
 
-    return pdf
+    return pdf_path
+
+
 
 '''Export as tsv given dataframe
 df = dataframe object (pandas)
@@ -72,6 +73,14 @@ def export_df(df, filename, path=None):
     file_final = filename + ".tsv"
 
     if not path:
-        create_path(filename)
+        path=create_path(filename)
 
     df.to_csv(path/file_final, sep="\t", index=False)
+
+
+
+'''Input pdf object from pdfplumber. Return string'''
+def get_pdf_date(pdf):
+    report_date = pdf.metadata['CreationDate']
+    report_date = report_date[2:6] + "-" + report_date[6:8] + "-" + report_date[8:10]
+    return report_date
