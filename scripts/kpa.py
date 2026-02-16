@@ -40,6 +40,7 @@ def scrape_kpa():
     #Get PDF
     pdf_path = functions.get_pdf(filename, page, link_button, browser, path)
     pdf = pdfplumber.open(pdf_path)
+    playwright.stop()
 
 
 

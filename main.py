@@ -11,8 +11,10 @@ warnings.filterwarnings('ignore')
 #Configure logging settings
 logging.basicConfig(filename='log.log', level=logging.INFO, filemode="w", format="%(asctime)s - %(message)s")
 
-#Dictionary of module:function (Note that the scripts.___ is important for python to find directory)
+#Dictionary of module:function (Note that the scripts.___ is important for python to find directory). Alphabetical Order.
 import_list = {
+    "scripts.kpa":"scrape_kpa",
+    "scripts.pmt":"scrape_pmt",
     "scripts.vervoer":"scrape_vervoer"
     }
 
@@ -38,11 +40,11 @@ for x in import_list:
         message = f"Succesfully ran {import_list[x]}."
     except Exception as e:
         #Error message.
-        message = f"Unable to run {import_list[x]}. {e}"
+        message = f"Issue running {import_list[x]}. {e}"
         pass
 
-        #log message
-        logging.info(message)
+    #log message
+    logging.info(message)
 
 
 logging.info(f"Finished running")
