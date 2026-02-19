@@ -13,6 +13,7 @@ logging.basicConfig(filename='log.log', level=logging.INFO, filemode="w", format
 
 #Dictionary of module:function (Note that the scripts.___ is important for python to find directory). Alphabetical Order.
 import_list = {
+    "scripts.ap2":"scrape_ap2",
     "scripts.kpa":"scrape_kpa",
     "scripts.pmt":"scrape_pmt",
     "scripts.vervoer":"scrape_vervoer"
