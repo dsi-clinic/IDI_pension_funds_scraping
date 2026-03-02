@@ -1,0 +1,138 @@
+Shareholder - Name	Issuer - Name	Security - Type	Security - ISIN	Security - Report Date	Security - Market Value	Security - Market Value - Currency Code	Stock - Ticker	Stock - Number of Shares	Data Source URL
+AP3	ABB LTD-REG	Equity	CH0012221716	2026-02-23	2,551,836	SEK	ABB SS	3,710,143.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRATON SE	Equity	DE000TRAT0N7	2026-02-23	157,982	SEK	8TRA SS	473,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NORDEA BANK ABP	Equity	FI4000297767	2026-02-23	1,074,386	SEK	NDA SS	6,176,407.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASTRAZENECA PLC	Equity	GB0009895292	2026-02-23	3,027,036	SEK	AZN SS	1,776,951.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HENNES & MAURITZ AB-B SHS	Equity	SE0000106270	2026-02-23	1,892,448	SEK	HMB SS	10,179,927.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SKF AB-B SHARES	Equity	SE0000108227	2026-02-23	221,220	SEK	SKFB SS	900,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ERICSSON LM-A SHS	Equity	SE0000108649	2026-02-23	397,362	SEK	ERICA SS	4,390,736.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ERICSSON LM-B SHS	Equity	SE0000108656	2026-02-23	1,892,354	SEK	ERICB SS	20,886,904.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RATOS AB-B SHS	Equity	SE0000111940	2026-02-23	97,053	SEK	RATOB SS	2,550,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SVENSKA CELLULOSA AB SCA-B	Equity	SE0000112724	2026-02-23	171,640	SEK	SCAB SS	1,400,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SKANSKA AB-B SHS	Equity	SE0000113250	2026-02-23	708,402	SEK	SKAB SS	2,807,775.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRELLEBORG AB-B SHS	Equity	SE0000114837	2026-02-23	343,613	SEK	TRELB SS	875,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VOLVO AB-A SHS	Equity	SE0000115420	2026-02-23	106,739	SEK	VOLVA SS	360,118.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VOLVO AB-B SHS	Equity	SE0000115446	2026-02-23	3,053,579	SEK	VOLVB SS	10,319,630.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NCC AB-B SHS	Equity	SE0000117970	2026-02-23	91,823	SEK	NCCB SS	417,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SSAB AB - B SHARES	Equity	SE0000120669	2026-02-23	752,839	SEK	SSABB SS	10,807,336.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RAYSEARCH LABORATORIES AB	Equity	SE0000135485	2026-02-23	94,223	SEK	RAYB SS	413,260.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SKANDINAVISKA ENSKILDA BAN-A	Equity	SE0000148884	2026-02-23	2,177,394	SEK	SEBA SS	11,160,398.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SECURITAS AB-B SHS	Equity	SE0000163594	2026-02-23	89,792	SEK	SECUB SS	610,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ELEKTA AB-B SHS	Equity	SE0000163628	2026-02-23	86,317	SEK	EKTAB SS	1,521,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HUFVUDSTADEN AB-A SHS	Equity	SE0000170375	2026-02-23	124,000	SEK	HUFVA SS	1,000,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SSAB AB-A SHARES	Equity	SE0000171100	2026-02-23	3,524	SEK	SSABA SS	50,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INDUSTRIVARDEN AB-A SHS	Equity	SE0000190126	2026-02-23	116,312	SEK	INDUA SS	280,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BURE EQUITY AB	Equity	SE0000195810	2026-02-23	121,738	SEK	BURE SS	493,267.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GETINGE AB-B SHS	Equity	SE0000202624	2026-02-23	592,872	SEK	GETIB SS	2,709,654.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SWEDBANK AB - A SHARES	Equity	SE0000242455	2026-02-23	2,257,833	SEK	SWEDA SS	7,031,558.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CASTELLUM AB	Equity	SE0000379190	2026-02-23	495,140	SEK	CAST SS	4,653,570.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SANDVIK AB	Equity	SE0000667891	2026-02-23	1,822,444	SEK	SAND SS	6,062,688.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TELIA CO AB	Equity	SE0000667925	2026-02-23	283,940	SEK	TELIA SS	7,210,269.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CELLAVISION AB CEVI SS Equity SEK 307,964.00 48,412 SE0000683484ALFA LAVAL AB	Equity	SE0000695876	2026-02-23	1,495,624	SEK	ALFA SS	3,211,562.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JM AB	Equity	SE0000806994	2026-02-23	25,074	SEK	JM SS	180,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BILLERUD AB	Equity	SE0000862997	2026-02-23	37,560	SEK	BILL SS	400,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SWEDISH ORPHAN BIOVITRUM AB	Equity	SE0000872095	2026-02-23	779,613	SEK	SOBI SS	2,342,586.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INDUTRADE AB	Equity	SE0001515552	2026-02-23	513,822	SEK	INDT SS	2,137,363.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HUSQVARNA AB-B SHS	Equity	SE0001662230	2026-02-23	14,883	SEK	HUSQB SS	320,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LINDAB INTERNATIONAL AB	Equity	SE0001852419	2026-02-23	265,502	SEK	LIAB SS	1,274,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ARISE AB	Equity	SE0002095604	2026-02-23	170,260	SEK	ARISE SS	3,869,536.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SDIPTECH AB - B	Equity	SE0003756758	2026-02-23	362,674	SEK	SDIPB SS	1,891,885.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SIVERS SEMICONDUCTORS AB	Equity	SE0003917798	2026-02-23	8,308	SEK	SIVE SS	2,000,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	XVIVO PERFUSION AB	Equity	SE0004840718	2026-02-23	51,083	SEK	XVIVO SS	273,757.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PLATZER FASTIGHETER HOLD-B	Equity	SE0004977692	2026-02-23	11,175	SEK	PLAZB SS	150,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SAGAX AB-B	Equity	SE0005127818	2026-02-23	1,747,383	SEK	SAGAB SS	8,843,030.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TELE2 AB-B SHS	Equity	SE0005190238	2026-02-23	131,933	SEK	TEL2B SS	853,661.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HANZA AB	Equity	SE0005878543	2026-02-23	105,104	SEK	HANZA SS	826,292.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AFRY AB	Equity	SE0005999836	2026-02-23	320,484	SEK	AFRY SS	2,136,562.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INWIDO AB	Equity	SE0006220018	2026-02-23	24,630	SEK	INWI SS	150,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GRANGES AB	Equity	SE0006288015	2026-02-23	3,060	SEK	GRNG SS	21,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NP3 FASTIGHETER AB	Equity	SE0006342333	2026-02-23	126,007	SEK	NP3 SS	486,513.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	THULE GROUP AB/THE	Equity	SE0006422390	2026-02-23	23,980	SEK	THULE SS	100,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AXFOOD AB	Equity	SE0006993770	2026-02-23	198,670	SEK	AXFO SS	684,598.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HEXPOL AB	Equity	SE0007074281	2026-02-23	211,268	SEK	HPOLB SS	2,402,140.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PANDOX AB	Equity	SE0007100359	2026-02-23	203,000	SEK	PNDXB SS	1,000,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASSA ABLOY AB-B	Equity	SE0007100581	2026-02-23	1,382,070	SEK	ASSAB SS	3,850,849.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SVENSKA HANDELSBANKEN-A SHS	Equity	SE0007100599	2026-02-23	1,554,769	SEK	SHBA SS	11,572,529.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BRAVIDA HOLDING AB	Equity	SE0007491303	2026-02-23	172,726	SEK	BRAV SS	1,924,523.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VICORE PHARMA HOLDING AB	Equity	SE0007577895	2026-02-23	44,094	SEK	VICO SS	3,902,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SCANDIC HOTELS GROUP AB	Equity	SE0007640156	2026-02-23	24,325	SEK	SHOT SS	250,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DOMETIC GROUP AB	Equity	SE0007691613	2026-02-23	27,237	SEK	DOM SS	581,238.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CAMURUS AB	Equity	SE0007692850	2026-02-23	328,428	SEK	CAMX SS	533,163.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VITEC SOFTWARE GROUP AB-B SH	Equity	SE0007871363	2026-02-23	267,790	SEK	VITB SS	864,955.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INFANT BACTERIAL THERAPEUTIC	Equity	SE0008015259	2026-02-23	1,940	SEK	IBTB SS	38,408.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MIPS AB	Equity	SE0009216278	2026-02-23	115,421	SEK	MIPS SS	326,601.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MUNTERS GROUP AB	Equity	SE0009806607	2026-02-23	447,954	SEK	MTRS SS	2,605,899.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BONESUPPORT HOLDING AB BONEX SS Equity SEK 1,546,544.00 290,750 SE0009858152ESSITY AKTIEBOLAG-B	Equity	SE0009922164	2026-02-23	871,583	SEK	ESSITYB SS	3,286,512.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	XSPRAY PHARMA AB	Equity	SE0009973563	2026-02-23	53,959	SEK	XSPRAY SS	1,715,712.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HMS NETWORKS AB	Equity	SE0009997018	2026-02-23	58,977	SEK	HMS SS	140,756.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FAGERHULT GROUP AB	Equity	SE0010048884	2026-02-23	235,706	SEK	FAG SS	5,672,827.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BIOARCTIC AB	Equity	SE0010323311	2026-02-23	448,861	SEK	BIOAB SS	1,444,212.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CIBUS NORDIC REAL ESTAT PUBL	Equity	SE0010832204	2026-02-23	180,611	SEK	CIBUS SS	1,229,063.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HOLMEN AB-B SHARES	Equity	SE0011090018	2026-02-23	60,248	SEK	HOLMB SS	170,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FABEGE AB	Equity	SE0011166974	2026-02-23	101,537	SEK	FABG SS	1,230,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VITROLIFE AB	Equity	SE0011205202	2026-02-23	71,925	SEK	VITR SS	525,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AAK AB	Equity	SE0011337708	2026-02-23	400,543	SEK	AAK SS	1,518,357.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NYFOSA AB	Equity	SE0011426428	2026-02-23	112,565	SEK	NYF SS	1,515,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AVANZA BANK HOLDING AB	Equity	SE0012454072	2026-02-23	549,253	SEK	AZA SS	1,555,516.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EVOLUTION AB	Equity	SE0012673267	2026-02-23	697,824	SEK	EVO SS	1,108,009.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EQT AB	Equity	SE0012853455	2026-02-23	2,743,434	SEK	EQT SS	7,541,049.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BICO GROUP AB	Equity	SE0013647385	2026-02-23	57,938	SEK	BICO SS	2,751,114.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADDLIFE AB-B	Equity	SE0014401378	2026-02-23	478,096	SEK	ALIFB SS	3,005,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADDTECH AB-B SHARES	Equity	SE0014781795	2026-02-23	746,010	SEK	ADDTB SS	2,278,588.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SWECO AB-B SHS	Equity	SE0014960373	2026-02-23	235,615	SEK	SWECB SS	1,561,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LAGERCRANTZ GROUP AB-B SHS	Equity	SE0014990966	2026-02-23	345,982	SEK	LAGRB SS	1,625,855.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NORDNET AB PUBL	Equity	SE0015192067	2026-02-23	341,937	SEK	SAVE SS	1,265,497.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CINT GROUP AB	Equity	SE0015483276	2026-02-23	1,722	SEK	CINT SS	600,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	YUBICO AB	Equity	SE0015657788	2026-02-23	24,012	SEK	YUBICO SS	314,211.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EPIROC AB-A	Equity	SE0015658109	2026-02-23	427,356	SEK	EPIA SS	2,036,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EPIROC AB-B	Equity	SE0015658117	2026-02-23	1,442,637	SEK	EPIB SS	7,727,032.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INVESTOR AB-A SHS	Equity	SE0015811955	2026-02-23	2,306,876	SEK	INVEA SS	7,018,180.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INVESTOR AB-B SHS	Equity	SE0015811963	2026-02-23	4,691,280	SEK	INVEB SS	14,198,790.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GARO AB	Equity	SE0015812417	2026-02-23	12,574	SEK	GARO SS	734,479.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LIFCO AB-B SHS	Equity	SE0015949201	2026-02-23	162,465	SEK	LIFCOB SS	461,547.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BEIJER REF AB	Equity	SE0015949748	2026-02-23	843,248	SEK	BEIJB SS	5,655,585.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HEXAGON AB-B SHS	Equity	SE0015961909	2026-02-23	2,371,103	SEK	HEXAB SS	21,653,907.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NOLATO AB-B SHS	Equity	SE0015962477	2026-02-23	82,359	SEK	NOLAB SS	1,332,664.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RVRC HOLDING AB	Equity	SE0015962485	2026-02-23	278,473	SEK	RVRC SS	4,171,887.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NIBE INDUSTRIER AB-B SHS	Equity	SE0015988019	2026-02-23	798,874	SEK	NIBEB SS	22,427,683.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MILDEF GROUP AB	Equity	SE0016074249	2026-02-23	147,354	SEK	MILDEF SS	1,230,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SINCH AB SINCH SS Equity SEK 3,612,568.00 113,688 SE0016101844ELECTROLUX AB-B	Equity	SE0016589188	2026-02-23	63,780	SEK	ELUXB SS	1,000,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SYSTEMAIR AB	Equity	SE0016609499	2026-02-23	509,074	SEK	SYSR SS	5,844,712.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FASTIGHETSBOLAGET EMILSHUS-B	Equity	SE0016785786	2026-02-23	181,850	SEK	EMILB SS	3,367,595.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRUECALLER AB-B	Equity	SE0016787071	2026-02-23	48,451	SEK	TRUEB SS	2,510,396.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	STORSKOGEN GROUP AB-B	Equity	SE0016797732	2026-02-23	100,964	SEK	STORB SS	8,600,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CTEK AB	Equity	SE0016798763	2026-02-23	7,596	SEK	CTEK SS	600,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTEA FASTIGHETER AB	Equity	SE0017072259	2026-02-23	820,930	SEK	INTEAB SS	12,428,921.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NIVIKA FASTIGHETER AB-B	Equity	SE0017083272	2026-02-23	131,239	SEK	NIVIB SS	3,069,928.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DYNAVOX GROUP AB	Equity	SE0017105620	2026-02-23	265,480	SEK	DYVOX SS	2,602,744.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NCAB GROUP AB	Equity	SE0017160773	2026-02-23	19,120	SEK	NCAB SS	400,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INSTALCO AB	Equity	SE0017483506	2026-02-23	66,261	SEK	INSTAL SS	2,560,311.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ATLAS COPCO AB-A SHS	Equity	SE0017486889	2026-02-23	429,903	SEK	ATCOA SS	2,589,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ATLAS COPCO AB-B SHS	Equity	SE0017486897	2026-02-23	5,296,197	SEK	ATCOB SS	35,544,946.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MOMENTUM GROUP KOMPONENTER &	Equity	SE0017562523	2026-02-23	299,910	SEK	MMGRB SS	1,950,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ALLEIMA AB	Equity	SE0017615644	2026-02-23	81,850	SEK	ALLEI SS	1,000,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ENGCON AB	Equity	SE0017769847	2026-02-23	107,363	SEK	ENGCONB SS	1,290,415.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BIOGAIA AB-B SHS	Equity	SE0017769995	2026-02-23	266,387	SEK	BIOGB SS	2,508,356.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WALLENSTAM AB-B SHS	Equity	SE0017780133	2026-02-23	24,828	SEK	WALLB SS	600,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FASTIGHETS AB BALDER-B SHRS	Equity	SE0017832488	2026-02-23	350,162	SEK	BALDB SS	5,134,345.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADDNODE GROUP AB	Equity	SE0017885767	2026-02-23	75,221	SEK	ANODB SS	776,276.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WIHLBORGS FASTIGHETER AB	Equity	SE0018012635	2026-02-23	267,341	SEK	WIHL SS	2,929,765.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HEXATRONIC GROUP AB	Equity	SE0018040677	2026-02-23	236,663	SEK	HTRO SS	10,271,824.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BOLIDEN AB	Equity	SE0020050417	2026-02-23	1,050,368	SEK	BOL SS	2,038,757.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RUSTA AB	Equity	SE0020848356	2026-02-23	300,901	SEK	RUSTA SS	3,478,627.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GRUVAKTIEBOLAGET VISCARIA	Equity	SE0021148160	2026-02-23	72,076	SEK	VISC SS	3,700,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AUTOLIV INC-SWED DEP RECEIPT	Equity	SE0021309614	2026-02-23	405,931	SEK	ALIV SS	364,064.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VOLVO CAR AB-B	Equity	SE0021628898	2026-02-23	578,357	SEK	VOLCARB SS	18,839,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SAAB AB-B	Equity	SE0021921269	2026-02-23	2,088,576	SEK	SAABB SS	3,885,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PRISMA PROPERTIES AB	Equity	SE0022062055	2026-02-23	127,500	SEK	PRISMA SS	5,000,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AQ GROUP AB	Equity	SE0022062196	2026-02-23	283,368	SEK	AQ SS	1,436,955.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SECTRA AB-B SHS	Equity	SE0022419784	2026-02-23	194,106	SEK	SECTB SS	773,332.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASMODEE GROUP AB-B	Equity	SE0023615638	2026-02-23	566,170	SEK	ASMDEE SS	5,344,253.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EMBRACER GROUP AB	Equity	SE0023615885	2026-02-23	70,639	SEK	EMBRACB SS	1,164,131.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASKER HEALTHCARE GROUP AB	Equity	SE0024171458	2026-02-23	818,077	SEK	ASKER SS	9,692,857.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ATRIUM LJUNGBERG AB-B SHS ATRLJB SS Equity SEK 600,000.00 19,929 SE0024320832BUFAB AB	Equity	SE0025010671	2026-02-23	74,552	SEK	BUFAB SS	741,370.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ENITY HOLDING AB	Equity	SE0025011554	2026-02-23	467,999	SEK	ENITY SS	4,488,771.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HACKSAW AB	Equity	SE0025138357	2026-02-23	76,102	SEK	HACK SS	1,199,596.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MYCRONIC AB	Equity	SE0025158629	2026-02-23	653,672	SEK	MYCR SS	2,927,982.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COFFEE STAIN GROUP AB-B	Equity	SE0026599557	2026-02-23	26,950	SEK	COFFEEB SS	1,164,131.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GRUVAKTIEBOLAGET VISCARI-BTA	Equity	SE0027077835	2026-02-23	43,246	SEK	VISCBTA SS	2,220,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper

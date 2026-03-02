@@ -1,0 +1,803 @@
+Shareholder - Name	Issuer - Name	Security - Type	Security - ISIN	Security - Report Date	Security - Market Value	Security - Market Value - Currency Code	Stock - Ticker	Stock - Number of Shares	Data Source URL
+AP3	SLB LTD	Equity	AN8068571086	2026-02-23	23,386	USD	SLB US	66,269.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AUSTRALIAN FINANCE GROUP LTD	Equity	AU000000AFG9	2026-02-23	29	AUD	AFG AU	2,172.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ARISTOCRAT LEISURE LTD	Equity	AU000000ALL7	2026-02-23	45,423	AUD	ALL AU	126,724.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ANZ GROUP HOLDINGS LTD	Equity	AU000000ANZ3	2026-02-23	62,627	AUD	ANZ AU	279,728.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	APA GROUP	Equity	AU000000APA1	2026-02-23	2,386	AUD	APA AU	43,168.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BENDIGO AND ADELAIDE BANK	Equity	AU000000BEN6	2026-02-23	337	AUD	BEN AU	5,196.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BHP GROUP LTD	Equity	AU000000BHP4	2026-02-23	640,063	AUD	BHP AU	2,283,832.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BRAMBLES LTD	Equity	AU000000BXB1	2026-02-23	16,435	AUD	BXB AU	116,187.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COMMONWEALTH BANK OF AUSTRAL	Equity	AU000000CBA7	2026-02-23	203,697	AUD	CBA AU	205,910.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COMPUTERSHARE LTD	Equity	AU000000CPU5	2026-02-23	22,260	AUD	CPU AU	105,831.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CHARTER HALL RETAIL REIT	Equity	AU000000CQR9	2026-02-23	18,447	AUD	CQR AU	735,681.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CSL LTD	Equity	AU000000CSL8	2026-02-23	164,589	AUD	CSL AU	154,736.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DOWNER EDI LTD	Equity	AU000000DOW2	2026-02-23	15,134	AUD	DOW AU	308,983.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EVOLUTION MINING LTD	Equity	AU000000EVN4	2026-02-23	28,534	AUD	EVN AU	365,265.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FORTESCUE LTD	Equity	AU000000FMG4	2026-02-23	35,007	AUD	FMG AU	258,164.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GOODMAN GROUP	Equity	AU000000GMG2	2026-02-23	23,543	AUD	GMG AU	123,349.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HARVEY NORMAN HOLDINGS LTD	Equity	AU000000HVN7	2026-02-23	966	AUD	HVN AU	22,591.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INSURANCE AUSTRALIA GROUP	Equity	AU000000IAG3	2026-02-23	11,522	AUD	IAG AU	234,363.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JB HI-FI LTD	Equity	AU000000JBH7	2026-02-23	18,929	AUD	JBH AU	31,931.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JUMBO INTERACTIVE LTD	Equity	AU000000JIN0	2026-02-23	3,551	AUD	JIN AU	50,083.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LENDLEASE GROUP	Equity	AU000000LLC3	2026-02-23	726	AUD	LLC AU	22,649.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LYNAS RARE EARTHS LTD	Equity	AU000000LYC6	2026-02-23	1,752	AUD	LYC AU	22,865.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MIRVAC GROUP	Equity	AU000000MGR9	2026-02-23	8,313	AUD	MGR AU	658,213.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MONADELPHOUS GROUP LTD	Equity	AU000000MND5	2026-02-23	1,728	AUD	MND AU	10,582.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MEDIBANK PRIVATE LTD	Equity	AU000000MPL3	2026-02-23	3,581	AUD	MPL AU	121,333.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MACQUARIE GROUP LTD	Equity	AU000000MQG1	2026-02-23	74,992	AUD	MQG AU	59,903.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NATIONAL AUSTRALIA BANK LTD	Equity	AU000000NAB4	2026-02-23	95,600	AUD	NAB AU	366,753.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NORTHERN STAR RESOURCES LTD	Equity	AU000000NST8	2026-02-23	14,678	AUD	NST AU	89,133.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NRW HOLDINGS LTD	Equity	AU000000NWH5NETWEALTH	2026-02-23	5,969	AUD	NWH AU	188,129.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 GROUP LTD	Equity	AU000000NWL7	2026-02-23	1,179	AUD	NWL AU	7,457.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ORICA LTD	Equity	AU000000ORI1	2026-02-23	21,518	AUD	ORI AU	143,847.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PRO MEDICUS LTD	Equity	AU000000PME8	2026-02-23	10,297	AUD	PME AU	7,567.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PERSEUS MINING LTD	Equity	AU000000PRU3	2026-02-23	3,039	AUD	PRU AU	86,858.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	QANTAS AIRWAYS LTD	Equity	AU000000QAN2	2026-02-23	16,363	AUD	QAN AU	255,868.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	QBE INSURANCE GROUP LTD	Equity	AU000000QBE9	2026-02-23	41,967	AUD	QBE AU	342,475.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REA GROUP LTD	Equity	AU000000REA9	2026-02-23	13,071	AUD	REA AU	11,569.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RIO TINTO LTD	Equity	AU000000RIO1	2026-02-23	19,859	AUD	RIO AU	21,955.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RAMELIUS RESOURCES LTD	Equity	AU000000RMS4	2026-02-23	594	AUD	RMS AU	23,175.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REGIS RESOURCES LTD	Equity	AU000000RRL8	2026-02-23	6,737	AUD	RRL AU	144,829.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 LTD	Equity	AU000000S320	2026-02-23	1,524	AUD	S32 AU	69,471.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SEEK LTD	Equity	AU000000SEK6	2026-02-23	11,525	AUD	SEK AU	80,911.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SANDFIRE RESOURCES LTD	Equity	AU000000SFR8	2026-02-23	5,365	AUD	SFR AU	48,597.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	STOCKLAND	Equity	AU000000SGP0	2026-02-23	6,149	AUD	SGP AU	174,193.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SERVICE STREAM LTD	Equity	AU000000SSM2	2026-02-23	2,223	AUD	SSM AU	161,091.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUNCORP GROUP LTD	Equity	AU000000SUN6	2026-02-23	13,160	AUD	SUN AU	121,022.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRANSURBAN GROUP	Equity	AU000000TCL6	2026-02-23	27,854	AUD	TCL AU	318,168.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TELSTRA GROUP LTD	Equity	AU000000TLS2	2026-02-23	12,637	AUD	TLS AU	421,194.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TECHNOLOGY ONE LTD	Equity	AU000000TNE8	2026-02-23	15,726	AUD	TNE AU	91,296.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WESTPAC BANKING CORP	Equity	AU000000WBC1	2026-02-23	79,797	AUD	WBC AU	335,551.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WESFARMERS LTD	Equity	AU000000WES1	2026-02-23	51,092	AUD	WES AU	102,268.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WORLEY LTD	Equity	AU000000WOR2	2026-02-23	9,515	AUD	WOR AU	122,864.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WOOLWORTHS GROUP LTD	Equity	AU000000WOW2	2026-02-23	6,643	AUD	WOW AU	36,703.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COLES GROUP LTD	Equity	AU0000030678	2026-02-23	30,084	AUD	COL AU	227,754.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PERENTI LTD	Equity	AU0000061897	2026-02-23	9,239	AUD	PRN AU	537,517.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DETERRA ROYALTIES LTD	Equity	AU0000107484	2026-02-23	2,304	AUD	DRR AU	91,883.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REGAL PARTNERS LTD	Equity	AU0000226300	2026-02-23	2,137	AUD	RPL AU	108,068.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UCB SA	Equity	BE0003739530	2026-02-23	151,785	EUR	UCB BB	58,840.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CENERGY HOLDINGS SA	Equity	BE0974303357	2026-02-23	131,641	EUR	CENER BB	800,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ARCH CAPITAL GROUP LTD	Equity	BMG0450A1053	2026-02-23	32,088	USD	ACGL US	36,383.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CK INFRASTRUCTURE HOLDINGS L	Equity	BMG2178K1009	2026-02-23	50,536	HKD	1038 HK	742,551.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EVEREST GROUP LTD	Equity	BMG3223R1088	2026-02-23	17,966	USD	EG US	5,758.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KERRY PROPERTIES LTD	Equity	BMG524401079	2026-02-23	108	HKD	683 HK	4,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LUK FOOK HOLDINGS INTL LTD	Equity	BMG5695X1258	2026-02-23	250	HKD	590 HK	9,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MAN WAH HOLDINGS LTD	Equity	BMG5800U1071AGNICO	2026-02-23	30	HKD	1999 HK	5,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 EAGLE MINES LTD	Equity	CA0084741085	2026-02-23	64,094	CAD	AEM CN	40,977.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ARITZIA INC-SUBORDINATE VOTI	Equity	CA04045U1021	2026-02-23	5,176	CAD	ATZ CN	6,564.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BANK OF MONTREAL	Equity	CA0636711016	2026-02-23	40,178	CAD	BMO CN	33,542.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BANK OF NOVA SCOTIA	Equity	CA0641491075	2026-02-23	43,487	CAD	BNS CN	63,927.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BARRICK MINING CORP	Equity	CA06849F1080	2026-02-23	96,450	CAD	ABX CN	240,052.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CCL INDUSTRIES INC - CL B	Equity	CA1249003098	2026-02-23	10,462	CAD	CCL/B CN	17,957.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CAMECO CORP	Equity	CA13321L1085	2026-02-23	221,456	CAD	CCO CN	262,211.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CAN IMPERIAL BK OF COMMERCE	Equity	CA1360691010	2026-02-23	159,588	CAD	CM CN	190,856.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CANADIAN NATL RAILWAY CO	Equity	CA1363751027	2026-02-23	235,644	CAD	CNR CN	258,313.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CANADIAN UTILITIES LTD-A	Equity	CA1367178326	2026-02-23	28,596	CAD	CU CN	99,587.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CELESTICA INC	Equity	CA15101Q2071	2026-02-23	76,433	CAD	CLS CN	28,014.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DESCARTES SYSTEMS GRP/THE	Equity	CA2499061083	2026-02-23	26,387	CAD	DSG CN	32,610.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ELEMENT FLEET MANAGEMENT COR	Equity	CA2861812014	2026-02-23	25,075	CAD	EFN CN	103,508.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ENERFLEX LTD	Equity	CA29269R1055	2026-02-23	19,508	CAD	EFX CN	137,190.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FAIRFAX FINANCIAL HLDGS LTD	Equity	CA3039011026	2026-02-23	217,063	CAD	FFH CN	12,348.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FORTIS INC	Equity	CA3495531079	2026-02-23	36,017	CAD	FTS CN	75,107.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GFL ENVIRONMENTAL INC-SUB VT	Equity	CA36168Q1046	2026-02-23	21,578	CAD	GFL CN	54,460.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTACT FINANCIAL CORP	Equity	CA45823T1066	2026-02-23	72,803	CAD	IFC CN	37,916.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KINROSS GOLD CORP	Equity	CA4969024047	2026-02-23	38,750	CAD	K CN	149,155.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MAGNA INTERNATIONAL INC	Equity	CA5592224011	2026-02-23	96,542	CAD	MG CN	196,343.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	METRO INC/CN	Equity	CA59162N1096	2026-02-23	38,431	CAD	MRU CN	57,889.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	QUEBECOR INC -CL B	Equity	CA7481932084	2026-02-23	52,107	CAD	QBR/B CN	149,982.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RB GLOBAL INC	Equity	CA74935Q1072	2026-02-23	31,489	CAD	RBA CN	33,160.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROYAL BANK OF CANADA	Equity	CA7800871021	2026-02-23	140,964	CAD	RY CN	89,648.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SHOPIFY INC - CLASS A	Equity	CA82509L1076	2026-02-23	475,138	CAD	SHOP CN	319,932.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SPROTT INC	Equity	CA8520662088	2026-02-23	55,649	CAD	SII CN	61,597.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	STANTEC INC	Equity	CA85472N1096	2026-02-23	86,382	CAD	STN CN	99,247.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TFI INTERNATIONAL INC	Equity	CA87241L1094	2026-02-23	22,896	CAD	TFII CN	24,016.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TMX GROUP LTD	Equity	CA87262K1057	2026-02-23	29,635	CAD	X CN	84,434.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOROMONT INDUSTRIES LTD	Equity	CA8911021050	2026-02-23	29,928	CAD	TIH CN	26,821.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TORONTO-DOMINION BANK	Equity	CA8911605092	2026-02-23	18,047	CAD	TD CN	20,760.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WSP GLOBAL INC	Equity	CA92938W2022	2026-02-23	380,501	CAD	WSP CN	227,837.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WASTE CONNECTIONS INC	Equity	CA94106B1013	2026-02-23	249,595	USD	WCN US	154,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WHEATON PRECIOUS METALS CORP	Equity	CA9628791027	2026-02-23	366,157	CAD	WPM CN	337,677.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ZURICH INSURANCE GROUP AG	Equity	CH0011075394NOVARTIS	2026-02-23	294,139	CHF	ZURN SW	42,045.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 AG-REG	Equity	CH0012005267	2026-02-23	768,630	CHF	NOVN SW	603,282.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROCHE HOLDING AG-GENUSSCHEIN	Equity	CH0012032048	2026-02-23	142,042	CHF	ROG SW	37,230.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LONZA GROUP AG-REG	Equity	CH0013841017	2026-02-23	336,086	CHF	LONN SW	53,758.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NESTLE SA-REG	Equity	CH0038863350	2026-02-23	340,049	CHF	NESN SW	371,501.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CHUBB LTD	Equity	CH0044328745	2026-02-23	144,533	USD	CB US	50,363.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GARMIN LTD	Equity	CH0114405324	2026-02-23	28,171	USD	GRMN US	15,104.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CIE FINANCIERE RICHEMO-A REG	Equity	CH0210483332	2026-02-23	408,900	CHF	CFR SW	204,445.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UBS GROUP AG-REG	Equity	CH0244767585	2026-02-23	851,615	CHF	UBSG SW	1,982,098.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	THEON INTERNATIONAL PLC	Equity	CY0200751713	2026-02-23	78,475	EUR	THEON NA	270,837.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BAYERISCHE MOTOREN WERKE AG	Equity	DE0005190003	2026-02-23	254,573	EUR	BMW GR	252,807.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DEUTSCHE TELEKOM AG-REG	Equity	DE0005557508	2026-02-23	161,948	EUR	DTE GR	541,548.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INFINEON TECHNOLOGIES AG	Equity	DE0006231004	2026-02-23	376,059	EUR	IFX GR	921,897.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RHEINMETALL AG	Equity	DE0007030009	2026-02-23	785,902	EUR	RHM GR	46,567.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MERCEDES-BENZ GROUP AG	Equity	DE0007100000	2026-02-23	137,627	EUR	MBG GR	211,913.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SAP SE	Equity	DE0007164600	2026-02-23	671,263	EUR	SAP GR	297,997.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SIEMENS AG-REG	Equity	DE0007236101	2026-02-23	1,172,140	EUR	SIE GR	453,338.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VOLKSWAGEN AG-PREF	Equity	DE0007664039	2026-02-23	155,113	EUR	VOW3 GR	138,551.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADIDAS AG	Equity	DE000A1EWWW0	2026-02-23	559,439	EUR	ADS GR	306,091.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SIEMENS HEALTHINEERS AG	Equity	DE000SHL1006	2026-02-23	351,624	EUR	SHL GR	724,022.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ZALANDO SE	Equity	DE000ZAL1111	2026-02-23	324,668	EUR	ZAL GR	1,185,076.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GENMAB A/S	Equity	DK0010272202	2026-02-23	79,232	DKK	GMAB DC	27,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DSV A/S	Equity	DK0060079531	2026-02-23	70,142	DKK	DSV DC	30,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COLOPLAST-B	Equity	DK0060448595	2026-02-23	45,461	DKK	COLOB DC	57,470.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VESTAS WIND SYSTEMS A/S	Equity	DK0061539921	2026-02-23	100,413	DKK	VWS DC	400,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NOVO NORDISK A/S-B	Equity	DK0062498333	2026-02-23	420,794	DKK	NOVOB DC	893,653.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BANCO BILBAO VIZCAYA ARGENTA	Equity	ES0113211835	2026-02-23	220,094	EUR	BBVA SM	1,015,330.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BANCO SANTANDER SA	Equity	ES0113900J37	2026-02-23	1,211,591	EUR	SAN SM	11,128,576.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	IBERDROLA SA	Equity	ES0144580Y14	2026-02-23	759,283	EUR	IBE SM	3,803,358.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NESTE OYJ	Equity	FI0009013296	2026-02-23	83,941	EUR	NESTE FH	400,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOTALENERGIES SE	Equity	FR0000120271	2026-02-23	486,090	EUR	TTE FP	808,784.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OREAL	Equity	FR0000120321	2026-02-23	450,647	EUR	OR FP	113,699.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AXA SA	Equity	FR0000120628	2026-02-23	293,218	EUR	CS FP	662,131.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LVMH MOET HENNESSY LOUIS VUI	Equity	FR0000121014	2026-02-23	123,228	EUR	MC FP	17,671.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ESSILORLUXOTTICA	Equity	FR0000121667	2026-02-23	58,790	EUR	EL FP	20,147.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SCHNEIDER ELECTRIC SE	Equity	FR0000121972COMPAGNIE	2026-02-23	799,996	EUR	SU FP	315,005.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 DE SAINT GOBAIN	Equity	FR0000125007	2026-02-23	825,822	EUR	SGO FP	878,375.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CAPGEMINI SE	Equity	FR0000125338	2026-02-23	327,889	EUR	CAP FP	213,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BNP PARIBAS	Equity	FR0000131104	2026-02-23	721,024	EUR	BNP FP	825,477.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ENGIE	Equity	FR0010208488	2026-02-23	49,035	EUR	ENGI FP	202,386.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ANTOFAGASTA PLC	Equity	GB0000456144	2026-02-23	101,558	GBP	ANTO LN	250,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BAE SYSTEMS PLC	Equity	GB0002634946	2026-02-23	171,432	GBP	BA/ LN	807,326.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HSBC HOLDINGS PLC	Equity	GB0005405286	2026-02-23	522,088	GBP	HSBA LN	3,590,195.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PRUDENTIAL PLC	Equity	GB0007099541	2026-02-23	831,055	GBP	PRU LN	5,861,142.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RIO TINTO PLC	Equity	GB0007188757	2026-02-23	288,302	GBP	RIO LN	388,239.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LLOYDS BANKING GROUP PLC	Equity	GB0008706128	2026-02-23	850,107	GBP	LLOY LN	69,847,929.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SMITH & NEPHEW PLC	Equity	GB0009223206	2026-02-23	45,159	GBP	SN/ LN	294,318.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASTRAZENECA PLC	Equity	GB0009895292	2026-02-23	1,133,996	GBP	AZN LN	663,767.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AMDOCS LTD	Equity	GB0022569080	2026-02-23	4,171	USD	DOX US	5,635.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CARNIVAL PLC	Equity	GB0031215220	2026-02-23	70,245	GBP	CCL LN	250,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INVESTEC PLC	Equity	GB00B17BBQ50	2026-02-23	223,802	GBP	INVP LN	3,275,563.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EXPERIAN PLC	Equity	GB00B19NLV48	2026-02-23	573,878	GBP	EXPN LN	1,377,404.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RELX PLC	Equity	GB00B2B0DG97	2026-02-23	342,446	EUR	REN NA	913,326.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROLLS-ROYCE HOLDINGS PLC	Equity	GB00B63H8491	2026-02-23	213,093	GBP	RR/ LN	1,495,683.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COMPASS GROUP PLC	Equity	GB00BD6K4575	2026-02-23	690,280	GBP	CPG LN	2,356,927.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NATIONAL GRID PLC	Equity	GB00BDR05C01	2026-02-23	980,649	GBP	NG/ LN	6,934,354.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TESCO PLC	Equity	GB00BLGZ9862	2026-02-23	912,150	GBP	TSCO LN	16,665,139.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JD SPORTS FASHION PLC	Equity	GB00BM8Q5M07	2026-02-23	94,155	GBP	JD/ LN	8,998,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROYALTY PHARMA PLC- CL A	Equity	GB00BMVP7Y09	2026-02-23	18,995	USD	RPRX US	53,464.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GSK PLC	Equity	GB00BN7SWP63	2026-02-23	90,414	GBP	GSK LN	400,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	METLEN ENERGY & METALS	Equity	GB00BTQGS779	2026-02-23	436,783	EUR	MTLN LN	914,021.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VERISURE PLC	Equity	GB00BVMN1558	2026-02-23	2,058,201	EUR	VSURE SS	13,597,924.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SWIRE PROPERTIES LTD	Equity	HK0000063609	2026-02-23	13,188	HKD	1972 HK	532,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AIA GROUP LTD	Equity	HK0000069689	2026-02-23	1,521,450	HKD	1299 HK	16,116,047.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HKT TRUST AND HKT LTD-SS	Equity	HK0000093390	2026-02-23	59,750	HKD	6823 HK	4,393,492.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	POWER ASSETS HOLDINGS LTD	Equity	HK0006000050	2026-02-23	110,221	HKD	6 HK	1,691,484.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HANG SENG BANK LTD	Equity	HK0011000095	2026-02-23	10,048	HKD	11 HK	55,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HENDERSON LAND DEVELOPMENT	Equity	HK0012000102	2026-02-23	1,629	HKD	12 HK	49,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HYSAN DEVELOPMENT CO	Equity	HK0014000126	2026-02-23	2,948	HKD	14 HK	132,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUN HUNG KAI PROPERTIES	Equity	HK0016000132	2026-02-23	6,602	HKD	16 HK	59,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SWIRE PACIFIC LTD - CL A	Equity	HK0019000162BANK	2026-02-23	519	HKD	19 HK	7,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 OF EAST ASIA LTD	Equity	HK0023000190	2026-02-23	7,847	HKD	23 HK	498,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GALAXY ENTERTAINMENT GROUP L	Equity	HK0027032686	2026-02-23	9,055	HKD	27 HK	200,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GUANGDONG INVESTMENT LTD	Equity	HK0270001396	2026-02-23	43,824	HKD	270 HK	5,462,432.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CATHAY PACIFIC AIRWAYS	Equity	HK0293001514	2026-02-23	1,013	HKD	293 HK	69,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HONG KONG EXCHANGES & CLEAR	Equity	HK0388045442	2026-02-23	292,846	HKD	388 HK	608,068.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TECHTRONIC INDUSTRIES CO LTD	Equity	HK0669013440	2026-02-23	14,818	HKD	669 HK	139,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LINK REIT	Equity	HK0823032773	2026-02-23	17,999	HKD	823 HK	438,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CITIC TELECOM INTERNATIONAL	Equity	HK1883037637	2026-02-23	984	HKD	1883 HK	337,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BOC HONG KONG HOLDINGS LTD	Equity	HK2388011192	2026-02-23	26,782	HKD	2388 HK	575,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CRH PLC	Equity	IE0001827041	2026-02-23	580,875	GBP	CRH LN	503,943.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SMURFIT WESTROCK PLC	Equity	IE00028FXN24	2026-02-23	24,225	USD	SW US	68,132.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TE CONNECTIVITY PLC	Equity	IE000IVNQZ81	2026-02-23	104,585	USD	TEL US	49,996.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LINDE PLC	Equity	IE000S9YS762	2026-02-23	269,974	USD	LIN US	68,862.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ACCENTURE PLC-CL A	Equity	IE00B4BNMY34	2026-02-23	602,300	USD	ACN US	244,150.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JAZZ PHARMACEUTICALS PLC	Equity	IE00B4Q5ZN47	2026-02-23	67,526	USD	JAZZ US	43,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EATON CORP PLC	Equity	IE00B8KQN827	2026-02-23	1,042,118	USD	ETN US	355,843.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WILLIS TOWERS WATSON PLC	Equity	IE00BDB6Q211	2026-02-23	125,513	USD	WTW US	41,542.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NVENT ELECTRIC PLC	Equity	IE00BDVJJQ56	2026-02-23	56,255	USD	NVT US	60,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ALLEGION PLC	Equity	IE00BFRT3W74	2026-02-23	10,062	USD	ALLE US	6,873.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	STERIS PLC	Equity	IE00BFY8C754	2026-02-23	24,210	USD	STE US	10,386.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRANE TECHNOLOGIES PLC	Equity	IE00BK9ZQ967	2026-02-23	102,923	USD	TT US	28,761.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SEAGATE TECHNOLOGY HOLDINGS	Equity	IE00BKVD2N49	2026-02-23	281,923	USD	STX US	111,339.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AON PLC-CLASS A	Equity	IE00BLP1HW54	2026-02-23	25,035	USD	AON US	7,716.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PENTAIR PLC	Equity	IE00BLS09M33	2026-02-23	20,653	USD	PNR US	21,569.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MEDTRONIC PLC	Equity	IE00BTN1Y115	2026-02-23	25,878	USD	MDT US	29,299.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JOHNSON CONTROLS INTERNATION	Equity	IE00BY7QL619	2026-02-23	129,261	USD	JCI US	117,397.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RYANAIR HOLDINGS PLC	Equity	IE00BYTBXV33	2026-02-23	1,049,599	EUR	RYA ID	3,285,329.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LONGHI SPA	Equity	IT0003115950	2026-02-23	39,462	EUR	DLG IM	100,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ENI SPA	Equity	IT0003132476	2026-02-23	200,291	EUR	ENI IM	1,147,810.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PRYSMIAN SPA	Equity	IT0004176001	2026-02-23	115,351	EUR	PRY IM	123,515.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FINCANTIERI SPA	Equity	IT0005599938	2026-02-23	88,501	EUR	FCT IM	490,168.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BIRKENSTOCK HOLDING PLC	Equity	JE00BS44BN30	2026-02-23	155,840	USD	BIRK US	414,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	APTIV PLC	Equity	JE00BTDN8H13	2026-02-23	145,115	USD	APTV US	207,420.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NIPPON BUILDING FUND INC	Equity	JP3027670003	2026-02-23	59,285	JPY	8951 JP	7,054.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASAHI GROUP HOLDINGS LTD	Equity	JP3116000005ASICS	2026-02-23	8,919	JPY	2502 JP	92,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 CORP	Equity	JP3118000003	2026-02-23	10,888	JPY	7936 JP	49,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AJINOMOTO CO INC	Equity	JP3119600009	2026-02-23	24,737	JPY	2802 JP	126,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADVANTEST CORP	Equity	JP3122400009	2026-02-23	227,414	JPY	6857 JP	196,928.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AMANO CORP	Equity	JP3124400007	2026-02-23	7,407	JPY	6436 JP	29,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	IHI CORP	Equity	JP3134800006	2026-02-23	21,384	JPY	7013 JP	132,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ITOCHU CORP	Equity	JP3143600009	2026-02-23	46,283	JPY	8001 JP	398,455.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INABA DENKI SANGYO CO LTD	Equity	JP3146200005	2026-02-23	225	JPY	9934 JP	1,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GMO INTERNET GROUP INC	Equity	JP3152750000	2026-02-23	6,014	JPY	9449 JP	26,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INFRONEER HOLDINGS INC	Equity	JP3153850007	2026-02-23	377	JPY	5076 JP	3,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AIR WATER INC	Equity	JP3160670000	2026-02-23	25,646	JPY	4088 JP	193,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SMC CORP	Equity	JP3162600005	2026-02-23	12,171	JPY	6273 JP	3,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SQUARE ENIX HOLDINGS CO LTD	Equity	JP3164630000	2026-02-23	2,573	JPY	9684 JP	15,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RENESAS ELECTRONICS CORP	Equity	JP3164720009	2026-02-23	23,410	JPY	6723 JP	186,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NOK CORP	Equity	JP3164800009	2026-02-23	7,068	JPY	7240 JP	42,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SOMPO HOLDINGS INC	Equity	JP3165000005	2026-02-23	37,158	JPY	8630 JP	118,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OTSUKA CORP	Equity	JP3188200004	2026-02-23	4,828	JPY	4768 JP	25,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OTSUKA HOLDINGS CO LTD	Equity	JP3188220002	2026-02-23	18,265	JPY	4578 JP	35,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OBAYASHI CORP	Equity	JP3190000004	2026-02-23	27,109	JPY	1802 JP	141,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ONO PHARMACEUTICAL CO LTD	Equity	JP3197600004	2026-02-23	46,982	JPY	4528 JP	367,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OMRON CORP	Equity	JP3197800000	2026-02-23	12,227	JPY	6645 JP	52,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ORIENTAL LAND CO LTD	Equity	JP3198900007	2026-02-23	5,745	JPY	4661 JP	33,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ORIX CORP	Equity	JP3200450009	2026-02-23	46,657	JPY	8591 JP	174,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KAJIMA CORP	Equity	JP3210200006	2026-02-23	6,658	JPY	1812 JP	19,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KAMIGUMI CO LTD	Equity	JP3219000001	2026-02-23	18,362	JPY	9364 JP	61,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KAWASAKI KISEN KAISHA LTD	Equity	JP3223800008	2026-02-23	25,783	JPY	9107 JP	201,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KAWASAKI HEAVY INDUSTRIES	Equity	JP3224200000	2026-02-23	4,396	JPY	7012 JP	7,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KANSAI ELECTRIC POWER CO INC	Equity	JP3228600007	2026-02-23	32,906	JPY	9503 JP	227,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JAPAN POST INSURANCE CO LTD	Equity	JP3233250004	2026-02-23	127,729	JPY	7181 JP	460,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KEYENCE CORP	Equity	JP3236200006	2026-02-23	250,137	JPY	6861 JP	75,036.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KIOXIA HOLDINGS CORP	Equity	JP3236330001	2026-02-23	18,105	JPY	285A JP	29,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CANON INC	Equity	JP3242800005	2026-02-23	44,799	JPY	7751 JP	164,410.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KYOCERA CORP	Equity	JP3249600002	2026-02-23	11,317	JPY	6971 JP	87,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KIRIN HOLDINGS CO LTD	Equity	JP3258000003	2026-02-23	42,768	JPY	2503 JP	309,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KUBOTA CORP	Equity	JP3266400005	2026-02-23	32,056	JPY	6326 JP	245,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MEDIPAL HOLDINGS CORP	Equity	JP3268950007SHIP	2026-02-23	4,203	JPY	7459 JP	25,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 HEALTHCARE HOLDINGS INC	Equity	JP3274150006	2026-02-23	818	JPY	3360 JP	5,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KEISEI ELECTRIC RAILWAY CO	Equity	JP3278600006	2026-02-23	872	JPY	9009 JP	11,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KOEI TECMO HOLDINGS CO LTD	Equity	JP3283460008	2026-02-23	16,015	JPY	3635 JP	142,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KOBE STEEL LTD	Equity	JP3289800009	2026-02-23	11,754	JPY	5406 JP	96,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KOBE BUSSAN CO LTD	Equity	JP3291200008	2026-02-23	6,308	JPY	3038 JP	28,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KOMATSU LTD	Equity	JP3304200003	2026-02-23	19,556	JPY	6301 JP	66,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CYBERAGENT INC	Equity	JP3311400000	2026-02-23	26,268	JPY	4751 JP	333,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SANKYO CO LTD	Equity	JP3326410002	2026-02-23	3,542	JPY	6417 JP	23,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SANRIO CO LTD	Equity	JP3343200006	2026-02-23	11,886	JPY	8136 JP	41,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SANWA HOLDINGS CORP	Equity	JP3344400001	2026-02-23	19,144	JPY	5929 JP	79,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SHIONOGI & CO LTD	Equity	JP3347200002	2026-02-23	8,137	JPY	4507 JP	48,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SYSMEX CORP	Equity	JP3351100007	2026-02-23	18,262	JPY	6869 JP	201,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SHISEIDO CO LTD	Equity	JP3351600006	2026-02-23	9,486	JPY	4911 JP	70,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SHIMIZU CORP	Equity	JP3358800005	2026-02-23	10,013	JPY	1803 JP	63,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SHIN-ETSU CHEMICAL CO LTD	Equity	JP3371200001	2026-02-23	186,486	JPY	4063 JP	650,685.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JX ADVANCED METALS CORP	Equity	JP3379550001	2026-02-23	7,147	JPY	5016 JP	62,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NIPPON STEEL CORP	Equity	JP3381000003	2026-02-23	6,338	JPY	5401 JP	167,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ENEOS HOLDINGS INC	Equity	JP3386450005	2026-02-23	70,700	JPY	5020 JP	1,085,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AEON CO LTD	Equity	JP3388200002	2026-02-23	41,213	JPY	8267 JP	282,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FOOD & LIFE COMPANIES LTD	Equity	JP3397150008	2026-02-23	3,118	JPY	3563 JP	6,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUZUKI MOTOR CORP	Equity	JP3397200001	2026-02-23	116,088	JPY	7269 JP	845,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	STANLEY ELECTRIC CO LTD	Equity	JP3399400005	2026-02-23	8,653	JPY	6923 JP	47,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUMITOMO CHEMICAL CO LTD	Equity	JP3401400001	2026-02-23	12,829	JPY	4005 JP	489,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUMITOMO METAL MINING CO LTD	Equity	JP3402600005	2026-02-23	4,150	JPY	5713 JP	11,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUMITOMO RUBBER INDUSTRIES	Equity	JP3404200002	2026-02-23	369	JPY	5110 JP	2,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUMITOMO CORP	Equity	JP3404600003	2026-02-23	24,732	JPY	8053 JP	77,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUMITOMO ELECTRIC INDUSTRIES	Equity	JP3407400005	2026-02-23	59,073	JPY	5802 JP	158,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUMITOMO FORESTRY CO LTD	Equity	JP3409800004	2026-02-23	2,822	JPY	1911 JP	29,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SEINO HOLDINGS CO LTD	Equity	JP3415400005	2026-02-23	2,494	JPY	9076 JP	18,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SEKISUI HOUSE LTD	Equity	JP3420600003	2026-02-23	20,079	JPY	1928 JP	97,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SEVEN & I HOLDINGS CO LTD	Equity	JP3422950000	2026-02-23	14,586	JPY	3382 JP	110,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOKYO CENTURY CORP	Equity	JP3424950008	2026-02-23	11,728	JPY	8439 JP	98,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ANA HOLDINGS INC	Equity	JP3429800000	2026-02-23	105,124	JPY	9202 JP	600,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SOCIONEXT INC	Equity	JP3433500000SONY	2026-02-23	425	JPY	6526 JP	3,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 GROUP CORP	Equity	JP3435000009	2026-02-23	929,934	JPY	6758 JP	3,929,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SONY FINANCIAL GROUP INC	Equity	JP3435350008	2026-02-23	12,775	JPY	8729 JP	1,308,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SOFTBANK GROUP CORP	Equity	JP3436100006	2026-02-23	146,847	JPY	9984 JP	567,456.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TAISEI CORP	Equity	JP3443600006	2026-02-23	42,316	JPY	1801 JP	48,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TAKASAGO THERMAL ENGINEERING	Equity	JP3455200000	2026-02-23	2,269	JPY	1969 JP	8,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TAKEDA PHARMACEUTICAL CO LTD	Equity	JP3463000004	2026-02-23	33,395	JPY	4502 JP	117,439.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DAIICHI SANKYO CO LTD	Equity	JP3475350009	2026-02-23	74,195	JPY	4568 JP	376,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DAI-ICHI LIFE HOLDINGS INC	Equity	JP3476480003	2026-02-23	50,598	JPY	8750 JP	660,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DAIKIN INDUSTRIES LTD	Equity	JP3481800005	2026-02-23	138,647	JPY	6367 JP	117,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DAITO TRUST CONSTRUCT CO LTD	Equity	JP3486800000	2026-02-23	18,176	JPY	1878 JP	103,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KDDI CORP	Equity	JP3496400007	2026-02-23	193,385	JPY	9433 JP	1,213,990.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DAIFUKU CO LTD	Equity	JP3497400006	2026-02-23	21,158	JPY	6383 JP	73,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RESONA HOLDINGS INC	Equity	JP3500610005	2026-02-23	13,830	JPY	8308 JP	157,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DAIWA SECURITIES GROUP INC	Equity	JP3502200003	2026-02-23	12,381	JPY	8601 JP	153,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DAIWA HOUSE INDUSTRY CO LTD	Equity	JP3505000004	2026-02-23	93,426	JPY	1925 JP	305,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DAIWABO HOLDINGS CO LTD	Equity	JP3505400006	2026-02-23	852	JPY	3107 JP	4,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CHUGAI PHARMACEUTICAL CO LTD	Equity	JP3519400000	2026-02-23	53,328	JPY	4519 JP	110,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TDK CORP	Equity	JP3538800008	2026-02-23	44,655	JPY	6762 JP	343,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	T&D HOLDINGS INC	Equity	JP3539220008	2026-02-23	6,421	JPY	8795 JP	30,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TERUMO CORP	Equity	JP3546800008	2026-02-23	59,277	JPY	4543 JP	444,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PERSOL HOLDINGS CO LTD	Equity	JP3547670004	2026-02-23	24,970	JPY	2181 JP	1,461,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DISCO CORP	Equity	JP3548600000	2026-02-23	40,513	JPY	6146 JP	14,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DENSO CORP	Equity	JP3551500006	2026-02-23	37,505	JPY	6902 JP	295,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOKYO ELECTRON LTD	Equity	JP3571400005	2026-02-23	303,581	JPY	8035 JP	150,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOBU RAILWAY CO LTD	Equity	JP3597800006	2026-02-23	13,464	JPY	9001 JP	86,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOHO CO LTD	Equity	JP3598600009	2026-02-23	7,744	JPY	9602 JP	16,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOYOTA MOTOR CORP	Equity	JP3633400001	2026-02-23	328,227	JPY	7203 JP	1,662,930.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOYODA GOSEI CO LTD	Equity	JP3634200004	2026-02-23	9,902	JPY	7282 JP	42,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOYOTA INDUSTRIES CORP	Equity	JP3634600005	2026-02-23	22,508	JPY	6201 JP	21,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TREND MICRO INC	Equity	JP3637300009	2026-02-23	13,422	JPY	4704 JP	35,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PAN PACIFIC INTERNATIONAL HO	Equity	JP3639650005	2026-02-23	23,134	JPY	7532 JP	421,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NISHI-NIPPON FINANCIAL HOLDI	Equity	JP3658850007	2026-02-23	14,900	JPY	7189 JP	78,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WEST JAPAN RAILWAY CO	Equity	JP3659000008NISSHIN	2026-02-23	3,181	JPY	9021 JP	17,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 SEIFUN GROUP INC	Equity	JP3676800000	2026-02-23	2,555	JPY	2002 JP	22,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NITTO DENKO CORP	Equity	JP3684000007	2026-02-23	22,811	JPY	6988 JP	104,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NGK INSULATORS LTD	Equity	JP3695200000	2026-02-23	315	JPY	5333 JP	1,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NIPPON GAS CO LTD	Equity	JP3695600001	2026-02-23	15,304	JPY	8174 JP	87,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JAPAN AIRLINES CO LTD	Equity	JP3705200008	2026-02-23	38,288	JPY	9201 JP	224,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NSK LTD	Equity	JP3720800006	2026-02-23	275	JPY	6471 JP	4,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ZEON CORP	Equity	JP3725400000	2026-02-23	2,673	JPY	4205 JP	25,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SOFTBANK CORP	Equity	JP3732000009	2026-02-23	99,514	JPY	9434 JP	7,877,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NEC CORP	Equity	JP3733000008	2026-02-23	77,825	JPY	6701 JP	249,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NIDEC CORP	Equity	JP3734800000	2026-02-23	17,743	JPY	6594 JP	141,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NTT INC	Equity	JP3735400008	2026-02-23	95,082	JPY	9432 JP	10,251,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NH FOODS LTD	Equity	JP3743000006	2026-02-23	2,082	JPY	2282 JP	5,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JAPAN POST HOLDINGS CO LTD	Equity	JP3752900005	2026-02-23	53,166	JPY	6178 JP	547,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NIPPON YUSEN KK	Equity	JP3753000003	2026-02-23	12,723	JPY	9101 JP	42,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BIPROGY INC	Equity	JP3754200008	2026-02-23	8,438	JPY	8056 JP	26,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NINTENDO CO LTD	Equity	JP3756600007	2026-02-23	261,653	JPY	7974 JP	419,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NEXON CO LTD	Equity	JP3758190007	2026-02-23	7,945	JPY	3659 JP	35,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NOMURA HOLDINGS INC	Equity	JP3762600009	2026-02-23	69,470	JPY	8604 JP	907,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NOMURA RESEARCH INSTITUTE LT	Equity	JP3762800005	2026-02-23	21,282	JPY	4307 JP	60,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NOMURA REAL ESTATE HOLDINGS	Equity	JP3762900003	2026-02-23	16,192	JPY	3231 JP	284,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HARMONIC DRIVE SYSTEMS INC	Equity	JP3765150002	2026-02-23	62,160	JPY	6324 JP	279,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HAZAMA ANDO CORP	Equity	JP3767810009	2026-02-23	58,756	JPY	1719 JP	528,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BANDAI NAMCO HOLDINGS INC	Equity	JP3778630008	2026-02-23	6,748	JPY	7832 JP	27,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EAST JAPAN RAILWAY CO	Equity	JP3783600004	2026-02-23	932,024	JPY	9020 JP	3,835,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HITACHI CONSTRUCTION MACHINE	Equity	JP3787000003	2026-02-23	16,502	JPY	6305 JP	60,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HITACHI LTD	Equity	JP3788600009	2026-02-23	419,001	JPY	6501 JP	1,453,325.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HIROSE ELECTRIC CO LTD	Equity	JP3799000009	2026-02-23	15,054	JPY	6806 JP	14,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FAST RETAILING CO LTD	Equity	JP3802300008	2026-02-23	89,582	JPY	9983 JP	26,750.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FANUC CORP	Equity	JP3802400006	2026-02-23	550,657	JPY	6954 JP	1,538,909.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FUJIKURA LTD	Equity	JP3811000003	2026-02-23	45,131	JPY	5803 JP	44,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FUJITSU LIMITED	Equity	JP3818000006	2026-02-23	121,828	JPY	6702 JP	478,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FUJI ELECTRIC CO LTD	Equity	JP3820000002	2026-02-23	4,460	JPY	6504 JP	6,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FUYO GENERAL LEASE CO LTD	Equity	JP3826270005	2026-02-23	8,484	JPY	8424 JP	33,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BROTHER INDUSTRIES LTD	Equity	JP3830000000	2026-02-23	3,801	JPY	6448 JP	20,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BRIDGESTONE CORP	Equity	JP3830800003HOYA	2026-02-23	14,880	JPY	5108 JP	72,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 CORP	Equity	JP3837800006	2026-02-23	84,416	JPY	7741 JP	60,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HOKURIKU ELECTRIC POWER CO	Equity	JP3845400005	2026-02-23	413	JPY	9505 JP	7,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HONDA MOTOR CO LTD	Equity	JP3854600008	2026-02-23	62,202	JPY	7267 JP	688,543.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PANASONIC HOLDINGS CORP	Equity	JP3866800000	2026-02-23	29,061	JPY	6752 JP	244,193.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MARUI GROUP CO LTD	Equity	JP3870400003	2026-02-23	60,753	JPY	8252 JP	320,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MARUBENI CORP	Equity	JP3877600001	2026-02-23	4,685	JPY	8002 JP	18,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MIURA CO LTD	Equity	JP3880800002	2026-02-23	572	JPY	6005 JP	3,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MIZUHO FINANCIAL GROUP INC	Equity	JP3885780001	2026-02-23	384,150	JPY	8411 JP	1,145,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MS&AD INSURANCE GROUP HOLDIN	Equity	JP3890310000	2026-02-23	72,608	JPY	8725 JP	335,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUMITOMO MITSUI FINANCIAL GR	Equity	JP3890350006	2026-02-23	523,545	JPY	8316 JP	1,765,870.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUMITOMO MITSUI TRUST GROUP	Equity	JP3892100003	2026-02-23	82,769	JPY	8309 JP	294,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MITSUI FUDOSAN CO LTD	Equity	JP3893200000	2026-02-23	112,467	JPY	8801 JP	1,074,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MITSUI & CO LTD	Equity	JP3893600001	2026-02-23	176,869	JPY	8031 JP	647,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MITSUBISHI GAS CHEMICAL CO	Equity	JP3896800004	2026-02-23	6,480	JPY	4182 JP	38,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MITSUBISHI CORP	Equity	JP3898400001	2026-02-23	147,959	JPY	8058 JP	701,541.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MITSUBISHI HEAVY INDUSTRIES	Equity	JP3900000005	2026-02-23	137,607	JPY	7011 JP	609,300.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MITSUBISHI LOGISTICS CORP	Equity	JP3902000003	2026-02-23	19,347	JPY	9301 JP	274,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MITSUBISHI ELECTRIC CORP	Equity	JP3902400005	2026-02-23	64,341	JPY	6503 JP	238,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MITSUBISHI UFJ FINANCIAL GRO	Equity	JP3902900004	2026-02-23	426,106	JPY	8306 JP	2,906,142.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TOKIO MARINE HOLDINGS INC	Equity	JP3910660004	2026-02-23	126,726	JPY	8766 JP	370,415.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MURATA MANUFACTURING CO LTD	Equity	JP3914400001	2026-02-23	96,459	JPY	6981 JP	505,258.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MEITEC GROUP HOLDINGS INC	Equity	JP3919200000	2026-02-23	34,245	JPY	9744 JP	164,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DMG MORI CO LTD	Equity	JP3924800000	2026-02-23	2,248	JPY	6141 JP	14,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	YAKULT HONSHA CO LTD	Equity	JP3931600005	2026-02-23	490	JPY	2267 JP	3,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	YASKAWA ELECTRIC CORP	Equity	JP3932000007	2026-02-23	6,070	JPY	6506 JP	21,700.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LY CORP	Equity	JP3933800009	2026-02-23	8,603	JPY	4689 JP	350,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASTELLAS PHARMA INC	Equity	JP3942400007	2026-02-23	46,391	JPY	4503 JP	376,861.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JAPAN POST BANK CO LTD	Equity	JP3946750001	2026-02-23	35,455	JPY	7182 JP	272,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UNICHARM CORP	Equity	JP3951600000	2026-02-23	23,103	JPY	8113 JP	438,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROUND ONE CORP	Equity	JP3966800009	2026-02-23	5,942	JPY	4680 JP	90,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RECRUIT HOLDINGS CO LTD	Equity	JP3970300004	2026-02-23	123,265	JPY	6098 JP	236,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RYOHIN KEIKAKU CO LTD	Equity	JP3976300008	2026-02-23	14,333	JPY	7453 JP	87,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LASERTEC CORP	Equity	JP3979200007	2026-02-23	19,528	JPY	6920 JP	11,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SK HYNIX INC	Equity	KR7000660001KOREAN	2026-02-23	221,129	KRW	000660 KS	53,218.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 REINSURANCE CO	Equity	KR7003690005	2026-02-23	43,475	KRW	003690 KS	592,287.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SAMSUNG ELECTRONICS CO LTD	Equity	KR7005930003	2026-02-23	540,146	KRW	005930 KS	705,806.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SAMSUNG ELECTRONICS-PREF	Equity	KR7005931001	2026-02-23	65,663	KRW	005935 KS	115,332.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HANWHA AEROSPACE CO LTD	Equity	KR7012450003	2026-02-23	361,318	KRW	012450 KS	60,158.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COWAY CO LTD	Equity	KR7021240007	2026-02-23	68,818	KRW	021240 KS	124,073.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SANIL ELECTRIC CO LTD	Equity	KR7062040001	2026-02-23	211,750	KRW	062040 KS	255,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CK HUTCHISON HOLDINGS LTD	Equity	KYG217651051	2026-02-23	376,424	HKD	1 HK	6,016,716.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CK ASSET HOLDINGS LTD	Equity	KYG2177B1014	2026-02-23	51,290	HKD	1113 HK	1,104,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CREDO TECHNOLOGY GROUP HOLDI	Equity	KYG254571055	2026-02-23	79,381	USD	CRDO US	60,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GRAB HOLDINGS LTD - CL A	Equity	KYG4124C1096	2026-02-23	5,034	USD	GRAB US	109,709.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTER & CO INC - CL A	Equity	KYG4R20B1074	2026-02-23	104,511	USD	INTR US	1,340,387.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SANDS CHINA LTD	Equity	KYG7800X1079	2026-02-23	2,566	HKD	1928 HK	110,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SITC INTERNATIONAL HOLDINGS	Equity	KYG8187G1055	2026-02-23	6,913	HKD	1308 HK	210,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WHARF REAL ESTATE INVESTMENT	Equity	KYG9593A1040	2026-02-23	3,601	HKD	1997 HK	124,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WH GROUP LTD	Equity	KYG960071028	2026-02-23	617,926	HKD	288 HK	60,320,535.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MILLICOM INTL CELLULAR S.A.	Equity	LU0038705702	2026-02-23	555,900	USD	TIGO US	1,090,531.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SPOTIFY TECHNOLOGY SA	Equity	LU1778762911	2026-02-23	287,240	USD	SPOT US	53,796.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HEINEKEN NV	Equity	NL0000009165	2026-02-23	261,641	EUR	HEIA NA	347,006.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NXP SEMICONDUCTORS NV	Equity	NL0009538784	2026-02-23	205,566	USD	NXPI US	103,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASML HOLDING NV	Equity	NL0010273215	2026-02-23	1,072,501	EUR	ASML NA	107,662.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CNH INDUSTRIAL NV	Equity	NL0010545661	2026-02-23	15,428	USD	CNH US	181,983.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ARGENX SE	Equity	NL0010832176	2026-02-23	193,743	EUR	ARGX BB	25,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FERRARI NV	Equity	NL0011585146	2026-02-23	261,396	EUR	RACE IM	75,863.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ING GROEP NV	Equity	NL0011821202	2026-02-23	1,210,962	EUR	INGA NA	4,664,997.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADYEN NV	Equity	NL0012969182	2026-02-23	323,659	EUR	ADYEN NA	21,772.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PROSUS NV	Equity	NL0013654783	2026-02-23	1,051,645	EUR	PRX NA	1,840,506.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UNIVERSAL MUSIC GROUP NV	Equity	NL0015000IY2	2026-02-23	94,140	EUR	UMG NA	391,696.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CONTACT ENERGY LTD	Equity	NZCENE0001S6	2026-02-23	3,886	NZD	CEN NZ	78,709.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FISHER & PAYKEL HEALTHCARE C	Equity	NZFAPE0001S2	2026-02-23	14,975	NZD	FPH NZ	74,327.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FISHER & PAYKEL HEALTHCARE C	Equity	NZFAPE0001S2	2026-02-23	21,604	AUD	FPH AU	107,401.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MERIDIAN ENERGY LTD	Equity	NZMELE0002S7	2026-02-23	256	NZD	MEL NZ	8,581.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SPARK NEW ZEALAND LTD	Equity	NZTELE0001S4	2026-02-23	6,899	AUD	SPK AU	574,258.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CARNIVAL CORP	Equity	PA1436583006	2026-02-23	32,710	USD	CCL US	116,485.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VENTURE CORP LTD	Equity	SG0531000230	2026-02-23	1,582	SGD	VMS SP	14,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SINGAPORE TECH ENGINEERING	Equity	SG1F60858221DBS	2026-02-23	23,289	SGD	STE SP	386,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 GROUP HOLDINGS LTD	Equity	SG1L01001701	2026-02-23	261,793	SGD	DBS SP	649,089.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UNITED OVERSEAS BANK LTD	Equity	SG1M31001969	2026-02-23	29,129	SGD	UOB SP	116,098.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CAPITALAND INTEGRATED COMMER	Equity	SG1M51904654	2026-02-23	19,190	SGD	CICT SP	1,122,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CAPITALAND ASCENDAS REIT	Equity	SG1M77906915	2026-02-23	4,830	SGD	CLAR SP	238,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUNTEC REIT	Equity	SG1Q52922370	2026-02-23	57	SGD	SUN SP	5,500.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CITY DEVELOPMENTS LTD	Equity	SG1R89002252	2026-02-23	469	SGD	CIT SP	8,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OVERSEA-CHINESE BANKING CORP	Equity	SG1S04926220	2026-02-23	153,465	SGD	OCBC SP	1,085,276.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UOL GROUP LTD	Equity	SG1S83002349	2026-02-23	475	SGD	UOL SP	7,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SINGAPORE TELECOMMUNICATIONS	Equity	SG1T75931496	2026-02-23	32,857	SGD	ST SP	1,009,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FIRST RESOURCES LTD	Equity	SG1W35938974	2026-02-23	173	SGD	FR SP	11,600.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SHENG SIONG GROUP LTD	Equity	SG2D54973185	2026-02-23	3,595	SGD	SSG SP	191,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FLEX LTD	Equity	SG9999000020	2026-02-23	14,685	USD	FLEX US	26,434.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CAPITALAND INVESTMENT LTD/SI	Equity	SGXE62145532	2026-02-23	2,888	SGD	CLI SP	148,900.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AFLAC INC	Equity	US0010551028	2026-02-23	49,229	USD	AFL US	48,554.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AT&T INC	Equity	US00206R1023	2026-02-23	671,082	USD	T US	2,938,252.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ABBOTT LABORATORIES	Equity	US0028241000	2026-02-23	661,353	USD	ABT US	574,092.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ABBVIE INC	Equity	US00287Y1091	2026-02-23	1,674,431	USD	ABBV US	797,012.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADOBE INC	Equity	US00724F1012	2026-02-23	260,983	USD	ADBE US	81,100.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AECOM	Equity	US00766T1007	2026-02-23	19,731	USD	ACM US	22,510.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADVANCED MICRO DEVICES	Equity	US0079031078	2026-02-23	545,042	USD	AMD US	276,794.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ADVANCED DRAINAGE SYSTEMS IN	Equity	US00790R1041	2026-02-23	146,520	USD	WMS US	110,028.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AIRBNB INC-CLASS A	Equity	US0090661010	2026-02-23	16,440	USD	ABNB US	13,174.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ALEXANDRIA REAL ESTATE EQUIT	Equity	US0152711091	2026-02-23	140,853	USD	ARE US	313,017.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ALLSTATE CORP	Equity	US0200021014	2026-02-23	370,142	USD	ALL US	193,400.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ALLY FINANCIAL INC	Equity	US02005N1000	2026-02-23	30,887	USD	ALLY US	74,172.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ALNYLAM PHARMACEUTICALS INC	Equity	US02043Q1076	2026-02-23	147,884	USD	ALNY US	40,447.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ALPHABET INC-CL C	Equity	US02079K1079	2026-02-23	2,457,821	USD	GOOG US	851,848.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ALPHABET INC-CL A	Equity	US02079K3059	2026-02-23	7,130,693	USD	GOOGL US	2,477,720.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AMAZON.COM INC	Equity	US0231351067	2026-02-23	7,490,488	USD	AMZN US	3,529,405.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AMERICAN EXPRESS CO	Equity	US0258161092	2026-02-23	181,939	USD	AXP US	53,487.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 RENT- A	Equity	US02665T3068	2026-02-23	8,777	USD	AMH US	29,738.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AMERICAN WATER WORKS CO INC	Equity	US0304201033	2026-02-23	23,910	USD	AWK US	19,927.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AMERIPRISE FINANCIAL INC	Equity	US03076C1062	2026-02-23	199,276	USD	AMP US	44,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AMETEK INC	Equity	US0311001004	2026-02-23	61,760	USD	AME US	32,716.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AMGEN INC	Equity	US0311621009AMPHENOL	2026-02-23	338,138	USD	AMGN US	112,357.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 CORP-CL A	Equity	US0320951017	2026-02-23	405,191	USD	APH US	326,092.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ANALOG DEVICES INC	Equity	US0326541051	2026-02-23	722,906	USD	ADI US	289,906.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ANNALY CAPITAL MANAGEMENT IN	Equity	US0357108390	2026-02-23	15,758	USD	NLY US	76,647.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	APPLE INC	Equity	US0378331005	2026-02-23	10,719,444	USD	AAPL US	4,288,365.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	APPLIED INDUSTRIAL TECH INC	Equity	US03820C1053	2026-02-23	39,817	USD	AIT US	16,865.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	APPLIED MATERIALS INC	Equity	US0382221051	2026-02-23	103,298	USD	AMAT US	43,716.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	APPLOVIN CORP-CLASS A	Equity	US03831W1080	2026-02-23	23,853	USD	APP US	3,850.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ARES MANAGEMENT CORP - A	Equity	US03990B1017	2026-02-23	34,509	USD	ARES US	23,221.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ARISTA NETWORKS INC	Equity	US0404132054	2026-02-23	149,039	USD	ANET US	123,707.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ASTERA LABS INC	Equity	US04626A1034	2026-02-23	47,842	USD	ALAB US	31,277.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ATLASSIAN CORP-CL A	Equity	US0494681010	2026-02-23	38,964	USD	TEAM US	26,136.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ATMOS ENERGY CORP	Equity	US0495601058	2026-02-23	69,559	USD	ATO US	45,130.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AUTODESK INC	Equity	US0527691069	2026-02-23	91,711	USD	ADSK US	33,696.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AVALONBAY COMMUNITIES INC	Equity	US0534841012	2026-02-23	21,377	USD	AVB US	12,823.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	AVERY DENNISON CORP	Equity	US0536111091	2026-02-23	16,064	USD	AVY US	9,606.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BAKER HUGHES CO	Equity	US05722G1004	2026-02-23	468,321	USD	BKR US	1,118,446.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BALL CORP	Equity	US0584981064	2026-02-23	14,821	USD	BALL US	30,431.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BANCO BRADESCO-ADR	Equity	US0594603039	2026-02-23	638,977	USD	BBD US	20,869,200.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BANK OF AMERICA CORP	Equity	US0605051046	2026-02-23	1,518,140	USD	BAC US	3,002,022.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BAXTER INTERNATIONAL INC	Equity	US0718131099	2026-02-23	18,895	USD	BAX US	107,535.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BECTON DICKINSON AND CO	Equity	US0758871091	2026-02-23	520,547	USD	BDX US	291,720.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BENTLEY SYSTEMS INC-CLASS B	Equity	US08265T2087	2026-02-23	9,627	USD	BSY US	27,434.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WR BERKLEY CORP	Equity	US0844231029	2026-02-23	18,787	USD	WRB US	29,140.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BERKSHIRE HATHAWAY INC-CL B	Equity	US0846707026	2026-02-23	1,613,307	USD	BRK/B US	349,073.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BEST BUY CO INC	Equity	US0865161014	2026-02-23	16,659	USD	BBY US	27,071.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BIOMARIN PHARMACEUTICAL INC	Equity	US09061G1013	2026-02-23	148,631	USD	BMRN US	271,999.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BLACKSTONE INC	Equity	US09260D1072	2026-02-23	7,701	USD	BX US	5,434.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BLACKROCK INC	Equity	US09290D1019	2026-02-23	502,246	USD	BLK US	51,034.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BOOKING HOLDINGS INC	Equity	US09857L1089	2026-02-23	236,354	USD	BKNG US	4,800.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BOOZ ALLEN HAMILTON HOLDINGS	Equity	US0995021062	2026-02-23	8,434	USD	BAH US	10,873.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BORGWARNER INC	Equity	US0997241064	2026-02-23	137,336	USD	BWA US	331,480.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BXP INC	Equity	US1011211018	2026-02-23	17,312	USD	BXP US	27,902.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BOSTON SCIENTIFIC CORP	Equity	US1011371077	2026-02-23	1,251,768	USD	BSX US	1,427,802.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BRISTOL-MYERS SQUIBB CO	Equity	US1101221083	2026-02-23	275,354	USD	BMY US	555,195.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BROADRIDGE FINANCIAL SOLUTIO	Equity	US11133T1034BROADCOM	2026-02-23	19,223	USD	BR US	9,368.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 INC	Equity	US11135F1012	2026-02-23	4,263,415	USD	AVGO US	1,339,741.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BROWN & BROWN INC	Equity	US1152361010	2026-02-23	24,505	USD	BRO US	33,439.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BUILDERS FIRSTSOURCE INC	Equity	US12008R1077	2026-02-23	14,102	USD	BLDR US	14,906.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CBOE GLOBAL MARKETS INC	Equity	US12503M1080	2026-02-23	343,610	USD	CBOE US	148,887.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CBRE GROUP INC - A	Equity	US12504L1098	2026-02-23	40,581	USD	CBRE US	27,449.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CDW CORP/DE	Equity	US12514G1085	2026-02-23	18,940	USD	CDW US	15,124.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CF INDUSTRIES HOLDINGS INC	Equity	US1252691001	2026-02-23	19,010	USD	CF US	26,733.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	THE CIGNA GROUP	Equity	US1255231003	2026-02-23	24,603	USD	CI US	9,722.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CMS ENERGY CORP	Equity	US1258961002	2026-02-23	121,227	USD	CMS US	188,539.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CSX CORP	Equity	US1264081035	2026-02-23	6,715	USD	CSX US	20,146.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CADENCE DESIGN SYS INC	Equity	US1273871087	2026-02-23	6,038	USD	CDNS US	2,101.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CAPITAL ONE FINANCIAL CORP	Equity	US14040H1059	2026-02-23	426,820	USD	COF US	191,535.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CARDINAL HEALTH INC	Equity	US14149Y1082	2026-02-23	79,495	USD	CAH US	42,072.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CARLISLE COS INC	Equity	US1423391002	2026-02-23	15,152	USD	CSL US	5,152.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CARLYLE GROUP INC/THE	Equity	US14316J1088	2026-02-23	21,364	USD	CG US	39,308.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CARRIER GLOBAL CORP	Equity	US14448C1045	2026-02-23	264,269	USD	CARR US	543,937.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CATERPILLAR INC	Equity	US1491231015	2026-02-23	186,901	USD	CAT US	35,483.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CENTENE CORP	Equity	US15135B1017	2026-02-23	17,759	USD	CNC US	46,937.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CENTERPOINT ENERGY INC	Equity	US15189T1079	2026-02-23	435,549	USD	CNP US	1,235,521.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CHENIERE ENERGY INC	Equity	US16411R2085	2026-02-23	104,622	USD	LNG US	58,535.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CHIPOTLE MEXICAN GRILL INC	Equity	US1696561059	2026-02-23	9,457	USD	CMG US	27,798.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CHURCH & DWIGHT CO INC	Equity	US1713401024	2026-02-23	19,552	USD	CHD US	25,360.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CIENA CORP	Equity	US1717793095	2026-02-23	5,133	USD	CIEN US	2,387.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CINCINNATI FINANCIAL CORP	Equity	US1720621010	2026-02-23	25,242	USD	CINF US	16,809.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CISCO SYSTEMS INC	Equity	US17275R1023	2026-02-23	584,332	USD	CSCO US	825,020.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CINTAS CORP	Equity	US1729081059	2026-02-23	129,314	USD	CTAS US	74,781.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CITIGROUP INC	Equity	US1729674242	2026-02-23	594,563	USD	C US	554,152.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CITIZENS FINANCIAL GROUP	Equity	US1746101054	2026-02-23	25,237	USD	CFG US	46,991.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CLOROX COMPANY	Equity	US1890541097	2026-02-23	12,472	USD	CLX US	13,453.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CLOUDFLARE INC - CLASS A	Equity	US18915M1071	2026-02-23	3,151	USD	NET US	1,738.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COCA-COLA CO/THE	Equity	US1912161007	2026-02-23	1,148,999	USD	KO US	1,787,496.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COHERENT CORP	Equity	US19247G1076	2026-02-23	156,134	USD	COHR US	92,003.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COINBASE GLOBAL INC -CLASS A	Equity	US19260Q1076	2026-02-23	118,236	USD	COIN US	56,864.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COMCAST CORP-CLASS A	Equity	US20030N1019CONSOLIDATED	2026-02-23	136,982	USD	CMCSA US	498,428.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 EDISON INC	Equity	US2091151041	2026-02-23	91,403	USD	ED US	100,090.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CONSTELLATION BRANDS INC-A	Equity	US21036P1084	2026-02-23	231,778	USD	STZ US	182,719.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COOPER COS INC/THE	Equity	US2166485019	2026-02-23	25,006	USD	COO US	33,183.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COPART INC	Equity	US2172041061	2026-02-23	5,689	USD	CPRT US	15,805.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CORPAY INC	Equity	US2199481068	2026-02-23	24,562	USD	CPAY US	8,877.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CORTEVA INC	Equity	US22052L1044	2026-02-23	240,234	USD	CTVA US	389,790.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COSTCO WHOLESALE CORP	Equity	US22160K1051	2026-02-23	634,963	USD	COST US	80,082.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	COSTAR GROUP INC	Equity	US22160N1090	2026-02-23	25,152	USD	CSGP US	40,683.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CROWDSTRIKE HOLDINGS INC - A	Equity	US22788C1053	2026-02-23	19,326	USD	CRWD US	4,484.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CUBESMART	Equity	US2296631094	2026-02-23	12,224	USD	CUBE US	36,877.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	CURTISS-WRIGHT CORP	Equity	US2315611010	2026-02-23	16,955	USD	CW US	3,345.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DR HORTON INC	Equity	US23331A1097	2026-02-23	4,847	USD	DHI US	3,660.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DARDEN RESTAURANTS INC	Equity	US2371941053	2026-02-23	21,888	USD	DRI US	12,936.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DATADOG INC - CLASS A	Equity	US23804L1035	2026-02-23	75,023	USD	DDOG US	60,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DECKERS OUTDOOR CORP	Equity	US2435371073	2026-02-23	541,759	USD	DECK US	568,353.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DELL TECHNOLOGIES -C	Equity	US24703L2025	2026-02-23	78,347	USD	DELL US	67,691.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DELTA AIR LINES INC	Equity	US2473617023	2026-02-23	297,867	USD	DAL US	466,797.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	S SPORTING GOODS INC	Equity	US2533931026	2026-02-23	210,712	USD	DKS US	115,759.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DIGITAL REALTY TRUST INC	Equity	US2538681030	2026-02-23	36,533	USD	DLR US	25,682.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WALT DISNEY CO/THE	Equity	US2546871060	2026-02-23	165,768	USD	DIS US	158,467.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DOCUSIGN INC	Equity	US2561631068	2026-02-23	16,767	USD	DOCU US	26,660.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DOLLAR GENERAL CORP	Equity	US2566771059	2026-02-23	113,039	USD	DG US	92,596.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DOLLAR TREE INC	Equity	US2567461080	2026-02-23	23,028	USD	DLTR US	20,360.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	S PIZZA INC	Equity	US25754A2015	2026-02-23	11,616	USD	DPZ US	3,031.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DOVER CORP	Equity	US2600031080	2026-02-23	308,845	USD	DOV US	172,043.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DRAFTKINGS INC-CL A	Equity	US26142V1052	2026-02-23	17,518	USD	DKNG US	55,287.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DROPBOX INC-CLASS A	Equity	US26210C1045	2026-02-23	9,269	USD	DBX US	36,261.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	DYNATRACE INC	Equity	US2681501092	2026-02-23	18,237	USD	DT US	45,764.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EBAY INC	Equity	US2786421030	2026-02-23	37,127	USD	EBAY US	46,359.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EDISON INTERNATIONAL	Equity	US2810201077	2026-02-23	25,342	USD	EIX US	45,921.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EMCOR GROUP INC	Equity	US29084Q1004	2026-02-23	26,377	USD	EME US	4,689.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EMERSON ELECTRIC CO	Equity	US2910111044	2026-02-23	265,304	USD	EMR US	217,406.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ENTEGRIS INC	Equity	US29362U1043	2026-02-23	18,912	USD	ENTG US	24,413.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ENTERGY CORP	Equity	US29364G1031	2026-02-23	42,879	USD	ETR US	50,454.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EQUIFAX INC	Equity	US2944291051EQUINIX	2026-02-23	65,103	USD	EFX US	32,632.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 INC	Equity	US29444U7000	2026-02-23	179,355	USD	EQIX US	25,460.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EQUITABLE HOLDINGS INC	Equity	US29452E1010	2026-02-23	20,543	USD	EQH US	46,888.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EQUITY LIFESTYLE PROPERTIES	Equity	US29472R1086	2026-02-23	24,410	USD	ELS US	43,801.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ESSENTIAL UTILITIES INC	Equity	US29670G1022	2026-02-23	41,436	USD	WTRG US	117,480.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ESSEX PROPERTY TRUST INC	Equity	US2971781057	2026-02-23	16,388	USD	ESS US	6,811.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EXELIXIS INC	Equity	US30161Q1040	2026-02-23	16,331	USD	EXEL US	40,523.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	F&G ANNUITIES & LIFE INC	Equity	US30190A1043	2026-02-23	576	USD	FG US	2,031.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EXLSERVICE HOLDINGS INC	Equity	US3020811044	2026-02-23	239,596	USD	EXLS US	614,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EXPEDIA GROUP INC	Equity	US30212P3038	2026-02-23	31,455	USD	EXPE US	12,075.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	EXPEDITORS INTL WASH INC	Equity	US3021301094	2026-02-23	17,234	USD	EXPD US	12,579.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	META PLATFORMS INC-CLASS A	Equity	US30303M1027	2026-02-23	3,461,720	USD	META US	570,366.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FAIR ISAAC CORP	Equity	US3032501047	2026-02-23	33,095	USD	FICO US	2,129.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FASTENAL CO	Equity	US3119001044	2026-02-23	36,422	USD	FAST US	98,710.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FERGUSON ENTERPRISES INC	Equity	US31488V1070	2026-02-23	44,764	USD	FERG US	21,868.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 INC	Equity	US3156161024	2026-02-23	18,032	USD	FFIV US	7,683.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FIDELITY NATIONAL INFO SERV	Equity	US31620M1062	2026-02-23	57,546	USD	FIS US	94,171.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FIDELITY NATIONAL FINANCIAL	Equity	US31620R3030	2026-02-23	16,994	USD	FNF US	33,857.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FIFTH THIRD BANCORP	Equity	US3167731005	2026-02-23	211,849	USD	FITB US	492,213.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FIRST CITIZENS BCSHS -CL A	Equity	US31946M1036	2026-02-23	22,753	USD	FCNCA US	1,153.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FIRST SOLAR INC	Equity	US3364331070	2026-02-23	630,977	USD	FSLR US	262,697.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FISERV INC	Equity	US3377381088	2026-02-23	24,359	USD	FISV US	39,441.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FIRSTENERGY CORP	Equity	US3379321074	2026-02-23	83,216	USD	FE US	202,156.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	FUTU HOLDINGS LTD-ADR	Equity	US36118L1061	2026-02-23	814,590	USD	FUTU US	539,516.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ARTHUR J GALLAGHER & CO	Equity	US3635761097	2026-02-23	259,868	USD	AJG US	109,212.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GAMING AND LEISURE PROPERTIE	Equity	US36467J1088	2026-02-23	8,920	USD	GLPI US	21,707.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GARTNER INC	Equity	US3666511072	2026-02-23	26,344	USD	IT US	11,357.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GE VERNOVA INC	Equity	US36828A1016	2026-02-23	271,827	USD	GEV US	45,234.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GENERAC HOLDINGS INC	Equity	US3687361044	2026-02-23	112,849	USD	GNRC US	90,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GENERAL ELECTRIC	Equity	US3696043013	2026-02-23	415,448	USD	GE US	146,686.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GENERAL MOTORS CO	Equity	US37045V1008	2026-02-23	409,066	USD	GM US	547,092.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GENUINE PARTS CO	Equity	US3724601055	2026-02-23	18,529	USD	GPC US	16,389.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GILEAD SCIENCES INC	Equity	US3755581036	2026-02-23	148,470	USD	GILD US	131,558.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GODADDY INC - CLASS A	Equity	US3802371076	2026-02-23	67,492	USD	GDDY US	59,158.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GOLDMAN SACHS GROUP INC	Equity	US38141G1040	2026-02-23	261,084	USD	GS US	32,304.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GRACO INC	Equity	US3841091040WW	2026-02-23	10,984	USD	GGG US	14,574.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 GRAINGER INC	Equity	US3848021040	2026-02-23	35,915	USD	GWW US	3,871.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HCA HEALTHCARE INC	Equity	US40412C1018	2026-02-23	184,866	USD	HCA US	43,066.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HSBC HOLDINGS PLC-SPONS ADR	Equity	US4042804066	2026-02-23	62,836	USD	HSBC US	86,869.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HALLIBURTON CO	Equity	US4062161017	2026-02-23	38,212	USD	HAL US	147,058.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HALOZYME THERAPEUTICS INC	Equity	US40637H1095	2026-02-23	18,564	USD	HALO US	30,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HARTFORD INSURANCE GROUP INC	Equity	US4165151048	2026-02-23	62,125	USD	HIG US	49,032.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HEALTHPEAK PROPERTIES INC	Equity	US42250P1030	2026-02-23	16,666	USD	DOC US	112,719.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HEICO CORP-CLASS A	Equity	US4228062083	2026-02-23	134,275	USD	HEI/A US	57,852.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JACK HENRY & ASSOCIATES INC	Equity	US4262811015	2026-02-23	12,409	USD	JKHY US	7,396.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HEWLETT PACKARD ENTERPRISE	Equity	US42824C1099	2026-02-23	31,089	USD	HPE US	140,765.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HOLOGIC INC	Equity	US4364401012	2026-02-23	18,560	USD	HOLX US	27,098.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HOME DEPOT INC	Equity	US4370761029	2026-02-23	965,534	USD	HD US	305,174.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HOST HOTELS & RESORTS INC	Equity	US44107P1049	2026-02-23	6,018	USD	HST US	36,916.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HOWMET AEROSPACE INC	Equity	US4432011082	2026-02-23	32,872	USD	HWM US	17,438.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HUBBELL INC	Equity	US4435106079	2026-02-23	29,152	USD	HUBB US	7,139.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HUBSPOT INC	Equity	US4435731009	2026-02-23	56,650	USD	HUBS US	15,353.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 TRANSPRT SVCS INC	Equity	US4456581077	2026-02-23	21,159	USD	JBHT US	11,841.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HUNTINGTON BANCSHARES INC	Equity	US4461501045	2026-02-23	115,331	USD	HBAN US	722,957.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HYATT HOTELS CORP - CL A	Equity	US4485791028	2026-02-23	16,264	USD	H US	11,033.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	IDEX CORP	Equity	US45167R1041	2026-02-23	171,590	USD	IEX US	104,878.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ILLINOIS TOOL WORKS	Equity	US4523081093	2026-02-23	195,753	USD	ITW US	86,439.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ILLUMINA INC	Equity	US4523271090	2026-02-23	27,435	USD	ILMN US	22,749.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INCYTE CORP	Equity	US45337C1027	2026-02-23	47,969	USD	INCY US	52,820.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INGERSOLL-RAND INC	Equity	US45687V1061	2026-02-23	34,819	USD	IR US	47,802.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INSULET CORP	Equity	US45784P1012	2026-02-23	20,234	USD	PODD US	7,742.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTEL CORP	Equity	US4581401001	2026-02-23	83,908	USD	INTC US	247,311.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTERACTIVE BROKERS GRO-CL A	Equity	US45841N1072	2026-02-23	3,931	USD	IBKR US	6,648.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTERCONTINENTAL EXCHANGE IN	Equity	US45866F1049	2026-02-23	285,390	USD	ICE US	191,644.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTL BUSINESS MACHINES CORP	Equity	US4592001014	2026-02-23	112,935	USD	IBM US	41,466.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTL FLAVORS & FRAGRANCES	Equity	US4595061015	2026-02-23	31,379	USD	IFF US	50,642.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTUIT INC	Equity	US4612021034	2026-02-23	433,976	USD	INTU US	71,252.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INTUITIVE SURGICAL INC	Equity	US46120E6023	2026-02-23	956,542	USD	ISRG US	183,686.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	INVITATION HOMES INC	Equity	US46187W1071	2026-02-23	16,790	USD	INVH US	65,711.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	IRON MOUNTAIN INC	Equity	US46284V1017ITAU	2026-02-23	22,943	USD	IRM US	30,081.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 UNIBANCO H-SPON PRF ADR	Equity	US4655621062	2026-02-23	281,054	USD	ITUB US	4,269,151.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ITRON INC	Equity	US4657411066	2026-02-23	61,454	USD	ITRI US	71,976.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JPMORGAN CHASE & CO	Equity	US46625H1005	2026-02-23	3,555,498	USD	JPM US	1,200,087.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JABIL INC	Equity	US4663131039	2026-02-23	67,277	USD	JBL US	32,089.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JACOBS SOLUTIONS INC	Equity	US46982L1089	2026-02-23	400,666	USD	J US	328,975.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JOHNSON & JOHNSON	Equity	US4781601046	2026-02-23	393,279	USD	JNJ US	206,681.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KKR & CO INC	Equity	US48251W1045	2026-02-23	747,530	USD	KKR US	637,751.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KEYCORP	Equity	US4932671088	2026-02-23	31,226	USD	KEY US	164,542.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KIMBERLY-CLARK CORP	Equity	US4943681035	2026-02-23	15,251	USD	KMB US	16,441.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KIMCO REALTY CORP	Equity	US49446R1095	2026-02-23	124,579	USD	KIM US	668,431.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KINDER MORGAN INC	Equity	US49456B1017	2026-02-23	52,415	USD	KMI US	207,371.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KIRBY CORP	Equity	US4972661064	2026-02-23	21,180	USD	KEX US	20,907.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	KROGER CO	Equity	US5010441013	2026-02-23	547,354	USD	KR US	952,779.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LPL FINANCIAL HOLDINGS INC	Equity	US50212V1008	2026-02-23	26,972	USD	LPLA US	8,213.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	HARRIS TECHNOLOGIES INC	Equity	US5024311095	2026-02-23	88,852	USD	LHX US	32,917.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LABCORP HOLDINGS INC	Equity	US5049221055	2026-02-23	21,907	USD	LH US	9,497.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LAM RESEARCH CORP	Equity	US5128073062	2026-02-23	568,178	USD	LRCX US	360,991.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LAUREATE EDUCATION INC	Equity	US5186132032	2026-02-23	87,942	USD	LAUR US	284,066.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LENNAR CORP-A	Equity	US5260571048	2026-02-23	22,821	USD	LEN US	24,144.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LEVI STRAUSS & CO- CLASS A	Equity	US52736R1023	2026-02-23	5,279	USD	LEVI US	27,681.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LIBERTY MEDIA CORP-FORMULA-C	Equity	US5312297550	2026-02-23	23,088	USD	FWONK US	25,490.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ELI LILLY & CO	Equity	US5324571083	2026-02-23	2,737,310	USD	LLY US	277,019.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LIVE NATION ENTERTAINMENT IN	Equity	US5380341090	2026-02-23	26,455	USD	LYV US	20,191.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LOEWS CORP	Equity	US5404241086	2026-02-23	70,808	USD	L US	73,127.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	LYFT INC-A	Equity	US55087P1049	2026-02-23	35,620	USD	LYFT US	200,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	M & T BANK CORP	Equity	US55261F1049	2026-02-23	24,476	USD	MTB US	13,212.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MARKEL GROUP INC	Equity	US5705351048	2026-02-23	23,837	USD	MKL US	1,206.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MARSH & MCLENNAN COS	Equity	US5717481023	2026-02-23	99,168	USD	MRSH US	58,136.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MARTIN MARIETTA MATERIALS	Equity	US5732841060	2026-02-23	31,305	USD	MLM US	5,468.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MARVELL TECHNOLOGY INC	Equity	US5738741041	2026-02-23	448,372	USD	MRVL US	573,835.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MASCO CORP	Equity	US5745991068	2026-02-23	14,757	USD	MAS US	25,290.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MASTEC INC	Equity	US5763231090	2026-02-23	57,757	USD	MTZ US	28,898.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MASTERCARD INC - A	Equity	US57636Q1040	2026-02-23	2,242,097	USD	MA US	427,144.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	S CORP	Equity	US5801351017	2026-02-23	174,778	USD	MCD US	62,195.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MCGRATH RENTCORP	Equity	US5805891091MCKESSON	2026-02-23	112,599	USD	MGRC US	116,708.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 CORP	Equity	US58155Q1031	2026-02-23	1,089,196	USD	MCK US	144,412.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MEDPACE HOLDINGS INC	Equity	US58506Q1094	2026-02-23	51,642	USD	MEDP US	10,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MERCK & CO. INC.	Equity	US58933Y1055	2026-02-23	686,442	USD	MRK US	709,260.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	METLIFE INC	Equity	US59156R1086	2026-02-23	536,270	USD	MET US	738,842.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	METTLER-TOLEDO INTERNATIONAL	Equity	US5926881054	2026-02-23	39,931	USD	MTD US	3,115.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MICROSOFT CORP	Equity	US5949181045	2026-02-23	9,681,196	USD	MSFT US	2,177,156.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MICRON TECHNOLOGY INC	Equity	US5951121038	2026-02-23	1,484,318	USD	MU US	565,617.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MID-AMERICA APARTMENT COMM	Equity	US59522J1034	2026-02-23	12,496	USD	MAA US	9,784.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MIRION TECHNOLOGIES INC	Equity	US60471A1016	2026-02-23	60,465	USD	MIR US	280,788.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MONOLITHIC POWER SYSTEMS INC	Equity	US6098391054	2026-02-23	38,102	USD	MPWR US	4,572.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MONSTER BEVERAGE CORP	Equity	US61174X1090	2026-02-23	519,500	USD	MNST US	736,928.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	MORGAN STANLEY	Equity	US6174464486	2026-02-23	619,520	USD	MS US	379,532.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NRG ENERGY INC	Equity	US6293775085	2026-02-23	28,037	USD	NRG US	19,149.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NASDAQ INC	Equity	US6311031081	2026-02-23	40,024	USD	NDAQ US	44,816.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NATERA INC	Equity	US6323071042	2026-02-23	57,271	USD	NTRA US	27,189.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NETAPP INC	Equity	US64110D1046	2026-02-23	22,593	USD	NTAP US	22,945.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NETFLIX INC	Equity	US64110L1061	2026-02-23	519,266	USD	NFLX US	602,334.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NEUROCRINE BIOSCIENCES INC	Equity	US64125C1099	2026-02-23	110,198	USD	NBIX US	84,503.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NEWMONT CORP	Equity	US6516391066	2026-02-23	136,962	USD	NEM US	149,182.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NEWS CORP - CLASS A	Equity	US65249B1098	2026-02-23	13,549	USD	NWSA US	56,415.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NEXTERA ENERGY INC	Equity	US65339F1012	2026-02-23	365,732	USD	NEE US	495,474.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NISOURCE INC	Equity	US65473P1057	2026-02-23	131,918	USD	NI US	343,565.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NORDSON CORP	Equity	US6556631025	2026-02-23	185,610	USD	NDSN US	83,961.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NORTHERN TRUST CORP	Equity	US6658591044	2026-02-23	32,748	USD	NTRS US	26,075.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	GEN DIGITAL INC	Equity	US6687711084	2026-02-23	15,341	USD	GEN US	61,363.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	NVIDIA CORP	Equity	US67066G1040	2026-02-23	10,997,265	USD	NVDA US	6,413,139.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OKTA INC	Equity	US6792951054	2026-02-23	168,541	USD	OKTA US	211,985.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OMNICOM GROUP	Equity	US6819191064	2026-02-23	23,238	USD	OMC US	31,298.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ON SEMICONDUCTOR	Equity	US6821891057	2026-02-23	25,636	USD	ON US	51,490.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ONTO INNOVATION INC	Equity	US6833441057	2026-02-23	130,632	USD	ONTO US	90,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ORACLE CORP	Equity	US68389X1054	2026-02-23	234,735	USD	ORCL US	130,981.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OTIS WORLDWIDE CORP	Equity	US68902V1070	2026-02-23	56,654	USD	OTIS US	70,539.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	OWENS CORNING	Equity	US6907421019P	2026-02-23	13,164	USD	OC US	12,793.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 G & E CORP	Equity	US69331C1080	2026-02-23	50,214	USD	PCG US	339,841.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PTC INC	Equity	US69370C1009	2026-02-23	24,754	USD	PTC US	15,454.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PACCAR INC	Equity	US6937181088	2026-02-23	27,509	USD	PCAR US	27,320.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PACKAGING CORP OF AMERICA	Equity	US6951561090	2026-02-23	22,755	USD	PKG US	12,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PALO ALTO NETWORKS INC	Equity	US6974351057	2026-02-23	297,418	USD	PANW US	175,607.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PARKER HANNIFIN CORP	Equity	US7010941042	2026-02-23	242,743	USD	PH US	30,036.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PAYCOM SOFTWARE INC	Equity	US70432V1026	2026-02-23	11,419	USD	PAYC US	7,793.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PFIZER INC	Equity	US7170811035	2026-02-23	319,068	USD	PFE US	1,393,636.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PINTEREST INC- CLASS A	Equity	US72352L1061	2026-02-23	328,158	USD	PINS US	1,378,527.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	T ROWE PRICE GROUP INC	Equity	US74144T1088	2026-02-23	23,150	USD	TROW US	24,592.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PRINCIPAL FINANCIAL GROUP	Equity	US74251V1026	2026-02-23	25,555	USD	PFG US	31,508.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PROCTER & GAMBLE CO/THE	Equity	US7427181091	2026-02-23	1,556,840	USD	PG US	1,181,496.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PROGRESSIVE CORP	Equity	US7433151039	2026-02-23	447,610	USD	PGR US	213,778.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PROLOGIS INC	Equity	US74340W1036	2026-02-23	297,850	USD	PLD US	253,751.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PUBLIC SERVICE ENTERPRISE GP	Equity	US7445731067	2026-02-23	18,355	USD	PEG US	24,860.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PULTEGROUP INC	Equity	US7458671010	2026-02-23	21,033	USD	PHM US	19,508.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	PURE STORAGE INC - CLASS A	Equity	US74624M1027	2026-02-23	19,696	USD	PSTG US	31,967.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	QNITY ELECTRONICS INC	Equity	US74743L1008	2026-02-23	82,163	USD	Q US	109,442.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	QUALCOMM INC	Equity	US7475251036	2026-02-23	316,902	USD	QCOM US	201,496.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	QUANTA SERVICES INC	Equity	US74762E1029	2026-02-23	53,247	USD	PWR US	13,721.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	QUEST DIAGNOSTICS INC	Equity	US74834L1008	2026-02-23	62,068	USD	DGX US	38,901.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RPM INTERNATIONAL INC	Equity	US7496851038	2026-02-23	24,983	USD	RPM US	26,126.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RAYMOND JAMES FINANCIAL INC	Equity	US7547301090	2026-02-23	27,814	USD	RJF US	18,837.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REALTY INCOME CORP	Equity	US7561091049	2026-02-23	24,908	USD	O US	48,057.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REDDIT INC-CL A	Equity	US75734B1008	2026-02-23	276,024	USD	RDDT US	130,596.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REGENCY CENTERS CORP	Equity	US7588491032	2026-02-23	26,538	USD	REG US	41,811.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REGENERON PHARMACEUTICALS	Equity	US75886F1075	2026-02-23	140,160	USD	REGN US	19,749.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REGIONS FINANCIAL CORP	Equity	US7591EP1005	2026-02-23	26,244	USD	RF US	105,322.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RELIANCE INC	Equity	US7595091023	2026-02-23	43,634	USD	RS US	16,428.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	REPUBLIC SERVICES INC	Equity	US7607591002	2026-02-23	6,047	USD	RSG US	3,103.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RESMED INC	Equity	US7611521078	2026-02-23	32,559	USD	RMD US	14,701.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROBINHOOD MARKETS INC - A	Equity	US7707001027	2026-02-23	87,576	USD	HOOD US	84,215.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROBLOX CORP -CLASS A	Equity	US7710491033	2026-02-23	95,769	USD	RBLX US	128,542.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROCKWELL AUTOMATION INC	Equity	US7739031091	2026-02-23	21,722	USD	ROK US	6,072.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROKU INC	Equity	US77543R1023ROPER	2026-02-23	25,365	USD	ROKU US	25,428.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 TECHNOLOGIES INC	Equity	US7766961061	2026-02-23	357,479	USD	ROP US	87,343.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ROSS STORES INC	Equity	US7782961038	2026-02-23	277,169	USD	ROST US	167,340.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	RYDER SYSTEM INC	Equity	US7835491082	2026-02-23	37,673	USD	R US	21,408.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	S&P GLOBAL INC	Equity	US78409V1044	2026-02-23	644,739	USD	SPGI US	134,180.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SBA COMMUNICATIONS CORP	Equity	US78410G1040	2026-02-23	16,841	USD	SBAC US	9,469.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SS&C TECHNOLOGIES HOLDINGS	Equity	US78467J1007	2026-02-23	15,520	USD	SSNC US	19,308.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SALESFORCE INC	Equity	US79466L3024	2026-02-23	1,018,969	USD	CRM US	418,338.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SAMSUNG ELECTR-GDR REG S	Equity	US7960508882	2026-02-23	169,275	USD	SMSN LI	8,911.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SANDISK CORP	Equity	US80004C2008	2026-02-23	71,915	USD	SNDK US	32,949.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 CORP	Equity	US8085131055	2026-02-23	433,492	USD	SCHW US	471,886.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SEA LTD-ADR	Equity	US81141R1005	2026-02-23	185,658	USD	SE US	158,281.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SERVICENOW INC	Equity	US81762P1021	2026-02-23	948,095	USD	NOW US	673,110.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SKYWORKS SOLUTIONS INC	Equity	US83088M1027	2026-02-23	10,099	USD	SWKS US	17,321.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	JM SMUCKER CO/THE	Equity	US8326964058	2026-02-23	21,636	USD	SJM US	24,058.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SNAP-ON INC	Equity	US8330341012	2026-02-23	19,768	USD	SNA US	6,239.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SNAP INC - A	Equity	US83304A1060	2026-02-23	15,450	USD	SNAP US	208,217.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	BLOCK INC	Equity	US8522341036	2026-02-23	30,629	USD	XYZ US	51,178.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	STATE STREET CORP	Equity	US8574771031	2026-02-23	40,753	USD	STT US	34,356.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	STEEL DYNAMICS INC	Equity	US8581191009	2026-02-23	40,582	USD	STLD US	26,047.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	STRYKER CORP	Equity	US8636671013	2026-02-23	679,608	USD	SYK US	210,298.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUN COMMUNITIES INC	Equity	US8666741041	2026-02-23	15,349	USD	SUI US	13,472.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SUPER MICRO COMPUTER INC	Equity	US86800U3023	2026-02-23	12,415	USD	SMCI US	46,130.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SYNOPSYS INC	Equity	US8716071076	2026-02-23	58,914	USD	SNPS US	13,641.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	SYNCHRONY FINANCIAL	Equity	US87165B1035	2026-02-23	36,013	USD	SYF US	46,947.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TJX COMPANIES INC	Equity	US8725401090	2026-02-23	1,540,021	USD	TJX US	1,090,365.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	T-MOBILE US INC	Equity	US8725901040	2026-02-23	739,731	USD	TMUS US	396,239.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TAIWAN SEMICONDUCTOR-SP ADR	Equity	US8740391003	2026-02-23	662,700	USD	TSM US	237,173.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TAKE-TWO INTERACTIVE SOFTWRE	Equity	US8740541094	2026-02-23	466,240	USD	TTWO US	198,054.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TAPESTRY INC	Equity	US8760301072	2026-02-23	68,133	USD	TPR US	57,995.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TARGA RESOURCES CORP	Equity	US87612G1013	2026-02-23	43,035	USD	TRGP US	25,368.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TERADYNE INC	Equity	US8807701029	2026-02-23	31,588	USD	TER US	17,749.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TESLA INC	Equity	US88160R1014	2026-02-23	1,181,284	USD	TSLA US	285,678.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TEXAS INSTRUMENTS INC	Equity	US8825081040	2026-02-23	334,701	USD	TXN US	209,820.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	THERMO FISHER SCIENTIFIC INC	Equity	US8835561023	2026-02-23	823,652	USD	TMO US	154,594.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	M CO	Equity	US88579Y1010TRACTOR	2026-02-23	60,324	USD	MMM US	40,979.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 SUPPLY COMPANY	Equity	US8923561067	2026-02-23	166,896	USD	TSCO US	362,956.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRADEWEB MARKETS INC-CLASS A	Equity	US8926721064	2026-02-23	13,128	USD	TW US	13,277.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRANSUNION	Equity	US89400J1079	2026-02-23	20,678	USD	TRU US	26,226.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRAVELERS COS INC/THE	Equity	US89417E1091	2026-02-23	46,171	USD	TRV US	17,312.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRIMBLE INC	Equity	US8962391004	2026-02-23	320,936	USD	TRMB US	445,497.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TRIP.COM GROUP LTD-ADR	Equity	US89677Q1076	2026-02-23	55,552	USD	TCOM US	84,019.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TWILIO INC - A	Equity	US90138F1021	2026-02-23	24,767	USD	TWLO US	18,937.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	TYLER TECHNOLOGIES INC	Equity	US9022521051	2026-02-23	20,982	USD	TYL US	5,027.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UDR INC	Equity	US9026531049	2026-02-23	12,056	USD	UDR US	35,746.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	US BANCORP	Equity	US9029733048	2026-02-23	85,863	USD	USB US	175,006.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UBER TECHNOLOGIES INC	Equity	US90353T1007	2026-02-23	640,612	USD	UBER US	852,677.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ULTA BEAUTY INC	Equity	US90384S3031	2026-02-23	24,682	USD	ULTA US	4,437.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UNION PACIFIC CORP	Equity	US9078181081	2026-02-23	408,521	USD	UNP US	192,073.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UNITED PARCEL SERVICE-CL B	Equity	US9113121068	2026-02-23	11,944	USD	UPS US	13,096.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UNITED RENTALS INC	Equity	US9113631090	2026-02-23	526,510	USD	URI US	70,754.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UNITED THERAPEUTICS CORP	Equity	US91307C1027	2026-02-23	38,484	USD	UTHR US	8,590.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	UNITEDHEALTH GROUP INC	Equity	US91324P1021	2026-02-23	1,302,224	USD	UNH US	429,034.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VEEVA SYSTEMS INC-CLASS A	Equity	US9224751084	2026-02-23	96,179	USD	VEEV US	46,859.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VENTAS INC	Equity	US92276F1003	2026-02-23	49,394	USD	VTR US	69,424.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VERALTO CORP	Equity	US92338C1036	2026-02-23	84,615	USD	VLTO US	92,229.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VERISIGN INC	Equity	US92343E1029	2026-02-23	16,839	USD	VRSN US	7,538.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VERIZON COMMUNICATIONS INC	Equity	US92343V1044	2026-02-23	257,618	USD	VZ US	687,901.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VERISK ANALYTICS INC	Equity	US92345Y1064	2026-02-23	123,405	USD	VRSK US	60,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VERTEX PHARMACEUTICALS INC	Equity	US92532F1003	2026-02-23	555,947	USD	VRTX US	133,369.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VERTIV HOLDINGS CO-A	Equity	US92537N1081	2026-02-23	240,846	USD	VRT US	161,682.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VICI PROPERTIES INC	Equity	US9256521090	2026-02-23	29,108	USD	VICI US	112,580.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VISA INC-CLASS A SHARES	Equity	US92826C8394	2026-02-23	1,870,720	USD	V US	580,130.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	VULCAN MATERIALS CO	Equity	US9291601097	2026-02-23	30,340	USD	VMC US	11,569.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WP CAREY INC	Equity	US92936U1097	2026-02-23	13,420	USD	WPC US	22,678.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WABTEC CORP	Equity	US9297401088	2026-02-23	35,898	USD	WAB US	18,291.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WALMART INC	Equity	US9311421039	2026-02-23	1,778,318	USD	WMT US	1,736,001.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WASTE MANAGEMENT INC	Equity	US94106L1098	2026-02-23	597,219	USD	WM US	295,630.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WATERS CORP	Equity	US9418481035	2026-02-23	31,973	USD	WAT US	9,155.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WAYFAIR INC- CLASS A	Equity	US94419L1017	2026-02-23	83,091	USD	W US	90,000.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WELLS FARGO & CO	Equity	US9497461015WELLTOWER	2026-02-23	1,410,391	USD	WFC US	1,645,843.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	 INC	Equity	US95040Q1040	2026-02-23	180,209	USD	WELL US	105,594.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WEST PHARMACEUTICAL SERVICES	Equity	US9553061055	2026-02-23	25,761	USD	WST US	10,183.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WESTERN DIGITAL CORP	Equity	US9581021055	2026-02-23	384,790	USD	WDC US	242,929.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WEYERHAEUSER CO	Equity	US9621661043	2026-02-23	22,154	USD	WY US	101,708.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	WILLIAMS-SONOMA INC	Equity	US9699041011	2026-02-23	21,692	USD	WSM US	13,210.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	XYLEM INC	Equity	US98419M1009	2026-02-23	800,956	USD	XYL US	639,676.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ZEBRA TECHNOLOGIES CORP-CL A	Equity	US9892071054	2026-02-23	16,126	USD	ZBRA US	7,223.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ZILLOW GROUP INC - C	Equity	US98954M2008	2026-02-23	75,832	USD	Z US	120,895.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ZIMMER BIOMET HOLDINGS INC	Equity	US98956P1021	2026-02-23	21,173	USD	ZBH US	25,609.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ZSCALER INC	Equity	US98980G1022	2026-02-23	24,777	USD	ZS US	11,981.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper
+AP3	ZOOM COMMUNICATIONS INC	Equity	US98980L1017	2026-02-23	22,137	USD	ZM US	27,901.00	https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper

@@ -5,6 +5,9 @@ Purpose - To document the high level approach taken to each individual script. S
 ### ap2.py
 Scrapes AP2, a Swedish based company that manages pension funds in buffers. Scraper navigates to the AP2 webpage with historical documents, searches for and downloads the most recent reports for Swedish and Foreign equities. Then, for each pdf it extracts the entries in two segments, as there is no simple/consistent way to seperate the columns "Number" and "Market value" with regular expressions. It then reformats and combines these extractions, and only then regular expressions are able to be used to sort through them. Lastly, a dataframe is created and exported to TSV. No manual steps needed unless the website or format changes. Note: This scraper creates two PDFs and two TSVs.
 
+### ap3.py
+Scrapes AP3, a manager for the Swedish public's pension assets. Scraper navigates to AP3 data page, searching for the most recent pdfs in the categories: Swedish, foreign, fixed, and private, downloading them, and returning a list of directories. Then, one-by-one the pdfs are parsed through to find matching entries, the entries are formatted into dataframes, and exported to TSVs.  No manual steps needed unless the website or format changes. Note: This scraper creates four PDFs and four TSVs.
+
 ### kpa.py
 Scrapes KPA pensions, a group of companies based in Sweden that offer pension management, insurance, asset managment, and more. Scraper navigates to pdf preview and downloads, then filters for entries based on text size. Then, the data is formatted into a dictionary and exported as a TSV. No manual steps needed unless the website or format changes.
 

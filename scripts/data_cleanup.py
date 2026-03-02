@@ -6,9 +6,14 @@ import datetime
 from pathlib import Path
 
 '''Setup'''
+#Set current directory to repository
+os.chdir(Path(__file__).parent.parent)
+#Get year
 year = datetime.datetime.now().year
+#Setup variables
 data_folder = "./data/"
 list = []
+
 
 #Create list of named directories in data
 for folder in os.listdir(data_folder):
