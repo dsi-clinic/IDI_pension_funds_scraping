@@ -19,11 +19,12 @@ message = ""
 import_list = {
     "scripts.ap2":"scrape_ap2",
     "scripts.ap3":"scrape_ap3",
-    # "scripts.bpfbouw":"scrape_bpfbouw",
-    "scripts.kpa":"scrape_kpa"#,
-    # "scripts.pka":"scrape_pka",
-    # "scripts.pmt":"scrape_pmt",
-    # "scripts.vervoer":"scrape_vervoer"
+    "scripts.ap4":"scrape_ap4",
+    "scripts.bpfbouw":"scrape_bpfbouw",
+    "scripts.kpa":"scrape_kpa",
+    "scripts.pka":"scrape_pka",
+    "scripts.pmt":"scrape_pmt",
+    "scripts.vervoer":"scrape_vervoer"
     }
 
 
