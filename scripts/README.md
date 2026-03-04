@@ -17,6 +17,9 @@ Scrapes bpfBOUW, a Dutch company that manages pension funds in the construction 
 ### kpa.py
 Scrapes KPA pensions, a group of companies based in Sweden that offer pension management, insurance, asset managment, and more. Scraper navigates to pdf preview and downloads, then filters for entries based on text size. Then, the data is formatted into a dictionary and exported as a TSV. No manual steps needed unless the website or format changes.
 
+### nbim.py
+Scrapes Norges Bank Investment Managment, a Norwegian government pension fund created in 1969 after and in direct reponse to the discovery of oil in the North Sea. The data is already formatted in a csv format, so this scraper simply searches for the most recent one with requests, downloads it, and then reformats it according to IDI schema. Downloads 1 CSV and saves 1 TSV. No manual steps needed unless the format of csvs or their URLS change.
+
 ### pka.py
 Scrapes Pensionskassernes Administration a/s, a Denmark based company that claims to invest in causes that comply with the EU's green and social agenda. Scraper begins by downloading pdf with playwright, while attempting to deny cookies if prompted. Then, in a context manager extracts entries and checks for matches with pdfplumber and regular expressions, before writing to a TSV. No manual steps needed unless the website or format changes.
 

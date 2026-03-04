@@ -22,6 +22,7 @@ import_list = {
     "scripts.ap4":"scrape_ap4",
     "scripts.bpfbouw":"scrape_bpfbouw",
     "scripts.kpa":"scrape_kpa",
+    "scripts.nbim":"scrape_nbim",
     "scripts.pka":"scrape_pka",
     "scripts.pmt":"scrape_pmt",
     "scripts.vervoer":"scrape_vervoer"

@@ -27,7 +27,7 @@ def create_path(name="no_name"):
 
 
 '''
-Download pdf and path ASSUMING you have defined link_button as the link that will open google pdf preview.
+Download pdf and path ASSUMING you have defined link_button as the link that will open google pdf preview. (this is pretty situational)
 filename = org (Ex: vervoer, danica, etc)
 page = browser page (playwright)
 link_button = button to be clicked (playwright)

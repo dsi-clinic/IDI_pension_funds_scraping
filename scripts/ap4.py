@@ -1,4 +1,3 @@
-
 '''Scrapes the fourth Swedish National Pension fund, AP4. Scraper naviagtes to AP4 holdings page with playwright, grabs a list of all links on it, and searches with regex starting from the most recent link until it finds a match. The PDF downloads with requests, and then is scraped with pdfplumber and regex. While extracting the text, each line is split into to and then remerged with ! as a seperator, as the columns "No of Shares" and "Fair Value" would otherwise be difficult/unreliable to search through with regex. Matched data is added to either to a Swedish dataframe or Foreign one depending on country of origin, then 2 tsvs are created (as they were last time AP4 was scraped). No manual steps needed unless the website or format changes.'''
 #Python modules
 import re
