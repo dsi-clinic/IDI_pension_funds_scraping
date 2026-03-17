@@ -2,6 +2,9 @@
 Purpose - To document the high level approach taken to each individual script. Sections ordered in alphabetical order.
 
 # Scrapers
+### amf.py
+Scrapes AMF Pension, manager for over four million pension holders, based is Sweden. Scraper finds most recent pdf and downloads using requests. Then, it begins looping through each page of the document, using a combination of keywords, page cropping, font type, and text size to filter out desired entries. Additionally, the security type is stored using a match statement and applied to following entries until a new security type is listed, or the page ends. No manual steps needed unless the URL format or Pdf format changes. Note: This pdf has a lot of edge cases, so the likelyhood that this one needs to be tweaked or redone in the future is high.
+
 ### ap2.py
 Scrapes AP2, a Swedish based company that manages pension funds in buffers. Scraper navigates to the AP2 webpage with historical documents, searches for and downloads the most recent reports for Swedish and Foreign equities. Then, for each pdf it extracts the entries in two segments, as there is no simple/consistent way to seperate the columns "Number" and "Market value" with regular expressions. It then reformats and combines these extractions, and only then regular expressions are able to be used to sort through them. Lastly, a dataframe is created and exported to TSV. No manual steps needed unless the website or format changes. Note: This scraper creates two PDFs and two TSVs.
 

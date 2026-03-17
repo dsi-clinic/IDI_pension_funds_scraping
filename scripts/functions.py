@@ -2,9 +2,7 @@
 #python modules
 import datetime
 from pathlib import Path
-import io
 #external modules
-import pdfplumber
 import requests
 
 

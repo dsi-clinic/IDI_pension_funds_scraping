@@ -17,6 +17,7 @@ message = ""
 
 #Dictionary of module:function (Note that the scripts.___ is important for python to find directory). Alphabetical Order.
 import_list = {
+    "scripts.amf":"scrape_amf",
     "scripts.ap2":"scrape_ap2",
     "scripts.ap3":"scrape_ap3",
     "scripts.ap4":"scrape_ap4",

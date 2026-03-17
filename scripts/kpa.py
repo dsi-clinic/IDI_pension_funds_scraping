@@ -1,7 +1,4 @@
 '''Scrapes KPA pensions, a group of companies based in Sweden that offer pension management, insurance, asset managment, and more. Scraper navigates to pdf preview and downloads, then filters for entries based on text size. Then, the data is formatted into a dictionary and exported as a TSV. No manual steps needed unless the website or format changes.'''
-#Python Modules
-import re
-
 #External modules
 import pdfplumber
 import pandas as pd

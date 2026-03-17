@@ -1,4 +1,4 @@
-''''''
+'''Scrapes Norges Bank Investment Managment, a Norwegian government pension fund created in 1969 after and in direct reponse to the discovery of oil in the North Sea. The data is already formatted in a csv format, so this scraper simply searches for the most recent one with requests, downloads it, and then reformats it according to IDI schema. Downloads 1 CSV and saves 1 TSV. No manual steps needed unless the format of csvs or their URLS change.'''
 import datetime
 import requests
 import pandas as pd
