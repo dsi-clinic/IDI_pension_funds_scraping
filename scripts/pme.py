@@ -90,34 +90,37 @@ def scrape_pme():
         #Split groups into vars
         month, day, year = next_report_date.groups()
 
-        #Match statement, converts the listed month into the numeric representation of 3 months prior.
-        match month:
-            case "January":
-                month = "10"
-            case "February":
-                month = "11"
-            case "March":
-                month = "12"
-            case "April":
-                month = "01"
-            case "May":
-                month = "02"
-            case "June":
-                month = "03"
-            case "July": 
-                month = "04"
-            case "August":
-                month = "05"
-            case "September":
-                month = "06"
-            case "October":
-                month = "07"
-            case "November":
-                month = "08"
-            case "December":
-                month = "09"
-            case _: #In case of anything else, month is NA
-                month = ""
+        # #Match statement, converts the listed month into the numeric representation of 3 months prior.
+        # match month:
+        #     case "January":
+        #         month = "10"
+        #     case "February":
+        #         month = "11"
+        #     case "March":
+        #         month = "12"
+        #     case "April":
+        #         month = "01"
+        #     case "May":
+        #         month = "02"
+        #     case "June":
+        #         month = "03"
+        #     case "July": 
+        #         month = "04"
+        #     case "August":
+        #         month = "05"
+        #     case "September":
+        #         month = "06"
+        #     case "October":
+        #         month = "07"
+        #     case "November":
+        #         month = "08"
+        #     case "December":
+        #         month = "09"
+        #     case _: #In case of anything else, month is NA
+        #         month = ""
+
+        #Converted to function, but untested in this script. Delete commented code above if works.
+        month = functions.convert_month(month, -3)
 
         #Convert day to double digit if necessary
         if len(day) < 2:

@@ -22,20 +22,21 @@ message = ""
 
 #Dictionary of module:function (Note that the scripts.___ is important for python to find directory). Alphabetical Order.
 import_list = {
-    # "scripts.amf":"scrape_amf",
-    # "scripts.ap2":"scrape_ap2",
-    # "scripts.ap3":"scrape_ap3",
-    # "scripts.ap4":"scrape_ap4",
-    # "scripts.ap7":"scrape_ap7",
-    # "scripts.bpfbouw":"scrape_bpfbouw",
-    # "scripts.bpl":"scrape_bpl",
-    # "scripts.detailhandel":"scrape_detailhandel",
-    # "scripts.kpa":"scrape_kpa",
+    "scripts.amf":"scrape_amf",
+    "scripts.ap2":"scrape_ap2",
+    "scripts.ap3":"scrape_ap3",
+    "scripts.ap4":"scrape_ap4",
+    "scripts.ap7":"scrape_ap7",
+    "scripts.bpfbouw":"scrape_bpfbouw",
+    "scripts.bpl":"scrape_bpl",
+    "scripts.detailhandel":"scrape_detailhandel",
+    "scripts.kpa":"scrape_kpa",
     "scripts.nbim":"scrape_nbim",
-    # "scripts.pka":"scrape_pka",
-    "scripts.pme":"scrape_pme"
-    # "scripts.pmt":"scrape_pmt",
-    # "scripts.vervoer":"scrape_vervoer"
+    "scripts.pka":"scrape_pka",
+    "scripts.pensiondanmark":"scrape_pension_danmark",
+    "scripts.pme":"scrape_pme",
+    "scripts.pmt":"scrape_pmt",
+    "scripts.vervoer":"scrape_vervoer"
     }
 
 
