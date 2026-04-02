@@ -31,6 +31,7 @@ import_list = {
     "scripts.bpl":"scrape_bpl",
     "scripts.detailhandel":"scrape_detailhandel",
     "scripts.kpa":"scrape_kpa",
+    "scripts.lacera":"scrape_lacera",
     "scripts.nbim":"scrape_nbim",
     "scripts.pka":"scrape_pka",
     "scripts.pensiondanmark":"scrape_pension_danmark",

@@ -29,6 +29,9 @@ Scrapes Pensioen Funds Detailhandel, a company based in the Netherlands that man
 ### kpa.py
 Scrapes KPA pensions, a group of companies based in Sweden that offer pension management, insurance, asset managment, and more. Scraper navigates to pdf preview and downloads, then filters for entries based on text size. Then, the data is formatted into a dictionary and exported as a TSV. No manual steps needed unless the website or format changes.
 
+### lacera.py
+Scrapes LACERA, a pension fund for Los Angelos County's retirees. Scraper parses through html content of data source page and uses regex to find link to PDF. PDF is downloaded with requests. Searches for entries with Regex one page at a time for memory. Entries are formatted and converted to dataframe. DF saved as TSV. No manual steps needed unless the format of the website, pdf link, or format changes.
+
 ### nbim.py
 Scrapes Norges Bank Investment Managment, a Norwegian government pension fund created in 1969 after and in direct reponse to the discovery of oil in the North Sea. The data is already formatted in a csv format, so this scraper simply searches for the most recent one with requests, downloads it, and then reformats it according to IDI schema. Downloads 1 CSV and saves 1 TSV. No manual steps needed unless the format of csvs or their URLS change.
 
