@@ -92,12 +92,8 @@ def scrape_railov() -> None:
     with pdfplumber.open(pdf_path) as pdf:
         toc_entries: list[tuple[str, str, str]] = []
         for page in pdf.pages:
-            toc_entries.extend(
-                _TOC_PATTERN.findall(page.extract_text() or "")
-            )
-        toc = pd.DataFrame(
-            toc_entries, columns=["name", "category", "page"]
-        )
+            toc_entries.extend(_TOC_PATTERN.findall(page.extract_text() or ""))
+        toc = pd.DataFrame(toc_entries, columns=["name", "category", "page"])
         wanted_pages = _necessary_pages(toc)
 
         report_date = utils.get_pdf_date(pdf)

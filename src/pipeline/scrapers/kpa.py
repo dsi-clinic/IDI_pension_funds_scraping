@@ -47,9 +47,9 @@ def _find_pdf_url() -> str:
         page = browser.new_page()
         page.goto(_LANDING_URL)
         try:
-            page.get_by_role(
-                "button", name="Avvisa cookies"
-            ).click(timeout=5000)
+            page.get_by_role("button", name="Avvisa cookies").click(
+                timeout=5000
+            )
         except Exception:
             pass
         href = page.get_by_role(

@@ -189,9 +189,7 @@ def scrape_pme() -> None:
                     next_button.click()
 
         browser.close()
-        logging.info(
-            "PME - Finished cycling through %d pages.", page_count
-        )
+        logging.info("PME - Finished cycling through %d pages.", page_count)
 
     df = pd.DataFrame(
         rows,

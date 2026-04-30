@@ -40,9 +40,7 @@ _ENTRY_FONT_SUFFIX = "CenturyGothic"
 
 # One holding row. Some entries (sanctioned) have no value, hence the
 # trailing ``*``.
-_ROW_PATTERN = re.compile(
-    r"(?P<issuer>[A-Za-z\d\- '/&]+) (?P<value>[\d\.]*)"
-)
+_ROW_PATTERN = re.compile(r"(?P<issuer>[A-Za-z\d\- '/&]+) (?P<value>[\d\.]*)")
 
 
 def _find_pdf_url() -> str:
@@ -62,9 +60,9 @@ def _find_pdf_url() -> str:
         page = browser.new_page()
         page.goto(_LANDING_URL)
         try:
-            page.get_by_role(
-                "button", name="alles weigeren"
-            ).click(timeout=5000)
+            page.get_by_role("button", name="alles weigeren").click(
+                timeout=5000
+            )
         except Exception:
             pass
         href = page.get_by_role(
@@ -93,9 +91,7 @@ def scrape_detailhandel() -> None:
         report_date = utils.get_pdf_date(pdf)
         for page in pdf.pages:
             left = page.crop((0, 0, _COLUMN_SPLIT, page.height))
-            right = page.crop(
-                (_COLUMN_SPLIT, 0, page.width, page.height)
-            )
+            right = page.crop((_COLUMN_SPLIT, 0, page.width, page.height))
             for column in (left, right):
                 for line in column.extract_text_lines(return_chars=True):
                     chars = line.get("chars") or []

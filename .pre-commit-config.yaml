@@ -1,0 +1,19 @@
+# Pre-commit hooks. Install with:
+#   uv run pre-commit install
+# Run manually against every file with:
+#   uv run pre-commit run --all-files
+#
+# The ruff hooks pick up their config from pyproject.toml ([tool.ruff]).
+# `archive/` holds historical work-in-progress scrapers that are kept
+# as-is for reference; they're excluded from both hooks.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.14
+    hooks:
+      - id: ruff
+        name: ruff (lint)
+        args: [--fix]
+        exclude: ^archive/
+      - id: ruff-format
+        name: ruff (format)
+        exclude: ^archive/

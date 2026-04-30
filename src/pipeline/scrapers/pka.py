@@ -48,14 +48,10 @@ def _download_pdf(today: datetime.date) -> str:
         page = browser.new_page()
         page.goto(_LANDING_URL)
         try:
-            page.get_by_role(
-                "button", name="Afvis Alle"
-            ).click(timeout=5000)
+            page.get_by_role("button", name="Afvis Alle").click(timeout=5000)
         except Exception:
             pass
-        page.get_by_role(
-            "button", name="Beholdningslisten", exact=True
-        ).click()
+        page.get_by_role("button", name="Beholdningslisten", exact=True).click()
         link_button = page.get_by_role(
             "link", name="Se beholdningslisten", exact=True
         )

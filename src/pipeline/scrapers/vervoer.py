@@ -50,9 +50,7 @@ def scrape_vervoer() -> None:
         link_button = page.get_by_role(
             "link", name="overzicht van onze beleggingen (pdf)"
         )
-        pdf_path = utils.get_pdf(
-            "vervoer", today, page, link_button, browser
-        )
+        pdf_path = utils.get_pdf("vervoer", today, page, link_button, browser)
 
     rows: list[list[str]] = []
     with pdfplumber.open(pdf_path) as pdf:

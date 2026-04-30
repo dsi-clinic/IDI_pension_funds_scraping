@@ -33,9 +33,7 @@ _DATA_SOURCE_URL = (
     "https://www.pfzw.nl/over-pfzw/beleggen-voor-een-goed-pensioen/"
     "soorten-beleggingen.html"
 )
-_BASE_URL = (
-    "https://www.pfzw.nl/content/dam/pfzw/web/transparantielijsten/"
-)
+_BASE_URL = "https://www.pfzw.nl/content/dam/pfzw/web/transparantielijsten/"
 _CURRENCY = "EUR"
 _MULTIPLIER = "x1_000_000"
 
@@ -212,9 +210,7 @@ def _download_assets(
     return results
 
 
-def _build_dataframe(
-    raw: pd.DataFrame, report_date: str
-) -> pd.DataFrame:
+def _build_dataframe(raw: pd.DataFrame, report_date: str) -> pd.DataFrame:
     """Map a raw Z&W JSON DataFrame onto the IDI schema.
 
     Args:

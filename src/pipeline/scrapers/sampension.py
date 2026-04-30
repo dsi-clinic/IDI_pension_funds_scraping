@@ -96,9 +96,7 @@ def _download_and_get_report_date(today: datetime.date) -> tuple[str, str, str]:
         page = browser.new_page()
         page.goto(_LANDING_URL)
         try:
-            page.get_by_role(
-                "button", name="Afvis alle"
-            ).click(timeout=5000)
+            page.get_by_role("button", name="Afvis alle").click(timeout=5000)
         except Exception:
             pass
 
@@ -113,26 +111,21 @@ def _download_and_get_report_date(today: datetime.date) -> tuple[str, str, str]:
         pdf_url = _PDF_BASE_URL + href
 
         response = requests.get(pdf_url, stream=True)
-        pdf_path = utils.download_file(
-            response, "sampension", today, "pdf"
-        )
+        pdf_path = utils.download_file(response, "sampension", today, "pdf")
 
         report_date = ""
         for paragraph in page.get_by_role("paragraph").all():
             match = _REPORT_DATE_PATTERN.search(paragraph.inner_text())
             if match:
                 month = utils.convert_month(match["month"])
-                report_date = (
-                    f"{match['year']}-{month}-{int(match['day']):02d}"
-                )
+                report_date = f"{match['year']}-{month}-{int(match['day']):02d}"
                 break
 
         browser.close()
 
     if not report_date:
         raise RuntimeError(
-            "Sampension: report date paragraph not found on the "
-            "landing page."
+            "Sampension: report date paragraph not found on the landing page."
         )
     return pdf_path, report_date, pdf_url
 
@@ -190,7 +183,9 @@ def _parse_ocr_text(texts: list[str]) -> tuple[list[str], list[str], list[str]]:
         for issuer in _ISSUER_PATTERN.findall(text):
             # ISINs frequently match the issuer regex; the heuristic is
             # that real issuer names have at most a handful of digits.
-            if len(re.findall(r"\d", issuer)) <= 2 and not _NON_ISSUER_PATTERN.search(issuer):
+            if len(
+                re.findall(r"\d", issuer)
+            ) <= 2 and not _NON_ISSUER_PATTERN.search(issuer):
                 issuers.append(issuer)
         for value, isin in _VALUE_ISIN_PATTERN.findall(text):
             # Real value rows always have a thousands separator (period

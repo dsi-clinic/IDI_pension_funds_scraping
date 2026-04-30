@@ -54,9 +54,7 @@ def scrape_pension_danmark() -> None:
             "the layout may have changed."
         )
     month = utils.convert_month(date_match["month"])
-    report_date = (
-        f"{date_match['year']}-{month}-{int(date_match['day']):02d}"
-    )
+    report_date = f"{date_match['year']}-{month}-{int(date_match['day']):02d}"
 
     rows = [
         [

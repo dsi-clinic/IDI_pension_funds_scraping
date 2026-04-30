@@ -196,9 +196,9 @@ def _find_report_links() -> dict[str, str]:
         # Cookie banner doesn't always appear in headless mode; if it isn't
         # there the click times out, so swallow that case.
         try:
-            page.get_by_role(
-                "button", name="Only accept necessary"
-            ).click(timeout=5000)
+            page.get_by_role("button", name="Only accept necessary").click(
+                timeout=5000
+            )
         except Exception:
             pass
         hrefs = [
@@ -359,7 +359,14 @@ def _parse_fixed(pdf_path: Path) -> pd.DataFrame:
     """
     text, report_date = _pdf_text(pdf_path)
     rows = [
-        [_PENSION_NAME, m["issuer"], m["sectype"], report_date, m["value"], _REPORTS_URL]
+        [
+            _PENSION_NAME,
+            m["issuer"],
+            m["sectype"],
+            report_date,
+            m["value"],
+            _REPORTS_URL,
+        ]
         for m in _FIXED_PATTERN.finditer(text)
     ]
     return pd.DataFrame(

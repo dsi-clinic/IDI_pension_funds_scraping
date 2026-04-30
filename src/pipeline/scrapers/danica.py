@@ -50,9 +50,9 @@ def _find_pdf_url() -> str:
         # The cookie banner is part of the homepage flow; if it doesn't
         # appear in headless mode we can still proceed.
         try:
-            page.get_by_role(
-                "button", name="OK to Necessary"
-            ).click(timeout=5000)
+            page.get_by_role("button", name="OK to Necessary").click(
+                timeout=5000
+            )
         except Exception:
             pass
 

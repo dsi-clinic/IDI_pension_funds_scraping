@@ -72,9 +72,9 @@ def _find_pdf_url() -> str:
         page = browser.new_page()
         page.goto(_HOLDINGS_URL)
         try:
-            page.get_by_role(
-                "button", name="Only necessary"
-            ).click(timeout=5000)
+            page.get_by_role("button", name="Only necessary").click(
+                timeout=5000
+            )
         except Exception:
             pass
 
@@ -119,9 +119,7 @@ def _stitch_rows(pdf_path: Path) -> str:
                 (_COLUMN_SPLIT, 0, page.width, page.height), strict=False
             ).extract_text_lines(return_chars=False)
             for left_line, right_line in zip(left, right, strict=False):
-                chunks.append(
-                    f"{left_line['text']}!{right_line['text']}!!!"
-                )
+                chunks.append(f"{left_line['text']}!{right_line['text']}!!!")
     return "".join(chunks)
 
 

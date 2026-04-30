@@ -80,9 +80,7 @@ def _extract_report_date(pdf: pdfplumber.PDF) -> str:
             "LACERA: report date not found on page 2 — "
             "the PDF layout may have changed."
         )
-    return (
-        f"{match['year']}-{int(match['month']):02d}-{int(match['day']):02d}"
-    )
+    return f"{match['year']}-{int(match['month']):02d}-{int(match['day']):02d}"
 
 
 @register("lacera")

@@ -86,15 +86,13 @@ def scrape_bpfbouw() -> None:
         page = browser.new_page()
         page.goto(_HOLDINGS_URL)
         try:
-            page.get_by_role(
-                "button", name="Alle cookies accepteren"
-            ).click(timeout=5000)
+            page.get_by_role("button", name="Alle cookies accepteren").click(
+                timeout=5000
+            )
         except Exception:
             pass
         link_button = page.get_by_role("link", name="Aandelenportefeuille")
-        pdf_path = utils.get_pdf(
-            "bpfbouw", today, page, link_button, browser
-        )
+        pdf_path = utils.get_pdf("bpfbouw", today, page, link_button, browser)
 
     rows: list[tuple[str, str]] = []
     date_str = ""
