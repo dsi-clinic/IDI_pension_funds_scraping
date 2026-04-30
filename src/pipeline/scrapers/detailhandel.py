@@ -1,19 +1,16 @@
-"""Pensioen Funds Detailhandel Scraper.
+"""Pensioenfonds Detailhandel Scraper.
 
-Scrapes Pensioen Funds Detailhandel, a company based in the Netherlands that
-manages the investments of non-food retail employees and those retired from
-the field. This scraper navigates to the website, finds the link to the pdf,
-saves it, and uses it to download the pdf. Then, the pdf is split into two
-sections per page to account for edge cases, and desired attributes for each
-are saved into a list. Then, regex is used to filter entries, the data is
-formatted, and exported as a TSV. No manual steps needed unless the website
-or format changes.
+Scrapes Pensioenfonds Detailhandel, the Dutch pension fund for non-food
+retail employees and retirees. Navigates to the website with Playwright
+to discover the holdings PDF link (the link target is a regular URL —
+not a popup — so we can't use ``utils.get_pdf``), downloads the PDF, and
+walks each entry. Each PDF page is split at a known x-coordinate so the
+left and right columns can be processed in order.
 
-Note: ``get_pdf`` was not used here, as the window was not a popup. Memory
-became an issue on this one, so only the desired attributes are saved and all
-others are deleted.
+Note: only entry-font lines are kept while iterating, to bound memory.
 """
 
+import datetime
 import re
 
 import pandas as pd
@@ -24,129 +21,107 @@ from playwright.sync_api import sync_playwright
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "Pensioenfonds Detailhandel"
+_LANDING_URL = (
+    "https://pensioenfondsdetailhandel.nl/onze-organisatie/"
+    "pensioenzaken/de-beleggingsportefeuille"
+)
+_CURRENCY = "EUR"
+
+# Each PDF page has two columns of holdings; this is the x-coordinate
+# that splits left from right. Re-measure if Detailhandel changes the
+# template.
+_COLUMN_SPLIT = 416
+
+# Holdings rows are rendered in CenturyGothic. pdfplumber prefixes
+# subsetted fonts with a random tag (e.g. "AAAAAG+"), so match the
+# suffix.
+_ENTRY_FONT_SUFFIX = "CenturyGothic"
+
+# One holding row. Some entries (sanctioned) have no value, hence the
+# trailing ``*``.
+_ROW_PATTERN = re.compile(
+    r"(?P<issuer>[A-Za-z\d\- '/&]+) (?P<value>[\d\.]*)"
+)
+
+
+def _find_pdf_url() -> str:
+    """Discover the holdings-PDF URL with Playwright.
+
+    Returns:
+        The absolute URL of the most recent holdings PDF.
+
+    Raises:
+        RuntimeError: If the "Beleggingen per" link is missing or has
+            no ``href``.
+    """
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True, slow_mo=1, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_LANDING_URL)
+        try:
+            page.get_by_role(
+                "button", name="alles weigeren"
+            ).click(timeout=5000)
+        except Exception:
+            pass
+        href = page.get_by_role(
+            "link", name="Beleggingen per", exact=False
+        ).get_attribute("href")
+        browser.close()
+
+    if not href:
+        raise RuntimeError(
+            "Detailhandel: 'Beleggingen per' link not found — "
+            "the landing page layout may have changed."
+        )
+    return href
+
 
 @register("detailhandel")
 def scrape_detailhandel() -> None:
-    """Scrape Pensioen Funds Detailhandel (Netherlands, retail pension) and write a TSV under ``data/detailhandel/<YYYY-MM-DD>/``.
+    """Scrape Pensioenfonds Detailhandel and write a TSV under ``data/disclosures/detailhandel/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    pdf_url = _find_pdf_url()
+    response = requests.get(pdf_url, stream=True)
+    pdf_path = utils.download_file(response, "detailhandel", today, "pdf")
 
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # ----------------/Get PDF/---------------------#
-
-    url = "https://pensioenfondsdetailhandel.nl/onze-organisatie/pensioenzaken/de-beleggingsportefeuille"  # Website download page
-    path = utils.create_path("detailhandel")  # Path to file
-
-    # Start playwright
-    playwright = sync_playwright().start()
-
-    # Establish page and browser
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=1, channel="chromium"
-    )
-    page = browser.new_page()
-
-    # Go to page that leads to PDF
-    page.goto(url)
-
-    # Reject Cookies
-    page.get_by_role("button", name="alles weigeren").click()
-
-    # Get URL of pdf page (Not a popup, therefore get_pdf function doesn't work here)
-    url = page.get_by_role(
-        "link", name="Beleggingen per", exact=False
-    ).get_attribute("href")
-
-    # Close browser and stop playwright
-    browser.close()
-    playwright.stop()
-
-    # -------------/Download PDF/--------------#
-
-    # Return response object
-    r = requests.get(url)
-
-    # Path to PDF
-    pdf_path = path / "raw_detailhandel.pdf"
-
-    # Write pdf data to directory
-    with open(pdf_path, "wb") as f:
-        for chunk in r.iter_content(chunk_size=8192):
-            if chunk:
-                f.write(chunk)
-
-    # Open PDF
-    pdf = pdfplumber.open(pdf_path)
-
-    # --------------/Sort through entries/---------------#
-
-    # Both edge cases and memory are issues on this one, so this loop splits pages into 2, gets their metadata, and appends only what we need.
-    text = []
-    for p in pdf.pages:
-        # Left and right columns
-        left = p.crop((0, 0, 416, p.height))
-        right = p.crop((416, 0, p.width, p.height))
-
-        # Extract left side, then right side (order of entries is maintained)
-        temp = left.extract_text_lines(
-            return_chars=True
-        ) + right.extract_text_lines(return_chars=True)
-
-        # For each line, get only what we need (The text and the font name)
-        for line in temp:
-            text.append([line["text"], line["chars"][0]["fontname"]])
-    # Delete temp for memory
-    del temp
-
-    # Establish constants
-    shareholder = "Pensioenfonds Detailhandel"
-    currency = "EUR"
-    report_date = utils.get_pdf_date(pdf)
-    sectype = ""
-
-    # Establish Pattern. Edge cases: Some entries don't have numbers.
-    pattern = re.compile(r"(?P<issuer>[A-Za-z\d\- '/&]+) (?P<value>[\d\.]*)")
-
-    # For each line, apply regex, check for edge cases, and append entries.
-    entries = []
-    for line in text:
-        # Split list from earlier into two variables
-        info, font = line
-
-        # Check for correct entry font
-        if font == "AAAAAG+CenturyGothic":
-            # Apply pattern to one line
-            match = re.search(pattern, info)
-            # Split groups into 2 vars
-            issuer, value = match.groups()
-            # Strip excess spaces on issuer name
-            issuer = issuer.strip()
-
-            # Some entries have numbers, and some don't (hence why we split the pages earlier.) Only sanctionized entries don't have them, and vice versa.
-            if not value:
-                sectype = "Sanctionized"
-            else:
-                sectype = "Equity"
-
-            # Create 1 entry according to IDI schema
-            entries.append(
-                [
-                    shareholder,
-                    issuer,
-                    sectype,
-                    report_date,
-                    value,
-                    currency,
-                    url,
-                ]
+    rows: list[list[str]] = []
+    with pdfplumber.open(pdf_path) as pdf:
+        report_date = utils.get_pdf_date(pdf)
+        for page in pdf.pages:
+            left = page.crop((0, 0, _COLUMN_SPLIT, page.height))
+            right = page.crop(
+                (_COLUMN_SPLIT, 0, page.width, page.height)
             )
+            for column in (left, right):
+                for line in column.extract_text_lines(return_chars=True):
+                    chars = line.get("chars") or []
+                    if not chars or not chars[0]["fontname"].endswith(
+                        _ENTRY_FONT_SUFFIX
+                    ):
+                        continue
+                    match = _ROW_PATTERN.search(line["text"])
+                    if not match:
+                        continue
+                    value = match["value"]
+                    sectype = "Equity" if value else "Sanctionized"
+                    rows.append(
+                        [
+                            _PENSION_NAME,
+                            match["issuer"].strip(),
+                            sectype,
+                            report_date,
+                            value,
+                            _CURRENCY,
+                            pdf_url,
+                        ]
+                    )
 
-    # ----------/Export data/-----------#
-
-    # Create df with columns according to IDI schema
     df = pd.DataFrame(
-        entries,
+        rows,
         columns=[
             "Shareholder - Name",
             "Issuer - Name",
@@ -157,10 +132,8 @@ def scrape_detailhandel() -> None:
             "Data Source URL",
         ],
     )
-    # Export as tsv
-    utils.export_df(df, "detailhandel", path)
+    utils.export_data(df, "detailhandel", today)
 
 
-# ---------------/Scrape Locally/-----------------#
 if __name__ == "__main__":
     scrape_detailhandel()

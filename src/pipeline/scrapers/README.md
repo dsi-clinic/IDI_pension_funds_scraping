@@ -65,11 +65,11 @@ Scrapes Pensionefonds Zorg & Welzjin, a Dutch pension fund for "health, mental, 
 # Shared helpers
 Reusable helpers live in the `pipeline.utils` package (one level up, in `../utils/`):
 
-- **files.py**
-  - `create_path(name)` — create and return `data/<name>/YYYY-MM-DD/`
-  - `get_pdf(filename, page, link_button, browser, path=None)` — download a PDF opened in a Google PDF preview popup
-  - `export_df(df, filename, path=None)` — write a pandas DataFrame as a TSV
-  - `download_file(request, full_filename, path, chunk_size=8192)` — stream a request body to disk in binary chunks
+- **files.py** — every scraper passes its registry name and a `datetime.date`; the helpers own the path layout `data/disclosures/<scraper>/<YYYY-MM-DD>/{raw,clean}/`.
+  - `download_file(response, scraper, date, file_type, *, subname=None)` — stream a `requests` response into `raw/<scraper>.<file_type>` (or `<scraper>_<subname>.<file_type>` when a scraper produces several raw files per run)
+  - `export_data(df, scraper, date, *, subname=None)` — write a DataFrame to `clean/<scraper>.tsv` (or `clean/<scraper>_<subname>.tsv`)
+  - `get_pdf(scraper, date, page, link_button, browser)` — Playwright-popup variant of `download_file`; saves to `raw/<scraper>.pdf` and closes the browser
+  - `build_dir(scraper, date, kind)` — escape hatch for scrapers that need to write a raw artifact that doesn't come from a single `requests` response (e.g. a multi-page page-text snapshot); returns `raw/` or `clean/`. Most scrapers should not call this directly
 - **parsing.py**
   - `get_pdf_date(pdf)` — extract `YYYY-MM-DD` from a pdfplumber PDF's `CreationDate`
   - `convert_month(month, offset=None)` — convert a month name to its zero-padded number string

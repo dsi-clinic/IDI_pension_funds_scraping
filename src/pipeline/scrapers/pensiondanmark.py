@@ -1,11 +1,12 @@
 """PensionDanmark Scraper.
 
-Scrapes PensionDanmark, a Danish labor-market pension fund. Scrapes a static
-HTML page with BS4. Scraper downloads and formats the HTML data, then sorts
-through it using regex. Output is exported as a TSV. No manual steps needed
-unless the website or format changes.
+Scrapes PensionDanmark, a Danish labor-market pension fund. The fund
+publishes its equity list as a static HTML page; this scraper downloads
+the page, normalizes whitespace, pulls the report date out of the page
+text, and walks each holding row with a single regex.
 """
 
+import datetime
 import re
 
 import pandas as pd
@@ -15,90 +16,64 @@ from bs4 import BeautifulSoup
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "PensionDanmark"
+_HOLDINGS_URL = "https://www.pensiondanmark.com/en/investments/equity-list/"
+_CURRENCY = "EUR"
+_MULTIPLIER = "x1_000_000"
+
+_DATE_PATTERN = re.compile(
+    r"(?P<day>\d{1,2}) (?P<month>[A-Za-z]+) (?P<year>\d{4})"
+)
+
+# Each holding is rendered across four short lines (country, issuer,
+# value, sector); after collapsing runs of 3+ blank lines into one, the
+# pattern below matches one row at a time.
+_ROW_PATTERN = re.compile(
+    r"\n{2}(?P<country>[A-Za-z ]+)\n"
+    r"(?P<issuer>[A-Za-z\d\- &,]+)\n"
+    r"(?P<value>[\d\.]+)\n"
+    r"(?P<sector>[A-Za-z\- &,]+)"
+)
+
 
 @register("pensiondanmark")
 def scrape_pension_danmark() -> None:
-    """Scrape PensionDanmark (Danish labor-market pension) and write a TSV under ``data/pensiondanmark/<YYYY-MM-DD>/``.
+    """Scrape PensionDanmark and write a TSV under ``data/disclosures/pensiondanmark/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    response = requests.get(_HOLDINGS_URL, stream=True)
+    html_path = utils.download_file(response, "pensiondanmark", today, "html")
 
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # ----------------/Setup/-----------------#
+    with open(html_path, "rb") as f:
+        parsed = BeautifulSoup(f.read(), "html.parser")
+    text = re.sub(r"\n{3}", "\n", parsed.get_text())
 
-    # Create path for files
-    path = utils.create_path("pension_danmark")
-
-    # Url to static HTML
-    url = "https://www.pensiondanmark.com/en/investments/equity-list/"
-    # Request for info
-    html = requests.get(url)
-    # Download raw HTML file
-    utils.download_file(html, "raw_pension_danmark.html", path)
-
-    # Parse HTML data for content
-    parsed = BeautifulSoup(html.content, "html.parser")
-
-    # Extract text from content
-    text = parsed.get_text()
-    # Format text for regex. For every 3 new line chars in a row, replace with only one.
-    text = re.sub("\n{3}", "\n", text)
-
-    # Search for report date in format Day (digits) Month (word) Year (digits)
-    date = re.search(
-        r"(?P<day>\d{1,2}) (?P<month>[A-za-z]+) (?P<year>\d{4})", text
-    )
-
-    # Format report date
-    day, month, year = date.groups()
-    # Convert month to digit
-    month = utils.convert_month(month)
-    # Convert day to double digit (if applicable)
-    if len(day) < 2:
-        day = "0" + day
-
-    # Assemble report date
-    report_date = year + "-" + month + "-" + day
-
-    # Establish other entry constants
-    shareholder = "PensionDanmark"
-    currency = "EUR"
-    multiplier = "x1_000_000"
-
-    # ------------------/Find entries/---------------------#
-
-    # Regex pattern for entries. After substituion, all entries should be formatted by 2 double new lines. No notable edge cases.
-    pattern = re.compile(
-        "\n{2}(?P<country>[A-Za-z ]+)\n(?P<issuer>[A-Za-z\\d\\- &,]+)\n(?P<value>[\\d\\.]+)\n(?P<sector>[A-Za-z\\- &,]+)"
-    )
-    # Apply regex
-    matches = re.findall(pattern, text)
-
-    # Format matches into entries
-    entries = []
-    for m in matches:
-        # Split groups into named variables
-        country, issuer, value, sector = m
-        # Format 1 entry according to IDI schema
-        entries.append(
-            [
-                shareholder,
-                issuer,
-                country,
-                sector,
-                report_date,
-                value,
-                multiplier,
-                currency,
-                url,
-            ]
+    date_match = _DATE_PATTERN.search(text)
+    if not date_match:
+        raise RuntimeError(
+            "PensionDanmark: report date not found on the page — "
+            "the layout may have changed."
         )
+    month = utils.convert_month(date_match["month"])
+    report_date = (
+        f"{date_match['year']}-{month}-{int(date_match['day']):02d}"
+    )
 
-    # -----------------/Export data/-----------------#
-
-    # Create data frame according to IDI schema
+    rows = [
+        [
+            _PENSION_NAME,
+            m["issuer"],
+            m["country"],
+            m["sector"],
+            report_date,
+            m["value"],
+            _MULTIPLIER,
+            _CURRENCY,
+            _HOLDINGS_URL,
+        ]
+        for m in _ROW_PATTERN.finditer(text)
+    ]
     df = pd.DataFrame(
-        entries,
+        rows,
         columns=[
             "Shareholder - Name",
             "Issuer - Name",
@@ -111,10 +86,8 @@ def scrape_pension_danmark() -> None:
             "Data Source URL",
         ],
     )
-    # Export data as tsv
-    utils.export_df(df, "pension_danmark", path)
+    utils.export_data(df, "pensiondanmark", today)
 
 
-# --------/Run function locally/--------#
 if __name__ == "__main__":
     scrape_pension_danmark()

@@ -1,221 +1,200 @@
 """PME Pensioenfonds Scraper.
 
-Scrapes PME pensioenfonds, a Dutch pension fund for employees in the metal
-and tech industries. Info is stored in dynamic HTML, which takes approximately
-5-10 minutes to scrape with playwright. Scraper establishes a connection to
-the data source page with playwright, and extracts and formats needed
-information such as the next button, the equity number of pages, and the
-report date. Then, a while loop is created both to save raw data and loop
-through pages to format that data. This script sometimes fails due to a bad
-network -- if it fails, try running again once or twice before giving up. The
-script is fully automatic and won't need to be changed unless the format of
-the website does.
+Scrapes PME, the Dutch metal- and tech-industries pension fund. PME's
+holdings are rendered into a paginated dynamic widget rather than served
+as a file, so the scraper drives the page with Playwright, walks the
+"next" button N times (where N is read off the "Page 1 of N" indicator),
+and parses each page's text with a single tab-separated row regex.
 
-Note: Attempts to fetch data directly were made both synchronously and
-asynchronously. Sync was slower, and async was faster but often missed pages.
-Playwright seems to be the best approach for now.
+The script can take 5–10 minutes to complete; if it fails midway,
+re-running once or twice usually succeeds (a network-flakiness symptom).
 """
 
+import datetime
 import logging
 import re
-from pathlib import Path
 
 import pandas as pd
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import Locator, Page, sync_playwright
+from playwright.sync_api import TimeoutError as PWTimeoutError
 
 from pipeline import utils
 from pipeline.registry import register
 
-# Append to log when imported by main.py; create a fresh log when run standalone.
-log_mode = "w" if __name__ == "__main__" else "a"
+_PENSION_NAME = "PME pensioenfonds"
+_HOLDINGS_URL = "https://www.pmepensioen.nl/en/investments/we-do-invest-in"
+_CURRENCY = "EUR"
+_MULTIPLIER = "x1"
+# PME doesn't publish a current report date, but does publish the *next*
+# report date, and reports run on a quarterly cycle. Subtracting three
+# months from the next report date approximates the current one.
+_QUARTER_OFFSET_MONTHS = -3
+
+# Each holding is a tab-separated row inside one of the paginated
+# widget panels. Edge cases: issuer names contain symbols and digits;
+# country names contain multiple words and may carry a ", Republic of"
+# suffix that we deliberately drop.
+_ROW_PATTERN = re.compile(
+    r"(?P<issuer>[A-Za-z\d\. /&\-,]+)\t"
+    r"(?P<value>[\d\.]+)\t"
+    r"(?P<country>[A-Za-z]+(?: [A-Za-z ]+)?)(?:, Republic of)?\t"
+    r"(?P<sector>[A-Za-z ,\-]+)\t"
+    r"(?P<sectype>[A-Za-z ]+)"
+)
+_PAGE_COUNT_PATTERN = re.compile(r"Page 1 of (?P<max>\d+)")
+_NEXT_REPORT_DATE_PATTERN = re.compile(
+    r"(?P<month>[A-Z][a-z]+) (?P<day>\d+)[a-z]+, (?P<year>\d{4})"
+)
+# Once the rendered text reaches this label we're past equity holdings.
+_END_OF_EQUITIES_LINE = "Investments in the Netherlands"
+
+# The PME page lazy-loads the equity widget, so the "next" link can take
+# tens of seconds to appear. Use Playwright's built-in wait_for with a
+# generous timeout instead of polling.
+_NEXT_BUTTON_TIMEOUT_MS = 60_000
+
+# After clicking "next", how long to wait for the widget's inner text to
+# actually change before declaring the page stuck.
+_PAGE_ADVANCE_TIMEOUT_MS = 15_000
+_PAGE_ADVANCE_POLL_MS = 200
+
+
+def _wait_for_next_button(page: Page) -> Locator:
+    """Wait for the equity widget's "next" link and return it.
+
+    Args:
+        page: Playwright page on the holdings URL.
+
+    Returns:
+        The Locator for the equity widget's "next" link.
+
+    Raises:
+        PWTimeoutError: If the link doesn't appear within
+            ``_NEXT_BUTTON_TIMEOUT_MS`` ms.
+    """
+    locator = page.get_by_role("link", name="next", exact=False).first
+    locator.wait_for(state="attached", timeout=_NEXT_BUTTON_TIMEOUT_MS)
+    return locator
+
+
+def _wait_for_text_change(page: Page, previous: str) -> str:
+    """Poll ``page.inner_text("div")`` until it differs from ``previous``.
+
+    Args:
+        page: Playwright page hosting the widget.
+        previous: The last-seen widget text. The poll returns as soon
+            as the widget renders anything different.
+
+    Returns:
+        The new widget text.
+
+    Raises:
+        RuntimeError: If the text doesn't change within
+            ``_PAGE_ADVANCE_TIMEOUT_MS`` ms — likely means the widget
+            failed to advance.
+    """
+    elapsed = 0
+    while elapsed < _PAGE_ADVANCE_TIMEOUT_MS:
+        current = page.inner_text("div")
+        if current != previous:
+            return current
+        page.wait_for_timeout(_PAGE_ADVANCE_POLL_MS)
+        elapsed += _PAGE_ADVANCE_POLL_MS
+    raise RuntimeError(
+        "PME: page text did not change after clicking 'next' within "
+        f"{_PAGE_ADVANCE_TIMEOUT_MS}ms — the widget may be stuck."
+    )
+
+
+def _approximate_report_date(text: str) -> str:
+    """Subtract one quarter from the page's "next report" date.
+
+    Args:
+        text: Visible text of the holdings page.
+
+    Returns:
+        ``YYYY-MM-DD`` string, or ``""`` if no next-report date is
+        visible on the page.
+    """
+    match = _NEXT_REPORT_DATE_PATTERN.search(text)
+    if not match:
+        return ""
+    month = utils.convert_month(match["month"], _QUARTER_OFFSET_MONTHS)
+    return f"{match['year']}-{month}-{int(match['day']):02d}"
 
 
 @register("pme")
 def scrape_pme() -> None:
-    """Scrape PME pensioenfonds (Netherlands, metal/tech pension) and write a TSV under ``data/pme/<YYYY-MM-DD>/``.
+    """Scrape PME and write a TSV under ``data/disclosures/pme/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    raw_dir = utils.build_dir("pme", today, "raw")
 
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # -------------/Setup/------------#
-
-    # Create and save directory
-    path = utils.create_path("pme")
-    # URL to Dynamic HTML
-    url = "https://www.pmepensioen.nl/en/investments/we-do-invest-in"
-
-    # Find directory of repository
-    parent_dir = Path(__file__).parent.parent
-    # Setup logging
-    logging.basicConfig(
-        filename=parent_dir / "log.log",
-        level=logging.INFO,
-        filemode=log_mode,
-        format="%(asctime)s - %(message)s",
-    )
-
-    # ----------------/Get page text/-----------------#
-
-    # Playwright Start
-    playwright = sync_playwright().start()
-
-    # Establish page and browser
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=1, channel="chromium"
-    )
-    page = browser.new_page()
-
-    # Go to page that leads to PDF
-    page.goto(url)
-
-    # Cookies (sometimes doesn't appear in headless mode)
-    try:
-        page.get_by_role("button", name="Decline").click()
-    except Exception:
-        pass
-
-    # Sometimes playwright struggles to find the button we need. This loop ensures the script runs until it is found.
-    next_pension = ""
-    while not next_pension:
-        # Find all next buttons.
-        locator = page.get_by_role("link", name="next", exact=False).all()
+    rows: list[list[str]] = []
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(
+            headless=True, slow_mo=1, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_HOLDINGS_URL)
         try:
-            # First next button is the one that corresponds to equities.
-            next_pension = locator[0]
-        except Exception:
+            page.get_by_role("button", name="Decline").click(timeout=5000)
+        except PWTimeoutError:
             pass
 
-    # Scroll to next button to be able to click it.
-    next_pension.scroll_into_view_if_needed()
+        next_button = _wait_for_next_button(page)
+        next_button.scroll_into_view_if_needed()
 
-    # Get all text on page
-    text = page.inner_text("div")
+        text = page.inner_text("div")
+        page_count_match = _PAGE_COUNT_PATTERN.search(text)
+        if not page_count_match:
+            raise RuntimeError(
+                "PME: page count ('Page 1 of N') not found on the holdings "
+                "page — the widget layout may have changed."
+            )
+        page_count = int(page_count_match["max"])
+        report_date = _approximate_report_date(text)
 
-    # --------------/Get constants/----------------#
+        last_text = ""
+        with open(raw_dir / "pme.txt", "w") as snapshot:
+            logging.info("PME - Begin cycling through pages")
+            for page_idx in range(page_count):
+                current_text = _wait_for_text_change(page, last_text)
+                last_text = current_text
+                snapshot.write(current_text)
 
-    # Find the number of pages as an integer
-    page_numbers = re.search(r"Page 1 of (?P<max>\d+)", text)
-    page_numbers = int(page_numbers.group(1))
-
-    # Report date not listed, however the next report date is, as well as the fact that they report every 3 months. Using this, we can approximate report dates.
-    # Find date of next report using regex
-    next_report_date = re.search(
-        r"(?P<month>[A-Z][a-z]+) (?P<day>\d+)[a-z]+, (?P<year>\d{4})", text
-    )
-    if next_report_date:
-        # Split groups into vars
-        month, day, year = next_report_date.groups()
-
-        # Convert month word to date with offset
-        month = utils.convert_month(month, -3)
-
-        # Convert day to double digit if necessary
-        if len(day) < 2:
-            day = "0" + day
-
-        # Piece together report date in desired format
-        report_date = year + "-" + month + "-" + day
-    else:
-        # If not found, report date is NA
-        report_date = ""
-
-    # Establish other constants
-    shareholder = "PME pensioenfonds"
-    currency = "EUR"
-    multiplier = "x1"
-
-    # Setup variables for loop
-    count = 1  # Progress loop
-    new_text = ""  # New text to parse
-    old_text = (
-        ""  # Old text to compare new text to (ensure that page has turned)
-    )
-    entries = []  # Entries for DF
-
-    # Regular expression to match entries. Follows schema of entries on site, with each category being seperated by a tab.
-    # Edge cases: Symbols and numbers in issuer names. Some country names have multiple words. Some countries have ", Republic of" as a suffix, which the expression does not capture.
-    entry_pattern = re.compile(
-        "(?P<issuer>[A-Za-z\\d\\. /&\\-,]+)\t(?P<value>[\\d\\.]+)\t(?P<country>[A-Za-z]+(?: [A-Za-z ]+)?)(?:, Republic of)?\t(?P<sector>[A-Za-z ,\\-]+)\t(?P<type>[A-Za-z ]+)"
-    )
-
-    # -------------/Loop through pages, Scrape data/------------#
-
-    # Open context manager to a text file. Essentially saves a snapshot of every page, just to have some documentation of raw data.
-    with open(path / "raw_data_pme.txt", "w") as file:
-        logging.info("PME - Begin cycling through pages")
-
-        # Loop through each page
-        while count <= page_numbers:
-            # Collect text on a page
-            new_text = page.inner_text("div")
-
-            # If new text is not the same as old text, proceed with regex
-            if new_text != old_text:
-                # New text (unformatted) is now the old text
-                old_text = new_text
-                # Write unformatted new text to text file
-                file.write(new_text)
-
-                # Split text by lines
-                new_text = new_text.splitlines()
-
-                # For every line
-                for line in new_text:
-                    # Equity entries don't continue past this text. When reached, break loop.
-                    if line == "Investments in the Netherlands":
+                for line in current_text.splitlines():
+                    if line == _END_OF_EQUITIES_LINE:
                         break
-                    # If it is a potential equity entry,
-                    else:
-                        # Apply pattern to 1 line
-                        match = re.search(entry_pattern, line)
+                    match = _ROW_PATTERN.search(line)
+                    if not match:
+                        continue
+                    rows.append(
+                        [
+                            _PENSION_NAME,
+                            match["issuer"].strip(),
+                            match["country"].strip(),
+                            match["sector"].strip(),
+                            match["sectype"].strip(),
+                            report_date,
+                            match["value"].strip(),
+                            _MULTIPLIER,
+                            _CURRENCY,
+                            _HOLDINGS_URL,
+                        ]
+                    )
 
-                        # If match is found,
-                        if match:
-                            # Split into variables
-                            issuer, value, country, sector, sectype = (
-                                match.groups()
-                            )
-                            # Append an entry according to IDI schema
-                            entries.append(
-                                [
-                                    shareholder,
-                                    issuer.strip(),
-                                    country.strip(),
-                                    sector.strip(),
-                                    sectype.strip(),
-                                    report_date,
-                                    value.strip(),
-                                    multiplier,
-                                    currency,
-                                    url,
-                                ]
-                            )
+                # Click for the next iteration unless we've just
+                # processed the last page.
+                if page_idx < page_count - 1:
+                    next_button.click()
 
-                # After all lines are looped through, tick counter
-                count += 1
-
-                # Ideally, a modulo operator could've been used to log every dozen pages, but due to playwright lag that doesn't work.
-                # Uncomment this for debug purposes
-                # logging.info(f"PME - Found page {count}")
-
-            # If new text and old text are the same, try to click again
-            else:
-                try:
-                    next_pension.click()
-                except Exception:
-                    pass
-
-        # At end of pages, close browser, stop playwright, and log success
         browser.close()
-        playwright.stop()
-        logging.info("PME - Finished cycling through pages.")
+        logging.info(
+            "PME - Finished cycling through %d pages.", page_count
+        )
 
-    # -----------/Create and export DF/--------------#
-
-    # Create DF according to IDI schema
     df = pd.DataFrame(
-        entries,
+        rows,
         columns=[
             "Shareholder - Name",
             "Issuer - Name",
@@ -229,10 +208,8 @@ def scrape_pme() -> None:
             "Data Source URL",
         ],
     )
-    # Export as tsv
-    utils.export_df(df, "pme", path)
+    utils.export_data(df, "pme", today)
 
 
-# --------/Run function locally/--------#
 if __name__ == "__main__":
     scrape_pme()

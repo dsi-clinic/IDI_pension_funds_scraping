@@ -1,100 +1,83 @@
 """AP7 Scraper.
 
 Scrapes AP7, a "building block in the national pension system's premium
-pension component" in Sweden. Downloads static HTML file with requests,
-reformats and matches using regular expressions, and saves as TSV. No manual
-steps needed unless the website or format changes.
+pension component" in Sweden. AP7 publishes a static HTML page with the
+fund's holdings; this scraper downloads it, normalizes whitespace, slices
+off the page preamble, and runs a single row regex over the rest.
 """
 
+import datetime
 import re
 
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup
 
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "AP7"
+_HOLDINGS_URL = "https://www.ap7.se/english/ap7-equity-fund/"
+
+# The holdings table on the page is preceded by an unrelated narrative;
+# this marker is the last non-data text before the rows begin. If AP7
+# rewords the page header this string is the first thing to update.
+_PREAMBLE_MARKER = "Securities Share Market value Position"
+
+# One row of the holdings table, captured as named groups.
+# Notes on the character classes:
+#   - issuer: first char is a capital letter or a digit followed by a
+#     capital letter (the latter accounts for tickers like "3M");
+#   - P_I (price/interest): can carry a scientific-notation exponent;
+#   - report_date: day and month allowed as 1 or 2 digits.
+_ROW_PATTERN = re.compile(
+    r"(?P<issuer>(?:[A-Za-z]|\d[A-Z])[A-Za-z\d /&\-\.)(]+) "
+    r"(?P<ownership>[\d,]+\%)[\d ]+"
+    r"Market value (?P<value>\d+) "
+    r"Position (?P<shares>\d+) "
+    r"Currency (?P<currency>[A-Z]{3}) "
+    r"Exchange rate (?P<ex_rate>[\d\.]+) "
+    r"Price/interest (?P<p_i>[\d\.]+(?:E-\d)?) "
+    r"Securities F_Market Value - (?P<sectype>[A-Za-z ]+) "
+    r"Datum: (?P<report_date>\d{4}-\d{1,2}-\d{1,2})"
+)
+
 
 @register("ap7")
 def scrape_ap7() -> None:
-    """Scrape AP7 (Sweden) static holdings HTML and write a TSV under ``data/ap7/<YYYY-MM-DD>/``.
+    """Scrape AP7 (Sweden) static holdings HTML and write a TSV under ``data/disclosures/ap7/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    response = requests.get(_HOLDINGS_URL, stream=True)
+    html_path = utils.download_file(response, "ap7", today, "html")
 
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # ------------/Download raw HTML/-----------#
-
-    # Get content from URL with requests
-    url = "https://www.ap7.se/english/ap7-equity-fund/"
-    req = requests.get(url)
-    content = bs(req.content, "html.parser")
-
-    # Create folder and html path
-    path = utils.create_path("ap7")
-    html_path = path / "ap7.html"
-
-    # Copy html info onto new file at specified path with binary
-    with open(html_path, "wb") as f:
-        for chunk in req.iter_content(chunk_size=8192):
-            if chunk:
-                f.write(chunk)
-
-    # -------------/Format and parse text/---------#
-
-    # Extract text from html
-    text = content.get_text()
-    # Remove excess spaces and newlines (format into 1 line)
+    with open(html_path, "rb") as f:
+        text = BeautifulSoup(f.read(), "html.parser").get_text()
     text = re.sub(r"\s+", " ", text)
-    # Remove preface (index at the end is to access the (.+) group)
-    text = re.findall(
-        re.compile("Securities Share Market value Position(.+)"), text
-    )[0]
 
-    # Regex pattern. Follows site schema very closely, with information we are actually interested in capturing in named groups.
-    # Edge cases: In issuer group, first character is either a capital letter or occasionally a digit, but this group is always preceeded with digits, hence the or statement; In P_I group, some numbers have exponents; In report date group, I don't have access to a report in a single digit day or month, so the {1,2} is there to account for whichever way they format.
-    pattern = re.compile(
-        r"(?P<issuer>(?:[A-Za-z]|\d[A-Z])[A-Za-z\d /&\-\.)(]+) (?P<ownership>[\d,]+\%)[\d ]+Market value (?P<value>\d+) Position (?P<shares>\d+) Currency (?P<currency>[A-Z]{3}) Exchange rate (?P<ex_rate>[\d\.]+) Price/interest (?P<P_I>[\d\.]+(?:E-\d)?) Securities F_Market Value - (?P<sectype>[A-Za-z ]+) Datum: (?P<report_date>\d{4}-\d{1,2}-\d{1,2})"
-    )
-    matches = re.findall(pattern, text)  # Find all matches
+    _, _, body = text.partition(_PREAMBLE_MARKER)
+    if not body:
+        raise RuntimeError(
+            f"AP7: preamble marker {_PREAMBLE_MARKER!r} not found — "
+            "the holdings page layout may have changed."
+        )
 
-    # If match, append to entries list in accordance to IDI schema
-    entries = []
-    for match in matches:
-        # Get groups into variables
-        (
-            issuer,
-            ownership,
-            value,
-            shares,
-            currency,
-            P_I,
-            ex_rate,
-            sectype,
-            report_date,
-        ) = match
-        # Order according to schema
-        entry = [
-            "AP7",
-            issuer,
-            sectype,
-            report_date,
-            value,
-            currency,
-            ex_rate,
-            shares,
-            ownership,
-            url,
+    rows = [
+        [
+            _PENSION_NAME,
+            m["issuer"],
+            m["sectype"],
+            m["report_date"],
+            m["value"],
+            m["currency"],
+            m["ex_rate"],
+            m["shares"],
+            m["ownership"],
+            _HOLDINGS_URL,
         ]
-        # Append
-        entries.append(entry)
-
-    # -------------/Export/---------#
-
-    # Format column names according to IDI schema
+        for m in _ROW_PATTERN.finditer(body)
+    ]
     df = pd.DataFrame(
-        entries,
+        rows,
         columns=[
             "Shareholder - Name",
             "Issuer - Name",
@@ -108,10 +91,8 @@ def scrape_ap7() -> None:
             "Data Source URL",
         ],
     )
-    # Export as TSV at path
-    utils.export_df(df, "ap7", path)
+    utils.export_data(df, "ap7", today)
 
 
-# ---------/Scrape Locally/---------#
 if __name__ == "__main__":
     scrape_ap7()

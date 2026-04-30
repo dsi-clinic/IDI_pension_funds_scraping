@@ -1,19 +1,24 @@
 """AP2 Scraper.
 
-Scrapes AP2, a Swedish based company that manages pension funds in buffers.
-Scraper navigates to the AP2 webpage with historical documents, searches for
-and downloads the most recent reports for Swedish and Foreign equities.
-Then, for each pdf it extracts the entries in two segments, as there is no
-simple/consistent way to seperate the columns "Number" and "Market value"
-with regular expressions. It then reformats and combines these extractions,
-and only then regular expressions are able to be used to sort through them.
-Lastly, a dataframe is created and exported to TSV. No manual steps needed
-unless the website or format changes. Note: This scraper creates two PDFs
-and two TSVs.
+Scrapes AP2 (Sweden), which manages buffer-fund pension assets. The reports
+page lists per-year PDFs tagged with date and language; this scraper picks
+the most recent Swedish and Foreign equity reports, downloads them, and
+emits one TSV per language.
+
+Both PDFs lay rows out so that the "Number of Shares" and "Market Value"
+columns can't be reliably split with a single regex. The workaround is to
+crop each page into two columns at a known x-coordinate, extract lines from
+each, and stitch the two halves with ``-`` so the row regex has an explicit
+boundary token to anchor on.
+
+Note: re-measure ``_SWEDISH_COLUMN_SPLIT`` / ``_FOREIGN_COLUMN_SPLIT`` and
+the page-1 Y offsets if AP2 changes either report's layout.
 """
 
 import datetime
 import re
+from collections.abc import Iterator
+from pathlib import Path
 
 import pandas as pd
 import pdfplumber
@@ -23,181 +28,169 @@ from playwright.sync_api import sync_playwright
 from pipeline import utils
 from pipeline.registry import register
 
+# The name of the pension fund.
+_PENSION_NAME = "AP2"
 
-@register("ap2")
-def scrape_ap2() -> None:
-    """Scrape AP2 (Sweden) Swedish and Foreign equity reports into two TSVs under ``data/ap2/<YYYY-MM-DD>/``.
+# AP2 publishes one report per year at a predictable URL.
+_REPORTS_URL = "https://ap2.se/en/asset-management/holdings/"
+
+# AP2 publishes new holdings each year. If the current upload year has no
+# matching pair, walk backwards a few years; bounded so a permanent URL
+# change can't loop forever.
+_MAX_YEARS_BACK = 5
+
+# Per-template page geometry. The Swedish and Foreign reports have different
+# column widths and different first-page header heights.
+_SWEDISH_COLUMN_SPLIT = 373
+_FOREIGN_COLUMN_SPLIT = 456
+_SWEDISH_FIRST_PAGE_Y = 114
+_FOREIGN_FIRST_PAGE_Y = 132
+
+# Uploads are organized as /uploads/{upload_year}/<...>YYYY_MM_DD_<lang>_<...>.pdf
+# where <lang> is "Svenska" or "Utlandska" (with optional first-letter casing).
+_LINK_PATTERN = re.compile(
+    r".+/uploads/(?P<upload_year>\d{4})/.+"
+    r"(?P<date>\d{4}_\d{2}_\d{2})_"
+    r"(?P<language>[Ss]venska|[Uu]tlandska)_.+\.pdf"
+)
+
+# Row regexes for each report. The "-" between shares and value is the
+# stitch token added by ``_stitched_lines``.
+# TODO(student): the Swedish output sets a "Security - Market Value - Multiplier"
+# of "x1_000" but the Foreign output has no multiplier column at all. Confirm
+# against the IDI schema whether this asymmetry is intentional, or whether
+# Foreign should also report a multiplier.
+_SWEDISH_PATTERN = re.compile(
+    r"^(?P<issuer>.+?)\s+"
+    r"(?P<isin>SE\d{10})\s+"
+    r"(?P<country>[A-Z]{2})\s+"
+    r"(?P<shares>[\d\s]+)-"
+    r"(?P<value>[\d\s]+)\s+"
+    r"(?P<share_capital>[\d,.]+%)\s+"
+    r"(?P<voting_capital>[\d,.]+%)$"
+)
+_FOREIGN_PATTERN = re.compile(
+    r"^(?P<issuer>.+?)\s+"
+    r"(?P<isin>[A-Z]{2}[A-Z0-9]{9,})\s+"
+    r"(?P<country>[A-Z]{2})\s+"
+    r"(?P<shares>[\d\s]+)-"
+    r"(?P<value>[\d\s]+)$"
+)
+
+
+def _find_report_links() -> tuple[tuple[str, str], tuple[str, str]]:
+    """Return ``((swedish_url, swedish_date), (foreign_url, foreign_date))``.
+
+    Dates are normalized to ``YYYY-MM-DD``.
 
     Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
+        RuntimeError: If a matching pair isn't found within ``_MAX_YEARS_BACK``.
     """
-    # Setup
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True, slow_mo=1, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_REPORTS_URL)
+        page.get_by_role("button", name="Deny").click()
+        hrefs = [
+            link.get_attribute("href")
+            for link in page.get_by_role("link").all()
+        ]
+        browser.close()
 
-    # Set constants
-    shareholder = "ap2"
-    url = "https://ap2.se/en/asset-management/holdings/"
-    path = utils.create_path(shareholder)
-    year = int(datetime.date.today().year)
+    target_year = datetime.date.today().year
+    for _ in range(_MAX_YEARS_BACK):
+        swedish: tuple[str, str] | None = None
+        foreign: tuple[str, str] | None = None
+        for href in hrefs:
+            if href is None:
+                continue
+            match = _LINK_PATTERN.match(href)
+            if not match or int(match["upload_year"]) != target_year:
+                continue
+            entry = (href, match["date"].replace("_", "-"))
+            language = match["language"].lower()
+            if language == "svenska" and swedish is None:
+                swedish = entry
+            elif language == "utlandska" and foreign is None:
+                foreign = entry
+            if swedish and foreign:
+                return swedish, foreign
+        target_year -= 1
 
-    # Get URLs to pdfs with Playwright
-    playwright = sync_playwright().start()
-
-    # Establish page and browser
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=1, channel="chromium"
-    )
-    page = browser.new_page()
-
-    # Go to page that leads to PDF
-    page.goto(url)
-
-    # Reject Cookies
-    cookies_button = page.get_by_role("button", name="Deny")
-    cookies_button.click()
-
-    # Get all links on download page
-    link_locators = page.get_by_role("link").all()
-
-    # Match PDFs based on date and keywords. Save url, and last date updated into list.
-    swedish_pdf = []
-    foreign_pdf = []
-    while not swedish_pdf and not foreign_pdf:
-        # Dynamic pattern, tries latest year and goes back a year if failed.
-        pattern = ".+/uploads/" + str(year) + "/.+"
-
-        # For every link,
-        for link in link_locators:
-            # Get URL embedded in metadata
-            link = link.get_attribute("href")
-            # Search date
-            match = re.search(pattern, link)
-
-            # If link matches the year, search for keywords
-            if match:
-                # Match must be string
-                match = str(match.group())
-                # Search for data and Svenska (Swedish)
-                search_match = re.search(
-                    r".+(\d{4}_\d{2}_\d{2})_[Ss]venska_.+", match
-                )
-                if search_match:
-                    # Append link
-                    swedish_pdf.append(str(search_match.group()))
-                    # Append date
-                    swedish_pdf.append(search_match.group(1))
-                else:
-                    # If failed, search for date abd Utlandska (foreign)
-                    search_match = re.search(
-                        r".+(\d{4}_\d{2}_\d{2})_[Uu]tlandska_.+", match
-                    )
-                    if search_match:
-                        foreign_pdf.append(str(search_match.group()))
-                        foreign_pdf.append(search_match.group(1))
-
-            # After first two matches found, break loop
-            if swedish_pdf and foreign_pdf:
-                break
-        # If failed, go back a year and try again
-        year -= 1
-
-    # Downloading the PDFs
-
-    # Get data on pdf 1
-    r = requests.get(swedish_pdf[0])
-    # Copy data to new file
-    with open(path / "raw_ap2_swedish.pdf", "wb") as f:
-        for chunk in r.iter_content(chunk_size=8192):
-            if chunk:
-                f.write(chunk)
-
-    # Get data on pdf2
-    r = requests.get(foreign_pdf[0])
-    # Copy
-    with open(path / "raw_ap2_foreign.pdf", "wb") as f:
-        for chunk in r.iter_content(chunk_size=8192):
-            if chunk:
-                f.write(chunk)
-
-    # Stop playwright
-    playwright.stop()
-
-    # Extracting data - Swedish
-
-    # Open PDF
-    pdf = pdfplumber.open(path / "raw_ap2_swedish.pdf")
-
-    # Set vars
-    tabs = []
-    offset = 114  # Y Offset for page 1
-    length = len(pdf.pages)  # Length of pdf
-    count = 0  # Counts through while statement
-
-    # Extract text in two sections, as columns "Number" and "Market Value" can not be seperated with regex consistently/easily
-    while count < length:
-        # Setup page
-        page = pdf.pages[count]
-        left = page.crop(
-            (0, offset, 373, page.height)
-        )  # All columns up to Market Value
-        right = page.crop(
-            (373, offset, page.width, page.height)
-        )  # Market value and all columns after
-        offset = 0  # After first page, offset uneeded
-
-        # Extract text
-        temp1 = left.extract_text_lines(return_chars=False)
-        temp2 = right.extract_text_lines(return_chars=False)
-
-        # Iterate through page
-        count2 = 0
-        length2 = len(temp1)  # Length of entries
-        while count2 < length2:
-            # Seperate matches via dash instead of space
-            tabs.append(temp1[count2]["text"] + "-" + temp2[count2]["text"])
-            count2 += 1
-
-        # Used to iterate as many times as there are pages
-        count += 1
-
-    # Regex - Swedish
-
-    # Establish pattern. Follows schema of pdf columns.
-    pattern = re.compile(
-        r"^(?P<ShareholderName>.+?)\s+(?P<ISIN>SE\d{10})\s+(?P<Country>[A-Z]{2})\s+(?P<NumberOfShares>[\d\s]+)-(?P<MarketValue>[\d\s]+)\s+(?P<ShareCapital>[\d,.]+%)\s+(?P<VotingCapital>[\d,.]+%)$"
+    raise RuntimeError(
+        f"AP2: did not find both Swedish and Foreign reports within "
+        f"{_MAX_YEARS_BACK} years — the URL/upload scheme may have changed."
     )
 
-    # Set constants
-    report_date = str(swedish_pdf[1])
-    report_date = report_date.replace("_", "-")  # Format date
-    multiplier = "x1_000"
 
-    # Search through entries, if match, append to data following IDI column schema.
-    data = []
-    for tab in tabs:
-        match = pattern.search(tab)
-        if match:
-            data.append(
-                [
-                    shareholder,
-                    match.group(1),
-                    match.group(3),
-                    match.group(2),
-                    report_date,
-                    match.group(5),
-                    match.group(4),
-                    multiplier,
-                    match.group(6),
-                    match.group(7),
-                    url,
-                ]
-            )
+def _stitched_lines(
+    pdf_path: Path, x_split: int, first_page_y_offset: int
+) -> Iterator[str]:
+    """Yield ``"<left>-<right>"`` strings, one per row of the holdings table.
 
-    # Export - Swedish
+    The columns "Number of Shares" and "Market Value" can't be reliably
+    split with a single regex pass over the raw extraction; cropping to
+    two columns at ``x_split`` and rejoining with ``-`` gives the row
+    regex a stable token to anchor on.
 
-    # Create data
-    df = pd.DataFrame(
-        data,
+    Args:
+        pdf_path: The path to the PDF report.
+        x_split: The horizontal split point between the left and right
+            columns.
+        first_page_y_offset: The Y offset for the first page.
+
+    Yields:
+        ``"<left>-<right>"`` strings, one per row of the holdings table.
+    """
+    with pdfplumber.open(pdf_path) as pdf:
+        for i, page in enumerate(pdf.pages):
+            y = first_page_y_offset if i == 0 else 0
+            left = page.crop((0, y, x_split, page.height))
+            right = page.crop((x_split, y, page.width, page.height))
+            for left_line, right_line in zip(
+                left.extract_text_lines(return_chars=False),
+                right.extract_text_lines(return_chars=False),
+                strict=False,
+            ):
+                yield f"{left_line['text']}-{right_line['text']}"
+
+
+def _parse_swedish(pdf_path: Path, report_date: str) -> pd.DataFrame:
+    """Parse a Swedish report into a DataFrame.
+
+    Args:
+        pdf_path: The path to the PDF report.
+        report_date: The report date.
+
+    Returns:
+        A DataFrame with one row per shareholder.
+    """
+    rows = []
+    for line in _stitched_lines(
+        pdf_path, _SWEDISH_COLUMN_SPLIT, _SWEDISH_FIRST_PAGE_Y
+    ):
+        m = _SWEDISH_PATTERN.search(line)
+        if not m:
+            continue
+        rows.append(
+            [
+                _PENSION_NAME,
+                m["issuer"],
+                m["country"],
+                m["isin"],
+                report_date,
+                m["value"],
+                "x1_000",
+                m["shares"],
+                m["share_capital"],
+                m["voting_capital"],
+                _REPORTS_URL,
+            ]
+        )
+    return pd.DataFrame(
+        rows,
         columns=[
             "Shareholder - Name",
             "Issuer - Name",
@@ -212,76 +205,39 @@ def scrape_ap2() -> None:
             "Data Source URL",
         ],
     )
-    # Export as TSV
-    utils.export_df(df, "ap2_swedish", path)
 
-    # Extracting Data - Foreign
 
-    # Open pdf
-    pdf = pdfplumber.open(path / "raw_ap2_foreign.pdf")
+def _parse_foreign(pdf_path: Path, report_date: str) -> pd.DataFrame:
+    """Parse a Foreign report into a DataFrame.
 
-    # Set vars
-    tabs = []
-    offset = 132  # Y Offset for page 1
-    length = len(pdf.pages)  # Length of document
-    count = 0  # Counts through while statement
+    Args:
+        pdf_path: The path to the PDF report.
+        report_date: The report date.
 
-    # Extract text in two sections, as columns "Number" and "Market Value" can not be seperated with regex consistently/easily
-    while count < length:
-        # Set vars
-        page = pdf.pages[count]
-        left = page.crop((0, offset, 456, page.height))
-        right = page.crop((456, offset, page.width, page.height))
-        offset = 0
-
-        # Extract text
-        temp1 = left.extract_text_lines(return_chars=False)
-        temp2 = right.extract_text_lines(return_chars=False)
-
-        # Iterate through each page
-        count2 = 0
-        length2 = len(temp1)
-        while count2 < length2:
-            # Seperate matches via dash instead of space
-            tabs.append(temp1[count2]["text"] + "-" + temp2[count2]["text"])
-            count2 += 1
-
-        # Iterate through while statement as many times as there are pages
-        count += 1
-
-    # Regex - Foreign
-
-    # Pattern following pdf column schema.
-    pattern2 = re.compile(
-        r"^(?P<Name>.+?)\s+(?P<ISIN>[A-Z]{2}[A-Z0-9]{9,})\s+(?P<Country>[A-Z]{2})\s+(?P<NumberOfShares>[\d\s]+)-(?P<MarketValue>[\d\s]+)$"
-    )
-
-    # Set report date
-    report_date = str(foreign_pdf[1])
-    report_date = report_date.replace("_", "-")
-
-    # Search through entries, if match, append to data following IDI column schema.
-    data = []
-    for tab in tabs:
-        match = pattern2.search(tab)
-        if match:
-            data.append(
-                [
-                    shareholder,
-                    match.group(1),
-                    match.group(3),
-                    match.group(2),
-                    report_date,
-                    match.group(5),
-                    match.group(4),
-                    url,
-                ]
-            )
-
-    # Export Data - Foreign
-    # Create dataframe following IDI column schema.
-    df2 = pd.DataFrame(
-        data,
+    Returns:
+        A DataFrame with one row per shareholder.
+    """
+    rows = []
+    for line in _stitched_lines(
+        pdf_path, _FOREIGN_COLUMN_SPLIT, _FOREIGN_FIRST_PAGE_Y
+    ):
+        m = _FOREIGN_PATTERN.search(line)
+        if not m:
+            continue
+        rows.append(
+            [
+                _PENSION_NAME,
+                m["issuer"],
+                m["country"],
+                m["isin"],
+                report_date,
+                m["value"],
+                m["shares"],
+                _REPORTS_URL,
+            ]
+        )
+    return pd.DataFrame(
+        rows,
         columns=[
             "Shareholder - Name",
             "Issuer - Name",
@@ -293,10 +249,44 @@ def scrape_ap2() -> None:
             "Data Source URL",
         ],
     )
-    # Export as TSV
-    utils.export_df(df2, "ap2_foreign", path)
 
 
-# Run function locally
+@register("ap2")
+def scrape_ap2() -> None:
+    """Scrape AP2 (Sweden) Swedish and Foreign equity reports into two TSVs."""
+    today = datetime.date.today()
+    (swedish_url, swedish_date), (foreign_url, foreign_date) = (
+        _find_report_links()
+    )
+
+    swedish_pdf_path = utils.download_file(
+        requests.get(swedish_url, stream=True),
+        "ap2",
+        today,
+        "pdf",
+        subname="swedish",
+    )
+    foreign_pdf_path = utils.download_file(
+        requests.get(foreign_url, stream=True),
+        "ap2",
+        today,
+        "pdf",
+        subname="foreign",
+    )
+
+    utils.export_data(
+        _parse_swedish(swedish_pdf_path, swedish_date),
+        "ap2",
+        today,
+        subname="swedish",
+    )
+    utils.export_data(
+        _parse_foreign(foreign_pdf_path, foreign_date),
+        "ap2",
+        today,
+        subname="foreign",
+    )
+
+
 if __name__ == "__main__":
     scrape_ap2()

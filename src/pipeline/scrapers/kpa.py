@@ -1,11 +1,14 @@
 """KPA Pension Scraper.
 
-Scrapes KPA pensions, a group of companies based in Sweden that offer pension
-management, insurance, asset management, and more. Scraper navigates to pdf
-preview and downloads, then filters for entries based on text size. Then, the
-data is formatted into a dictionary and exported as a TSV. No manual steps
-needed unless the website or format changes.
+Scrapes KPA Pension, a Swedish pension and asset-management group.
+Navigates the site with Playwright to find the latest holdings PDF,
+downloads it, and extracts each issuer name from the PDF based on the
+rendered line height — the entry font is ~9.5pt, distinguishable from
+headers and other ornamentation.
 """
+
+import datetime
+from urllib.parse import urljoin
 
 import pandas as pd
 import pdfplumber
@@ -15,93 +18,87 @@ from playwright.sync_api import sync_playwright
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "KPA"
+_LANDING_URL = (
+    "https://www.kpa.se/om-kpa-pension/vart-hallbarhetsarbete/"
+    "ansvarsfulla-investeringar/innehav-och-uteslutna-bolag/"
+)
+
+# Holdings rows render as ~9.5pt (bbox height between top and bottom).
+# Re-measure if KPA changes the report's body font.
+_ENTRY_HEIGHT_MIN = 9.0
+_ENTRY_HEIGHT_MAX = 10.0
+
+
+def _find_pdf_url() -> str:
+    """Open the landing page and return the absolute holdings-PDF URL.
+
+    Returns:
+        Absolute URL of the most recent holdings PDF.
+
+    Raises:
+        RuntimeError: If the "Innehav" link is missing or has no
+            ``href``.
+    """
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(
+            headless=True, slow_mo=5, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_LANDING_URL)
+        try:
+            page.get_by_role(
+                "button", name="Avvisa cookies"
+            ).click(timeout=5000)
+        except Exception:
+            pass
+        href = page.get_by_role(
+            "link", name="Innehav", exact=False
+        ).get_attribute("href")
+        browser.close()
+
+    if not href:
+        raise RuntimeError(
+            "KPA: 'Innehav' link not found — the landing page layout "
+            "may have changed."
+        )
+    return urljoin(_LANDING_URL, href)
+
 
 @register("kpa")
 def scrape_kpa() -> None:
-    """Scrape KPA Pension (Sweden) and write a TSV under ``data/kpa/<YYYY-MM-DD>/``.
+    """Scrape KPA Pension and write a TSV under ``data/disclosures/kpa/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    pdf_url = _find_pdf_url()
+    response = requests.get(pdf_url, stream=True)
+    pdf_path = utils.download_file(response, "kpa", today, "pdf")
 
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # Setup
-    filename = "KPA"
-    url = "https://www.kpa.se/om-kpa-pension/vart-hallbarhetsarbete/ansvarsfulla-investeringar/innehav-och-uteslutna-bolag/"
-    path = utils.create_path(filename)
+    rows: list[list[str]] = []
+    with pdfplumber.open(pdf_path) as pdf:
+        report_date = utils.get_pdf_date(pdf)
+        for page in pdf.pages:
+            for line in page.extract_text_lines():
+                height = line["bottom"] - line["top"]
+                if _ENTRY_HEIGHT_MIN < height < _ENTRY_HEIGHT_MAX:
+                    rows.append(
+                        [
+                            _PENSION_NAME,
+                            line["text"],
+                            report_date,
+                            pdf_url,
+                        ]
+                    )
 
-    # Start Playwright
-    playwright = sync_playwright().start()
-
-    # Go to page
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=5, channel="chromium"
+    df = pd.DataFrame(
+        rows,
+        columns=[
+            "Shareholder - Name",
+            "Issuer - Name",
+            "Security - Report Date",
+            "Data Source URL",
+        ],
     )
-    page = browser.new_page()
-    page.goto(url)
-
-    # Reject Cookies
-    reject_cookies = page.get_by_role("button", name="Avvisa cookies")
-    reject_cookies.click()
-
-    # Find Holdings
-    link_button = page.get_by_role("link", name="Innehav", exact=False)
-
-    # Format PDF link
-    pdf_link = link_button.get_attribute("href")
-    pdf_link = "https://www.kpa.se/" + pdf_link
-
-    # Request Data
-    req = requests.get(pdf_link)
-
-    # Download file and save path
-    pdf_path = utils.download_file(req, "raw_kpa.pdf", path)
-
-    # Stop Playwright
-    browser.close()
-    playwright.stop()
-
-    # Open PDF
-    pdf = pdfplumber.open(pdf_path)
-
-    # Extract Entries Based on Font Size
-    entries = []
-    for page in pdf.pages:
-        # Extract every line in a page, formatted in a list of dictionaries
-        text = page.extract_text_lines()
-
-        # For each line, calculate and check height
-        for t in text:
-            height = t["bottom"] - t["top"]
-            # If height falls within range, it is a match
-            if height > 9 and height < 10:
-                entries.append(t["text"])
-
-    # Formatting Data
-
-    # Create columns
-    shareholder_name = [filename]
-    report_date = [utils.get_pdf_date(pdf)]
-    url = [url]
-
-    number_of_entries = len(entries)
-
-    # Repeat constants per number of entries
-    shareholder_name = shareholder_name * number_of_entries
-    report_date = report_date * number_of_entries
-    url = url * number_of_entries
-
-    # Format dataframe in dictionary
-    df = {
-        "Shareholder - Name": shareholder_name,
-        "Issuer - Name": entries,
-        "Security - Report Date": report_date,
-        "Data Source URL": url,
-    }
-
-    # Export
-    final_df = pd.DataFrame(df)
-    # Export as tsv
-    utils.export_df(final_df, filename, path)
+    utils.export_data(df, "kpa", today)
 
 
 if __name__ == "__main__":

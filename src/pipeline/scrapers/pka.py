@@ -1,143 +1,115 @@
 """PKA Scraper.
 
-Scrapes Pensionskassernes Administration a/s, a Denmark-based company that
-claims to invest in causes that comply with the EU's green and social agenda.
-Scraper begins by downloading the pdf with playwright, while attempting to
-deny cookies if prompted. Then, inside a context manager, it extracts entries
-and checks for matches with pdfplumber and regular expressions before writing
-to a TSV. No manual steps needed unless the website or format changes.
+Scrapes Pensionskassernes Administration a/s, a Danish pension manager.
+Navigates the holdings page with Playwright, downloads the holdings PDF
+via the popup helper, and walks each row with a single regex.
 """
 
-import csv
+import datetime
 import re
 
+import pandas as pd
 import pdfplumber
 from playwright.sync_api import sync_playwright
 
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "Pensionskassernes Administration a/s"
+_LANDING_URL = (
+    "https://pka.dk/ansvarlighed/ansvarlige-investeringer/"
+    "politikker-og-rapporter"
+)
+
+# One row of the holdings table: issuer name, ISIN, market value,
+# percent ownership.
+_ROW_PATTERN = re.compile(
+    r"^(?P<issuer>.*?)\s+"
+    r"(?P<isin>[A-Z]{2}[A-Z0-9]{10})\s+"
+    r"(?P<value>[\d.,]+)\s+"
+    r"(?P<ownership>[\d.,]+\s*%)$"
+)
+_DKK_PATTERN = re.compile(r"DKK", re.IGNORECASE)
+
+
+def _download_pdf(today: datetime.date) -> str:
+    """Drive the landing page with Playwright and download the holdings PDF.
+
+    Args:
+        today: Date stamp for the run directory.
+
+    Returns:
+        Local path to the downloaded PDF.
+    """
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(
+            headless=True, slow_mo=1, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_LANDING_URL)
+        try:
+            page.get_by_role(
+                "button", name="Afvis Alle"
+            ).click(timeout=5000)
+        except Exception:
+            pass
+        page.get_by_role(
+            "button", name="Beholdningslisten", exact=True
+        ).click()
+        link_button = page.get_by_role(
+            "link", name="Se beholdningslisten", exact=True
+        )
+        pdf_path = utils.get_pdf("pka", today, page, link_button, browser)
+    return pdf_path
+
 
 @register("pka")
 def scrape_pka() -> None:
-    """Scrape Pensionskassernes Administration (Denmark) and write a TSV under ``data/pka/<YYYY-MM-DD>/``.
+    """Scrape PKA (Denmark) and write a TSV under ``data/disclosures/pka/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    pdf_path = _download_pdf(today)
 
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # /-----Setup - Download PDF-----/#
-
-    # Create path and url constant
-    path = utils.create_path("pka")
-    url = "https://pka.dk/ansvarlighed/ansvarlige-investeringer/politikker-og-rapporter"
-
-    # Playwright Start
-    playwright = sync_playwright().start()
-
-    # Establish page and browser
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=1, channel="chromium"
-    )
-    page = browser.new_page()
-
-    # Go to page that leads to PDF
-    page.goto(url)
-
-    # Deny all Cookies (Doesn't always appear in headless mode)
-    try:
-        reject_cookies = page.get_by_role("button", name="Afvis Alle")
-        reject_cookies.click()
-    except Exception:
-        pass
-
-    # Expand menu
-    button_1 = page.get_by_role("button", name="Beholdningslisten", exact=True)
-    button_1.click()
-
-    # Save button that leads to pdf preview
-    link_button = page.get_by_role(
-        "link", name="Se beholdningslisten", exact=True
-    )
-
-    # Get PDF
-    pdf_path = utils.get_pdf("pka", page, link_button, browser, path)
-    playwright.stop()
-
-    # /-----Apply Regex and write TSV-----/#
-
-    # Regex to match the line format: company name, ISIN, market value, share percent
-    pattern = re.compile(
-        r"^(.*?)\s+([A-Z]{2}[A-Z0-9]{10})\s+([\d.,]+)\s+([\d.,]+\s*%)$"
-    )
-
-    # Open pdf from path
+    rows: list[list[str]] = []
     with pdfplumber.open(pdf_path) as pdf:
-        # Create and open tsv file in path
-        with open(path / "pka.tsv", "w", newline="", encoding="utf-8") as f:
-            # ---Set column constants---#
+        report_date = utils.get_pdf_date(pdf)
 
-            shareholder = "Pensionskassernes Administration a/s"
-            report_date = utils.get_pdf_date(pdf)
+        first_page_text = pdf.pages[0].extract_text() or ""
+        currency_code = "DKK" if _DKK_PATTERN.search(first_page_text) else ""
 
-            # Search for DKK, if not found, return no currency
-            currency_search = pdf.pages[0].extract_text()
-            currency_search = re.search("(dkk)|(DKK)", currency_search)
-            if currency_search:
-                currency_code = "DKK"
-            else:
-                currency_code = " "
+        for page in pdf.pages:
+            text = page.extract_text() or ""
+            for line in text.splitlines():
+                match = _ROW_PATTERN.match(line.strip())
+                if not match:
+                    continue
+                rows.append(
+                    [
+                        _PENSION_NAME,
+                        match["issuer"],
+                        report_date,
+                        match["value"],
+                        currency_code,
+                        match["isin"],
+                        match["ownership"],
+                        _LANDING_URL,
+                    ]
+                )
 
-            # ---Match and write---#
-
-            # Open file, set spaces to tabs, and line seperators to new lines
-            writer = csv.writer(f, delimiter="\t", lineterminator="\n")
-            # Write heading column following IDI schema
-            writer.writerow(
-                [
-                    "Shareholder - Name",
-                    "Issuer - Name",
-                    "Security - Report Date",
-                    "Security - Market Value - Amount",
-                    "Security - Market Value - Currency Code",
-                    "Security - ISIN",
-                    "Stock - Percent Ownership",
-                    "Data Source URL",
-                ]
-            )
-
-            # For index and page in pages: Extract, format, match, and if match, append
-            for _i, page in enumerate(pdf.pages, start=1):
-                # Extract
-                text = page.extract_text()
-                # Split into entries
-                if text:
-                    lines = text.splitlines()
-
-                    # Check line for matches
-                    for line in lines:
-                        match = pattern.match(line.strip())
-                        # If match, write to tsv
-                        if match:
-                            # Set variables to corresponding group
-                            issuer, isin, value, percent_ownership = (
-                                match.groups()
-                            )
-                            # Write to CSV
-                            writer.writerow(
-                                [
-                                    shareholder,
-                                    issuer,
-                                    report_date,
-                                    value,
-                                    currency_code,
-                                    isin,
-                                    percent_ownership,
-                                    url,
-                                ]
-                            )
+    df = pd.DataFrame(
+        rows,
+        columns=[
+            "Shareholder - Name",
+            "Issuer - Name",
+            "Security - Report Date",
+            "Security - Market Value - Amount",
+            "Security - Market Value - Currency Code",
+            "Security - ISIN",
+            "Stock - Percent Ownership",
+            "Data Source URL",
+        ],
+    )
+    utils.export_data(df, "pka", today)
 
 
-# Run locally
 if __name__ == "__main__":
     scrape_pka()

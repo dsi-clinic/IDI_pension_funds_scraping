@@ -1,15 +1,13 @@
 """PMT Scraper.
 
-Scrapes PMT, the Metal and Technology Pension Fund from the Netherlands. This
-pension fund has its investments stored in the HTML of its website. This
-scraper navigates to the webpage, scrapes the HTML, writes it to an HTML file,
-and then finds and scrapes the tabular information, which is the issuing
-company and the market value in euros. No manual steps will be needed unless
-PMT changes the URL or the format of their HTML tables.
+Scrapes PMT (Metal and Technology Pension Fund, Netherlands). The fund
+publishes its holdings as an HTML table on its public website; this
+scraper downloads the page, walks each ``<td>`` to separate company-name
+cells from market-value cells, and emits a TSV.
 """
 
+import datetime
 import re
-from datetime import datetime
 
 import pandas as pd
 import requests
@@ -18,56 +16,80 @@ from bs4 import BeautifulSoup
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "Metal and Technology Pension Fund"
+_HOLDINGS_URL = (
+    "https://www.pmt.nl/over-pmt/zo-beleggen-we/"
+    "waar-beleggen-we-in/aandelen-en-obligaties/#"
+)
+_CURRENCY = "EUR"
+
+# The HTML table doesn't tag company-name cells distinctly from
+# market-value cells; both render as plain ``<td>``. Company-name cells
+# carry the Dutch label "Bedrijfsnaam" as a prefix, so that's what we
+# split on.
+_COMPANY_LABEL = "Bedrijfsnaam"
+_NUMBER_PATTERN = re.compile(r"[\d.]+")
+_DATE_PATTERN = re.compile(r"\d+\s[A-Za-z]+\s\d{4}")
+
 
 @register("pmt")
 def scrape_pmt() -> None:
-    """Scrapes the PMT pension fund."""
-    # going to the url and getting the html, then writing it to the data folder
-    url = "https://www.pmt.nl/over-pmt/zo-beleggen-we/waar-beleggen-we-in/aandelen-en-obligaties/#"
-    html = requests.get(url)
-    parsed = BeautifulSoup(html.content, "html.parser")
-    filename = "pmt"
-    path = utils.create_path(filename)
+    """Scrape PMT (Netherlands) and write a TSV under ``data/disclosures/pmt/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    response = requests.get(_HOLDINGS_URL, stream=True)
+    html_path = utils.download_file(response, "pmt", today, "html")
 
-    with open(f"{path}/{filename}.html", "w") as html_file:
-        html_file.write(str(parsed))
+    with open(html_path, "rb") as f:
+        parsed = BeautifulSoup(f.read(), "html.parser")
 
-    # scraping the tabular values of the issuing company name and the market value
-    tables = parsed.find_all("table")
-    companies = []
-    values = []
-    numbers = r"[\d.]+"
-    company_name = r"Bedrijfsnaam"
-    for table in tables:
+    companies: list[str] = []
+    values: list[str] = []
+    for table in parsed.find_all("table"):
         body = table.find("tbody")
-        info = body.find_all("td")
-        for inf in info:
-            # the current html structure doesn't distinguish between an entry that is the company name or the market value
-            # so to find the ones that are company names, we look for the Danish word for company, and then start the scrape after that word
-            if re.search(company_name, inf.text):
-                companies.append(inf.text[12:])
+        if body is None:
+            continue
+        for cell in body.find_all("td"):
+            text = cell.text
+            if _COMPANY_LABEL in text:
+                companies.append(text.removeprefix(_COMPANY_LABEL).strip())
             else:
-                # if the Danish word for company isn't there, find the digits in the html, which will be the market value
-                values.append(re.search(numbers, inf.text).group())
+                match = _NUMBER_PATTERN.search(text)
+                if match:
+                    values.append(match.group())
 
-    # write the scraped information to a dataframe, with proper column headings matching the schema
-    companies_ser = pd.Series(companies, name="Issuer - Name")
-    values_ser = pd.Series(values, name="Security - Market Value - Amount")
-    df = pd.concat([companies_ser, values_ser], axis=1)
+    date_match = _DATE_PATTERN.search(parsed.text)
+    if not date_match:
+        raise RuntimeError(
+            "PMT: report date not found on the page — "
+            "the layout may have changed."
+        )
+    report_date = datetime.datetime.strptime(
+        date_match.group(), "%d %B %Y"
+    ).strftime("%Y-%m-%d")
 
-    # find and scrape the date of the report - which is in DD - Month - YYYY format
-    date_pattern = r"[\d]+\s[a-zA-Z]+\s[0-9][0-9][0-9][0-9]"
-    date_string = re.search(date_pattern, parsed.text).group()
-    date_of_report = datetime.strptime(date_string, "%d %B %Y")
-
-    # add necessary columns of the table, as per the schema
-    df["Shareholder - Name"] = "Metal and Technology Pension Fund"
-    df["Security - Report Date"] = date_of_report
-    df["Security - Market Value - Currency Code"] = "EUR"
-    df["Data Source URL"] = url
-
-    # write the dataframe as a tsv to the appropriate directory
-    utils.export_df(df, filename, path)
+    rows = [
+        [
+            _PENSION_NAME,
+            issuer,
+            report_date,
+            value,
+            _CURRENCY,
+            _HOLDINGS_URL,
+        ]
+        for issuer, value in zip(companies, values, strict=False)
+    ]
+    df = pd.DataFrame(
+        rows,
+        columns=[
+            "Shareholder - Name",
+            "Issuer - Name",
+            "Security - Report Date",
+            "Security - Market Value - Amount",
+            "Security - Market Value - Currency Code",
+            "Data Source URL",
+        ],
+    )
+    utils.export_data(df, "pmt", today)
 
 
 if __name__ == "__main__":

@@ -1,19 +1,23 @@
 """AP4 Scraper.
 
-Scrapes the fourth Swedish National Pension fund, AP4. Scraper navigates to
-AP4 holdings page with playwright, grabs a list of all links on it, and
-searches with regex starting from the most recent link until it finds a match.
-The PDF downloads with requests, and then is scraped with pdfplumber and regex.
-While extracting the text, each line is split into to and then remerged with
-``!`` as a separator, as the columns "No of Shares" and "Fair Value" would
-otherwise be difficult/unreliable to search through with regex. Matched data is
-added to either a Swedish dataframe or a Foreign one depending on country of
-origin, then 2 TSVs are created (as they were last time AP4 was scraped). No
-manual steps needed unless the website or format changes.
+Scrapes AP4, the fourth Swedish National Pension fund. Navigates the
+holdings page with Playwright to find the most recent ``-listed-`` PDF,
+downloads it, and walks each row.
+
+Each holdings row is laid out so that the "No of Shares" and "Fair
+Value" columns are visually separated but produce a single ambiguous
+text run when extracted normally. We work around it by cropping each
+page into a left and right column at a known x-coordinate, extracting
+each side's lines, and rejoining the two halves with ``!`` so the row
+regex has a stable boundary token between shares and value.
+
+Holdings are split into Swedish (issuer country = ``SE``) and Foreign
+TSVs to match the historical ``ap4_swedish`` / ``ap4_foreign`` outputs.
 """
 
 import datetime
 import re
+from pathlib import Path
 
 import pandas as pd
 import pdfplumber
@@ -23,175 +27,164 @@ from playwright.sync_api import sync_playwright
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "AP4"
+_HOLDINGS_URL = "https://www.ap4.se/en/reports/holdings/"
+_BASE_URL = "https://ap4.se"
+
+# AP4 publishes new reports each year. Bound the year walk-back so a
+# permanent URL change can't loop forever.
+_MAX_YEARS_BACK = 5
+
+# Page x-coordinate that splits "issuer/country/shares" (left) from
+# "value/isin/ticker/ownership/voting" (right). Re-measure if AP4
+# changes the report template.
+_COLUMN_SPLIT = 260
+
+# One holdings row, with ``!`` and ``!!!`` as stitching tokens added by
+# ``_stitch_rows``. ISIN, ticker, ownership, and voting are optional —
+# AP4 leaves them blank for some rows.
+_ROW_PATTERN = re.compile(
+    r"(?P<issuer>[A-Z\d][A-Za-z\d \-+&'/]+) "
+    r"(?P<country>[A-Z]{2}) "
+    r"(?P<shares>[\d ]+)!"
+    r"(?P<value>[\d ]+) ?"
+    r"(?P<isin>[A-Z\d]+)? ?"
+    r"(?P<ticker>[A-Z\d]+ [A-Z]{2})? ?"
+    r"(?P<ownership>\d,\d{2})? ?"
+    r"(?P<power>\d,\d{2})?!!!"
+)
+
+
+def _find_pdf_url() -> str:
+    """Open the holdings page and return the most recent ``-listed-`` PDF URL.
+
+    Returns:
+        Absolute URL of the most recent listed-holdings PDF.
+
+    Raises:
+        RuntimeError: If no matching link is found within
+            ``_MAX_YEARS_BACK`` years.
+    """
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(
+            headless=True, slow_mo=1, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_HOLDINGS_URL)
+        try:
+            page.get_by_role(
+                "button", name="Only necessary"
+            ).click(timeout=5000)
+        except Exception:
+            pass
+
+        hrefs = [
+            link.get_attribute("href")
+            for link in page.get_by_role("link").all()
+        ]
+        browser.close()
+
+    valid = [h for h in hrefs if h]
+    year = datetime.date.today().year
+    for _ in range(_MAX_YEARS_BACK):
+        pattern = re.compile(rf".+-listed.+{year}.+")
+        for href in valid:
+            if pattern.search(href):
+                return f"{_BASE_URL}{href}"
+        year -= 1
+    raise RuntimeError(
+        f"AP4: no -listed- PDF found within {_MAX_YEARS_BACK} years — "
+        "the URL scheme may have changed."
+    )
+
+
+def _stitch_rows(pdf_path: Path) -> str:
+    """Crop each page at ``_COLUMN_SPLIT`` and rejoin lines with ``!``/``!!!``.
+
+    Args:
+        pdf_path: Path to the downloaded AP4 PDF.
+
+    Returns:
+        A single string of all rows concatenated, with ``!`` between the
+        left and right halves of each row and ``!!!`` between rows. This
+        is the input that ``_ROW_PATTERN`` expects.
+    """
+    chunks: list[str] = []
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            left = page.crop(
+                (0, 0, _COLUMN_SPLIT, page.height), strict=False
+            ).extract_text_lines(return_chars=False)
+            right = page.crop(
+                (_COLUMN_SPLIT, 0, page.width, page.height), strict=False
+            ).extract_text_lines(return_chars=False)
+            for left_line, right_line in zip(left, right, strict=False):
+                chunks.append(
+                    f"{left_line['text']}!{right_line['text']}!!!"
+                )
+    return "".join(chunks)
+
+
+def _frame(rows: list[list[str]]) -> pd.DataFrame:
+    """Build the AP4 IDI-shaped DataFrame from collected rows.
+
+    Args:
+        rows: One row per holding, in the order emitted by
+            ``scrape_ap4``.
+
+    Returns:
+        A DataFrame with the IDI column names in canonical order.
+    """
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "Shareholder - Name",
+            "Issuer - Name",
+            "Issuer - Country Name",
+            "Security - ISIN",
+            "Security - Report Date",
+            "Security - Market Value",
+            "Stock - Number of Shares",
+            "Stock - Percent Ownership",
+            "Stock - Percent Voting Power",
+            "Data Source URL",
+        ],
+    )
+
 
 @register("ap4")
 def scrape_ap4() -> None:
-    """Scrape AP4 (Sweden) Swedish and Foreign holdings into two TSVs under ``data/ap4/<YYYY-MM-DD>/``.
-
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # -----------------------------/Setup/---------------------------#
-
-    # Set constants
-    shareholder = "AP4"
-    url = "https://www.ap4.se/en/reports/holdings/"
-    path = utils.create_path("ap4")
-
-    # Playwright Start
-    playwright = sync_playwright().start()
-
-    # Establish page and browser
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=1, channel="chromium"
-    )
-    page = browser.new_page()
-
-    # Go to page that leads to PDF
-    page.goto(url)
-
-    # Click cookies if present (sometimes does not happen in headless mode.)
-    try:
-        cookies_button = page.get_by_role("button", name="Only necessary")
-        cookies_button.click()
-    except Exception:
-        pass
-
-    # Get list of links on page
-    link_locators = page.get_by_role("link").all()
-
-    # Set variables for while loop
-    pdf_link = ""
-    year = int(datetime.date.today().year)
-
-    # Until matching link is found, search for every link in a year.
-    while not pdf_link:
-        # Pattern to search for. The way the website is organized, this should always pick the most recent entry.
-        link_pattern = ".+" + "-listed" + ".+" + str(year) + ".+"
-
-        # For each link, apply pattern.
-        for link in link_locators:
-            # Access link in metadata
-            link = link.get_attribute("href")
-
-            # Apply pattern. If match, break for loop and end while loop.
-            match = re.search(link_pattern, link)
-            if match:
-                pdf_link = "https://ap4.se" + link
-                break
-
-        # If failed, try previous year.
-        year -= 1
-
-    # Write pdf data to directory with requests.
-    pdf_path = path / "raw_ap4.pdf"
-    with open(pdf_path, "wb") as f:
-        r = requests.get(pdf_link)
-        for chunk in r.iter_content(chunk_size=8192):
-            if chunk:
-                f.write(chunk)
-
-    # Stop playwright
-    playwright.stop()
-
-    # -----------------------------/Scrape PDF/---------------------------#
+    """Scrape AP4 (Sweden) Swedish and Foreign holdings into two TSVs."""
+    today = datetime.date.today()
+    pdf_url = _find_pdf_url()
+    response = requests.get(pdf_url, stream=True)
+    pdf_path = utils.download_file(response, "ap4", today, "pdf")
 
     with pdfplumber.open(pdf_path) as pdf:
-        # Get date of pdf
         report_date = utils.get_pdf_date(pdf)
 
-        # Columns "No of Shares" and "Fair Value" not easily/consistently seperated with regex. Addressed while extracting text here.
-        text = ""
-        for page in pdf.pages:
-            # Divide the page into 2 and extract each part seperatley.
-            left = page.crop((0, 0, 260, page.height), strict=False)
-            right = page.crop((260, 0, page.width, page.height), strict=False)
+    text = _stitch_rows(pdf_path)
 
-            left = left.extract_text_lines(return_chars=False)
-            right = right.extract_text_lines(return_chars=False)
+    swedish: list[list[str]] = []
+    foreign: list[list[str]] = []
+    for m in _ROW_PATTERN.finditer(text):
+        row = [
+            _PENSION_NAME,
+            m["issuer"],
+            m["country"],
+            m["isin"] or "",
+            report_date,
+            m["value"],
+            m["shares"],
+            m["ownership"] or "",
+            m["power"] or "",
+            _HOLDINGS_URL,
+        ]
+        (swedish if m["country"] == "SE" else foreign).append(row)
 
-            # For each line, stich the 2 parts back together with exclamation marks used as seperators, and add to string.
-            for i, _d in enumerate(right, start=0):
-                text = text + left[i]["text"] + "!" + right[i]["text"] + "!!!"
-
-        # Search for: Word beginning with a capital letter or digit, followed by any letter, digits, spaces, and symbols; Space; Two captial letters; Space; Any number of digits and spaces;!;Any number of digits and spaces;Space;Digits and capital letters, followed by space, followed by 2 captial letters; Space; a digit, a comma, and 2 digits; Space; a digit, a comma, and 2 digits;!!!. Sometimes ownership, power, and isin missing, addressed by ?
-        listed_pattern = re.compile(
-            r"(?P<issuer>[A-Z\d][A-Za-z\d \-+&'/]+) (?P<issuer_country>[A-Z]{2}) (?P<shares>[\d ]+)!(?P<value>[\d ]+) ?(?P<isin>[A-Z\d]+)? ?(?P<ticker>[A-Z\d]+ [A-Z]{2})? ?(?P<ownership>\d,\d{2})? ?(?P<power>\d,\d{2})?!!!"
-        )
-
-        # Create lists for matches (2 lists for 2 dataframes, in accordance to previous ap4 scraping.)
-        entries_swedish = []
-        entries_foreign = []
-        # Search entire string
-        matches = re.findall(listed_pattern, text)
-        for match in matches:
-            # Set variables equal to groups in match
-            (
-                issuer,
-                issuer_country,
-                shares,
-                value,
-                isin,
-                ticker,
-                ownership,
-                power,
-            ) = match
-            # Create entry according to IDI schema
-            append_list = [
-                shareholder,
-                issuer,
-                issuer_country,
-                isin,
-                report_date,
-                value,
-                shares,
-                ownership,
-                power,
-                url,
-            ]
-            # If country is Sweden, append to Swedish list. For others, append to foreign list.
-            if issuer_country == "SE":
-                entries_swedish.append(append_list)
-            else:
-                entries_foreign.append(append_list)
-
-        # Create ande export swedish dataframe as tsv in accordance to IDI schema
-        df_swedish = pd.DataFrame(
-            entries_swedish,
-            columns=[
-                "Shareholder - Name",
-                "Issuer - Name",
-                "Issuer - Country Name",
-                "Security - ISIN",
-                "Security - Report Date",
-                "Security - Market Value",
-                "Stock - Number of Shares",
-                "Stock - Percent Ownership",
-                "Stock - Percent Voting Power",
-                "Data Source URL",
-            ],
-        )
-        utils.export_df(df_swedish, "ap4_swedish", path)
-        # Create ande export foreign dataframe as tsv in accordance to IDI schema
-        df_foreign = pd.DataFrame(
-            entries_foreign,
-            columns=[
-                "Shareholder - Name",
-                "Issuer - Name",
-                "Issuer - Country Name",
-                "Security - ISIN",
-                "Security - Report Date",
-                "Security - Market Value",
-                "Stock - Number of Shares",
-                "Stock - Percent Ownership",
-                "Stock - Percent Voting Power",
-                "Data Source URL",
-            ],
-        )
-        utils.export_df(df_foreign, "ap4_foreign", path)
+    utils.export_data(_frame(swedish), "ap4", today, subname="swedish")
+    utils.export_data(_frame(foreign), "ap4", today, subname="foreign")
 
 
-# ---------/Scrape Locally/---------#
 if __name__ == "__main__":
     scrape_ap4()

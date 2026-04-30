@@ -1,16 +1,14 @@
 """bpfBOUW Scraper.
 
-Scrapes bpfBOUW, a Dutch company that manages pension funds in the
-construction industry. Scraper navigates to the bpfBOUW website and downloads
-the most recent PDF of their shareholder report. Scraper uses regular
-expressions to extract information, and does additional reformatting including
-extracting the date. A CSV file of Dutch countries is imported, and removes
-countries the regex views as companies. Exports to TSV.
+Scrapes bpfBOUW, the Dutch construction-industry pension fund.
+Navigates the holdings page with Playwright, downloads the most recent
+shareholder PDF, walks each row, parses the report date out of the PDF,
+and removes country subheadings (which the row regex picks up as if
+they were issuers) using a supplemental CSV.
 """
 
-import locale
+import datetime
 import re
-from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
@@ -20,85 +18,108 @@ from playwright.sync_api import sync_playwright
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "bpfBOUW"
+_HOLDINGS_URL = "https://www.bpfbouw.nl/over-bpfbouw/hoe-we-beleggen"
+_CURRENCY = "EUR"
 
-# main function
-@register("bpfbouw")
-def scrape_bpfbouw() -> None:
-    """Scrape bpfBOUW (Netherlands, construction-industry pension) and write a TSV under ``data/bpfbouw/<YYYY-MM-DD>/``.
+# The PDF reports market values like ``"1.234,5"`` (Dutch thousands +
+# one decimal). After we strip both the period and comma the underlying
+# unit is ten-times the published value, so the IDI multiplier is x100
+# (the original ``x1000`` minus one factor of ten for the decimal).
+_MULTIPLIER = "x100"
+
+_TABLE_PATTERN = re.compile(r"^(.+?)\s+([\d.]+,\d+)$", re.MULTILINE)
+_DATE_PATTERN = re.compile(r"\b\d{2}\s+[A-Za-z]+\s+\d{4}\b")
+
+# Map Dutch month names to their two-digit form. Avoids the fragile
+# ``locale.setlocale(LC_ALL, "nl_NL.UTF-8")`` global mutation that the
+# earlier version relied on (that locale isn't installed by default
+# everywhere).
+_DUTCH_MONTHS: dict[str, str] = {
+    "januari": "01",
+    "februari": "02",
+    "maart": "03",
+    "april": "04",
+    "mei": "05",
+    "juni": "06",
+    "juli": "07",
+    "augustus": "08",
+    "september": "09",
+    "oktober": "10",
+    "november": "11",
+    "december": "12",
+}
+
+_COUNTRIES_CSV = (
+    Path(__file__).resolve().parents[3]
+    / "data"
+    / "countries"
+    / "dutchcountries.csv"
+)
+
+
+def _parse_dutch_date(date_str: str) -> str:
+    """Convert a ``"DD <maand> YYYY"`` Dutch date string to ``YYYY-MM-DD``.
+
+    Args:
+        date_str: A date as it appears in the PDF, e.g. ``"31 december 2024"``.
+
+    Returns:
+        The same date in ISO format.
 
     Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
+        ValueError: If the month name isn't recognized.
     """
-    # set up
-    filename = "bpfbouw"
-    path = utils.create_path(filename)
+    day, month_name, year = date_str.split()
+    month = _DUTCH_MONTHS[month_name.lower()]
+    return f"{year}-{month}-{int(day):02d}"
 
-    # defining constants
-    shareholder = "bpfBOUW"
-    URL = "https://www.bpfbouw.nl/over-bpfbouw/hoe-we-beleggen"
-    currency = "EUR"
-    multiplier = "x100"
 
-    # starting playwright
-    playwright = sync_playwright().start()
+@register("bpfbouw")
+def scrape_bpfbouw() -> None:
+    """Scrape bpfBOUW and write a TSV under ``data/disclosures/bpfbouw/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(
+            headless=True, slow_mo=500, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_HOLDINGS_URL)
+        try:
+            page.get_by_role(
+                "button", name="Alle cookies accepteren"
+            ).click(timeout=5000)
+        except Exception:
+            pass
+        link_button = page.get_by_role("link", name="Aandelenportefeuille")
+        pdf_path = utils.get_pdf(
+            "bpfbouw", today, page, link_button, browser
+        )
 
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=500, channel="chromium"
-    )
-    page = browser.new_page()
+    rows: list[tuple[str, str]] = []
+    date_str = ""
+    with pdfplumber.open(pdf_path) as pdf:
+        for pdf_page in pdf.pages:
+            text = pdf_page.extract_text() or ""
+            rows.extend(_TABLE_PATTERN.findall(text))
+            for date_match in _DATE_PATTERN.findall(text):
+                date_str = date_match
 
-    # go to page that leads to the PDF
-    page.goto(URL)
+    if not date_str:
+        raise RuntimeError(
+            "bpfBOUW: no report date found in the PDF — the layout may "
+            "have changed."
+        )
+    report_date = _parse_dutch_date(date_str)
 
-    # accepting cookies in pop-up window
-    page.get_by_role("button", name="Alle cookies accepteren").click()
-
-    # extracting link to PDF from button
-    link_button = page.get_by_role("link", name="Aandelenportefeuille")
-
-    # get PDF
-    pdf_path = utils.get_pdf(filename, page, link_button, browser, path)
-    pdf = pdfplumber.open(pdf_path)
-    playwright.stop()
-
-    # defining regular expression patterns to match PDF
-    tabs = []
-    table_pattern = re.compile(r"^(.+?)\s+([\d.]+,\d+)$", re.MULTILINE)
-    date_pattern = re.compile(r"\b\d{2}\s+[A-Za-z]+\s+\d{4}\b")
-
-    # extracting the information from PDF
-    for page in pdf.pages:
-        text = page.extract_text()
-        if text:  # matching the actual table, appending matching text to list
-            matches = table_pattern.findall(text)
-            for match in matches:
-                tabs.append(match)
-        if text:  # matching the date published
-            matches = date_pattern.findall(text)
-            for match in matches:
-                date_str = match
-
-    # changing locale to the netherlands in order to translate the extracted date, and converting the month from string to number format
-    locale.setlocale(locale.LC_ALL, "nl_NL.UTF-8")
-    number_month = datetime.strptime(date_str[3:-5], "%B").strftime("%m")
-
-    # correctly reformating date
-    date = date_str[-4:] + "-" + number_month + "-" + date_str[:2]
-
-    # creating dataframe from list of extracted text and values
     df = pd.DataFrame(
-        tabs, columns=["Issuer - Name", "Security - Market Value - Amount"]
+        rows, columns=["Issuer - Name", "Security - Market Value - Amount"]
     )
-
-    # adding the remaining columns and constants
-    df["Security - Report Date"] = date
-    df["Shareholder - Name"] = shareholder
-    df["Security - Market Value - Multiplier"] = multiplier
-    df["Security - Market Value - Currency Code"] = currency
-    df["Data Source URL"] = URL
-
-    # reordering columns to match IDI's order
+    df["Security - Report Date"] = report_date
+    df["Shareholder - Name"] = _PENSION_NAME
+    df["Security - Market Value - Multiplier"] = _MULTIPLIER
+    df["Security - Market Value - Currency Code"] = _CURRENCY
+    df["Data Source URL"] = _HOLDINGS_URL
     df = df[
         [
             "Shareholder - Name",
@@ -110,38 +131,17 @@ def scrape_bpfbouw() -> None:
             "Data Source URL",
         ]
     ]
+    df["Security - Market Value - Amount"] = df[
+        "Security - Market Value - Amount"
+    ].str.replace(r"[,.]", "", regex=True)
 
-    # removing commas and periods from market value. this is essentially multiplying by 10, since the original values each have
-    # 1 decimal point and the original multiplier was x1000, the multiplier for the finished dataframe here is only x100.
+    # Country subheadings ("BELGIË", "DUITSLAND", ...) get picked up by
+    # the row regex; filter them out using the supplemental list.
+    countries = pd.read_csv(_COUNTRIES_CSV).values.flatten().tolist()
+    df = df[~df["Issuer - Name"].isin(countries)].reset_index(drop=True)
 
-    no_decimals = []
-    for amount in df["Security - Market Value - Amount"]:
-        no_decimals.append(re.sub(r"[,.]", "", amount))
-
-    df["Security - Market Value - Amount"] = no_decimals
-
-    # removing country subheadings from the dataframe, as regular expression views them as companies.
-    # importing a list of Dutch countries
-
-    csv_dir = Path(__file__).parent
-    csv_dir = csv_dir / "supplement/dutchcountries.csv"
-    countries = pd.read_csv(csv_dir)
-    countries = sum(countries.values.tolist(), [])
-
-    # finding which countries have matches and finding their indices
-    matching_entries = df["Issuer - Name"].isin(countries)
-    index = []
-    for i in range(len(matching_entries)):
-        if matching_entries[i]:
-            index.append(i)
-
-    # removing indicies which are countries
-    df = df.drop(index)
-
-    # export dataframe!
-    utils.export_df(df, filename, path)
+    utils.export_data(df, "bpfbouw", today)
 
 
-# if run outside of main
 if __name__ == "__main__":
     scrape_bpfbouw()

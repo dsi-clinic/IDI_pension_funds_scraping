@@ -18,6 +18,9 @@ import requests
 from pipeline import utils
 from pipeline.registry import register
 
+# The name of the pension fund.
+_PENSION_NAME = "AMF Pension"
+
 # AMF publishes one report per year at a predictable URL. If the current
 # year's report isn't up yet we walk backwards a few years; bounded so a
 # permanent URL change can't loop forever.
@@ -60,7 +63,14 @@ _KEYWORD_PATTERN = re.compile(
 
 
 def _is_entry_line(line: dict) -> bool:
-    """Return True if a pdfplumber line is rendered in the entry font/size."""
+    """Return True if a pdfplumber line is rendered in the entry font/size.
+
+    Args:
+        line: A pdfplumber line dict, as returned by pdfplumber's `extract_text()`.
+
+    Returns:
+        `True` if the line is rendered in the entry font/size.
+    """
     first_char = line["chars"][0]
     height = first_char["bottom"] - first_char["top"]
     return (
@@ -91,10 +101,9 @@ def _fetch_latest_report() -> requests.Response:
 def scrape_amf() -> None:
     """Scrape AMF Pension (Sweden) and write a TSV under ``data/disclosures/amf/<YYYY-MM-DD>/``."""
     response = _fetch_latest_report()
-    path = utils.create_path("amf")
-    pdf_path = utils.download_file(response, "amf.pdf", path)
+    today = datetime.date.today()
+    pdf_path = utils.download_file(response, "amf", today, "pdf")
 
-    shareholder = "AMF Pension"
     entries: list[list[str]] = []
 
     with pdfplumber.open(pdf_path) as pdf:
@@ -129,7 +138,13 @@ def scrape_amf() -> None:
                         continue
 
                     entries.append(
-                        [shareholder, text, report_date, sec_type, response.url]
+                        [
+                            _PENSION_NAME,
+                            text,
+                            report_date,
+                            sec_type,
+                            response.url,
+                        ]
                     )
 
     df = pd.DataFrame(
@@ -142,7 +157,7 @@ def scrape_amf() -> None:
             "Data Source URL",
         ],
     )
-    utils.export_df(df, "amf", path)
+    utils.export_data(df, "amf", today)
 
 
 if __name__ == "__main__":

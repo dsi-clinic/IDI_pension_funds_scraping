@@ -1,0 +1,4610 @@
+[
+ {
+  "Onderneming": "37 Interactive Entertainment Network Technology Gr",
+  "Land": "China",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 4331384
+ },
+ {
+  "Onderneming": "3i Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 10319040
+ },
+ {
+  "Onderneming": "A2A SpA",
+  "Land": "Italie",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 2157625
+ },
+ {
+  "Onderneming": "AAC Technologies Holdings Inc",
+  "Land": "China",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 7928987
+ },
+ {
+  "Onderneming": "ABB Ltd",
+  "Land": "Zwitserland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 288665944
+ },
+ {
+  "Onderneming": "Abbott Laboratories",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 166266108
+ },
+ {
+  "Onderneming": "AbbVie Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 114188775
+ },
+ {
+  "Onderneming": "ABN AMRO Bank NV",
+  "Land": "Nederland",
+  "Sector": "Banken",
+  "BelangEur": 58437107
+ },
+ {
+  "Onderneming": "Accenture PLC",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 81027537
+ },
+ {
+  "Onderneming": "Acciona SA",
+  "Land": "Spanje",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 7994072
+ },
+ {
+  "Onderneming": "Accton Technology Corp",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 4367266
+ },
+ {
+  "Onderneming": "Ackermans & van Haaren NV",
+  "Land": "Belgie",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 5266168
+ },
+ {
+  "Onderneming": "ACS Actividades de Construccion y Servicios SA",
+  "Land": "Spanje",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 88509835
+ },
+ {
+  "Onderneming": "Adecco Group AG",
+  "Land": "Zwitserland",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 20841018
+ },
+ {
+  "Onderneming": "Adecoagro SA",
+  "Land": "Brazilie",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 27327673
+ },
+ {
+  "Onderneming": "adidas AG",
+  "Land": "Duitsland",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 12950244
+ },
+ {
+  "Onderneming": "Admiral Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Verzekeringen",
+  "BelangEur": 10899338
+ },
+ {
+  "Onderneming": "Adobe Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 199399386
+ },
+ {
+  "Onderneming": "Advanced Drainage Systems Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 127790139
+ },
+ {
+  "Onderneming": "Advanced Micro Devices Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 92364968
+ },
+ {
+  "Onderneming": "Advantest Corp",
+  "Land": "Japan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 79419237
+ },
+ {
+  "Onderneming": "AECOM",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 61307064
+ },
+ {
+  "Onderneming": "Aegon Ltd",
+  "Land": "Nederland",
+  "Sector": "Verzekeringen",
+  "BelangEur": 42473955
+ },
+ {
+  "Onderneming": "Aena SME SA",
+  "Land": "Spanje",
+  "Sector": "Transport",
+  "BelangEur": 6612670
+ },
+ {
+  "Onderneming": "Aflac Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 66915943
+ },
+ {
+  "Onderneming": "AGCO Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 56567563
+ },
+ {
+  "Onderneming": "Ageas SA/NV",
+  "Land": "Belgie",
+  "Sector": "Verzekeringen",
+  "BelangEur": 12095866
+ },
+ {
+  "Onderneming": "Agilent Technologies Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 141708833
+ },
+ {
+  "Onderneming": "Agnico Eagle Mines Ltd",
+  "Land": "Canada",
+  "Sector": "Materialen",
+  "BelangEur": 97329865
+ },
+ {
+  "Onderneming": "AIA Group Ltd",
+  "Land": "Hongkong",
+  "Sector": "Verzekeringen",
+  "BelangEur": 42624024
+ },
+ {
+  "Onderneming": "AIB Group PLC",
+  "Land": "Ierland",
+  "Sector": "Banken",
+  "BelangEur": 106170245
+ },
+ {
+  "Onderneming": "AIMA Technology Group Co Ltd",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 15101397
+ },
+ {
+  "Onderneming": "Airtel Africa PLC",
+  "Land": "Nigeria",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 6553165
+ },
+ {
+  "Onderneming": "Aisin Corp",
+  "Land": "Japan",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 15527309
+ },
+ {
+  "Onderneming": "Akzo Nobel NV",
+  "Land": "Nederland",
+  "Sector": "Materialen",
+  "BelangEur": 18233778
+ },
+ {
+  "Onderneming": "Albemarle Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 142711148
+ },
+ {
+  "Onderneming": "Alcon AG",
+  "Land": "Zwitserland",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 73973068
+ },
+ {
+  "Onderneming": "Alfa Laval AB",
+  "Land": "Zweden",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 22831431
+ },
+ {
+  "Onderneming": "Alibaba Health Information Technology Ltd",
+  "Land": "China",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 10418942
+ },
+ {
+  "Onderneming": "ALK-Abello A/S",
+  "Land": "Denemarken",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 89601509
+ },
+ {
+  "Onderneming": "Allegion plc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 98373951
+ },
+ {
+  "Onderneming": "Allianz SE",
+  "Land": "Duitsland",
+  "Sector": "Verzekeringen",
+  "BelangEur": 6686922
+ },
+ {
+  "Onderneming": "Allstate Corp/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 45036574
+ },
+ {
+  "Onderneming": "Alnylam Pharmaceuticals Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 4331167
+ },
+ {
+  "Onderneming": "Alpha Bank SA",
+  "Land": "Griekenland",
+  "Sector": "Banken",
+  "BelangEur": 1315020
+ },
+ {
+  "Onderneming": "Alphabet Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 1617164363
+ },
+ {
+  "Onderneming": "Altice France Lux 3",
+  "Land": "Frankrijk",
+  "Sector": "Niet gespecificeerd",
+  "BelangEur": 640851
+ },
+ {
+  "Onderneming": "Amadeus IT Group SA",
+  "Land": "Spanje",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 14746663
+ },
+ {
+  "Onderneming": "Amazon.com Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 724209567
+ },
+ {
+  "Onderneming": "America Movil SAB de CV",
+  "Land": "Mexico",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 28102887
+ },
+ {
+  "Onderneming": "American Express Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 160110908
+ },
+ {
+  "Onderneming": "American International Group Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 86450116
+ },
+ {
+  "Onderneming": "American Water Works Co Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 59857659
+ },
+ {
+  "Onderneming": "AMETEK Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 97996214
+ },
+ {
+  "Onderneming": "Amgen Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 59376478
+ },
+ {
+  "Onderneming": "AMMB Holdings Bhd",
+  "Land": "Maleisie",
+  "Sector": "Banken",
+  "BelangEur": 6574987
+ },
+ {
+  "Onderneming": "Amorepacific Corp",
+  "Land": "Zuid-Korea",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 1708602
+ },
+ {
+  "Onderneming": "Amphenol Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 48343978
+ },
+ {
+  "Onderneming": "Analog Devices Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 21553063
+ },
+ {
+  "Onderneming": "ANZ Group Holdings Ltd",
+  "Land": "Australie",
+  "Sector": "Banken",
+  "BelangEur": 2902263
+ },
+ {
+  "Onderneming": "AP Moller - Maersk A/S",
+  "Land": "Denemarken",
+  "Sector": "Transport",
+  "BelangEur": 19593093
+ },
+ {
+  "Onderneming": "Apollo Global Management Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 83900404
+ },
+ {
+  "Onderneming": "Apple Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 1504811129
+ },
+ {
+  "Onderneming": "Applied Materials Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 25043204
+ },
+ {
+  "Onderneming": "Aptiv PLC",
+  "Land": "Jersey",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 91524197
+ },
+ {
+  "Onderneming": "Arcadis NV",
+  "Land": "Nederland",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 15206287
+ },
+ {
+  "Onderneming": "Arch Capital Group Ltd",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 58339402
+ },
+ {
+  "Onderneming": "Archer-Daniels-Midland Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 57644537
+ },
+ {
+  "Onderneming": "Ardagh Packaging Finance PLC / Ardagh Holdings USA Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Niet gespecificeerd",
+  "BelangEur": 316141
+ },
+ {
+  "Onderneming": "Argenx SE",
+  "Land": "Nederland",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 90363519
+ },
+ {
+  "Onderneming": "Arista Networks Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 218746410
+ },
+ {
+  "Onderneming": "ASA International Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 2132715
+ },
+ {
+  "Onderneming": "Asahi Kasei Corp",
+  "Land": "Japan",
+  "Sector": "Materialen",
+  "BelangEur": 53700346
+ },
+ {
+  "Onderneming": "ASE Technology Holding Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 33527343
+ },
+ {
+  "Onderneming": "Ashtead Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 29226523
+ },
+ {
+  "Onderneming": "Asia Vital Components Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 12316741
+ },
+ {
+  "Onderneming": "Asics Corp",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 4224369
+ },
+ {
+  "Onderneming": "ASM International NV",
+  "Land": "Nederland",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 27880006
+ },
+ {
+  "Onderneming": "ASML Holding NV",
+  "Land": "Nederland",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 470462233
+ },
+ {
+  "Onderneming": "Assa Abloy AB",
+  "Land": "Zweden",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 34268175
+ },
+ {
+  "Onderneming": "Astellas Pharma Inc",
+  "Land": "Japan",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 18052477
+ },
+ {
+  "Onderneming": "AstraZeneca PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 361168469
+ },
+ {
+  "Onderneming": "Asustek Computer Inc",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 14686869
+ },
+ {
+  "Onderneming": "AT&T Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 110591732
+ },
+ {
+  "Onderneming": "Atlas Copco AB",
+  "Land": "Zweden",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 46141725
+ },
+ {
+  "Onderneming": "Atlassian Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 75165064
+ },
+ {
+  "Onderneming": "Aumovio SE",
+  "Land": "Duitsland",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 3755704
+ },
+ {
+  "Onderneming": "Autel Intelligent Technology Corp Ltd",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 9882800
+ },
+ {
+  "Onderneming": "Autodesk Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 215704575
+ },
+ {
+  "Onderneming": "Automatic Data Processing Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 123344024
+ },
+ {
+  "Onderneming": "Avery Dennison Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 5302698
+ },
+ {
+  "Onderneming": "Aviva PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Verzekeringen",
+  "BelangEur": 1646358
+ },
+ {
+  "Onderneming": "B3 SA - Brasil Bolsa Balcao",
+  "Land": "Brazilie",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 3968405
+ },
+ {
+  "Onderneming": "Ball Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 99932238
+ },
+ {
+  "Onderneming": "Banca Mediolanum SpA",
+  "Land": "Italie",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 24587066
+ },
+ {
+  "Onderneming": "Banco Bilbao Vizcaya Argentaria SA",
+  "Land": "Spanje",
+  "Sector": "Banken",
+  "BelangEur": 266863696
+ },
+ {
+  "Onderneming": "Banco BPM SpA",
+  "Land": "Italie",
+  "Sector": "Banken",
+  "BelangEur": 15555150
+ },
+ {
+  "Onderneming": "Banco de Sabadell SA",
+  "Land": "Spanje",
+  "Sector": "Banken",
+  "BelangEur": 21074854
+ },
+ {
+  "Onderneming": "Banco Santander SA",
+  "Land": "Spanje",
+  "Sector": "Banken",
+  "BelangEur": 33524601
+ },
+ {
+  "Onderneming": "Bandai Namco Holdings Inc",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 2753546
+ },
+ {
+  "Onderneming": "Bangkok Bank PCL",
+  "Land": "Thailand",
+  "Sector": "Banken",
+  "BelangEur": 23340105
+ },
+ {
+  "Onderneming": "Bank Central Asia Tbk PT",
+  "Land": "Indonesie",
+  "Sector": "Banken",
+  "BelangEur": 21589667
+ },
+ {
+  "Onderneming": "Bank of America Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Banken",
+  "BelangEur": 147542692
+ },
+ {
+  "Onderneming": "Bank of Montreal",
+  "Land": "Canada",
+  "Sector": "Banken",
+  "BelangEur": 34490128
+ },
+ {
+  "Onderneming": "Bank of New York Mellon Corp/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 130657864
+ },
+ {
+  "Onderneming": "Bank of Nova Scotia/The",
+  "Land": "Canada",
+  "Sector": "Banken",
+  "BelangEur": 73765193
+ },
+ {
+  "Onderneming": "Bank Polska Kasa Opieki SA",
+  "Land": "Polen",
+  "Sector": "Banken",
+  "BelangEur": 7134230
+ },
+ {
+  "Onderneming": "Bank Rakyat Indonesia Persero Tbk PT",
+  "Land": "Indonesie",
+  "Sector": "Banken",
+  "BelangEur": 117269787
+ },
+ {
+  "Onderneming": "Barclays PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Banken",
+  "BelangEur": 56644796
+ },
+ {
+  "Onderneming": "BayCurrent Inc",
+  "Land": "Japan",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 2923583
+ },
+ {
+  "Onderneming": "Bayerische Motoren Werke AG",
+  "Land": "Duitsland",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 87356472
+ },
+ {
+  "Onderneming": "Beazley PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Verzekeringen",
+  "BelangEur": 6753347
+ },
+ {
+  "Onderneming": "Becton Dickinson & Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 81305985
+ },
+ {
+  "Onderneming": "Belimo Holding AG",
+  "Land": "Zwitserland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 13915102
+ },
+ {
+  "Onderneming": "BeOne Medicines Ltd",
+  "Land": "China",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 44103897
+ },
+ {
+  "Onderneming": "Berkshire Hathaway Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 223844058
+ },
+ {
+  "Onderneming": "Best Buy Co Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 10453492
+ },
+ {
+  "Onderneming": "BIM Birlesik Magazalar AS",
+  "Land": "Turkije",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 2729417
+ },
+ {
+  "Onderneming": "Biogen Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 45209702
+ },
+ {
+  "Onderneming": "BlueScope Steel Ltd",
+  "Land": "Australie",
+  "Sector": "Materialen",
+  "BelangEur": 8772244
+ },
+ {
+  "Onderneming": "BNP Paribas SA",
+  "Land": "Frankrijk",
+  "Sector": "Banken",
+  "BelangEur": 99864842
+ },
+ {
+  "Onderneming": "BOE Technology Group Co Ltd",
+  "Land": "China",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 31859260
+ },
+ {
+  "Onderneming": "Boliden AB",
+  "Land": "Zweden",
+  "Sector": "Materialen",
+  "BelangEur": 56986336
+ },
+ {
+  "Onderneming": "Boston Scientific Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 302626018
+ },
+ {
+  "Onderneming": "Bouygues SA",
+  "Land": "Frankrijk",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 17657952
+ },
+ {
+  "Onderneming": "Brambles Ltd",
+  "Land": "Australie",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 157352941
+ },
+ {
+  "Onderneming": "Bridgestone Corp",
+  "Land": "Japan",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 44777981
+ },
+ {
+  "Onderneming": "Bright Horizons Family Solutions Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 43341820
+ },
+ {
+  "Onderneming": "Bristol-Myers Squibb Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 206588845
+ },
+ {
+  "Onderneming": "Broadcom Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 795946308
+ },
+ {
+  "Onderneming": "Broadridge Financial Solutions Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 13427444
+ },
+ {
+  "Onderneming": "Burberry Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 5832652
+ },
+ {
+  "Onderneming": "Bureau Veritas SA",
+  "Land": "Frankrijk",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 26496505
+ },
+ {
+  "Onderneming": "Cadence Design Systems Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 229830204
+ },
+ {
+  "Onderneming": "Cameco Corp",
+  "Land": "Canada",
+  "Sector": "Energie",
+  "BelangEur": 113933948
+ },
+ {
+  "Onderneming": "Canadian Imperial Bank of Commerce",
+  "Land": "Canada",
+  "Sector": "Banken",
+  "BelangEur": 86278761
+ },
+ {
+  "Onderneming": "Capital One Financial Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 117088492
+ },
+ {
+  "Onderneming": "Capitec Bank Holdings Ltd",
+  "Land": "Zuid-Afrika",
+  "Sector": "Banken",
+  "BelangEur": 28965149
+ },
+ {
+  "Onderneming": "Cardinal Health Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 78410730
+ },
+ {
+  "Onderneming": "Carlisle Cos Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 20017634
+ },
+ {
+  "Onderneming": "Cathay Financial Holding Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Verzekeringen",
+  "BelangEur": 25304458
+ },
+ {
+  "Onderneming": "Cboe Global Markets Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 10146217
+ },
+ {
+  "Onderneming": "Celestica Inc",
+  "Land": "Canada",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 2947668
+ },
+ {
+  "Onderneming": "Cellnex Telecom SA",
+  "Land": "Spanje",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 29946977
+ },
+ {
+  "Onderneming": "Centene Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 26400855
+ },
+ {
+  "Onderneming": "Central Japan Railway Co",
+  "Land": "Japan",
+  "Sector": "Transport",
+  "BelangEur": 30796633
+ },
+ {
+  "Onderneming": "Centrica PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 38727147
+ },
+ {
+  "Onderneming": "Chailease Holding Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 7777285
+ },
+ {
+  "Onderneming": "Charter Communications Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 2573004
+ },
+ {
+  "Onderneming": "Chartwell Retirement Residences",
+  "Land": "Canada",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 34944577
+ },
+ {
+  "Onderneming": "China Feihe Ltd",
+  "Land": "China",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 11537337
+ },
+ {
+  "Onderneming": "China Hongqiao Group Ltd",
+  "Land": "China",
+  "Sector": "Materialen",
+  "BelangEur": 12760627
+ },
+ {
+  "Onderneming": "CHINA HUISHAN DAIR",
+  "Land": "China",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 14702
+ },
+ {
+  "Onderneming": "China Jushi Co Ltd",
+  "Land": "China",
+  "Sector": "Materialen",
+  "BelangEur": 14404144
+ },
+ {
+  "Onderneming": "China Minsheng Banking Corp Ltd",
+  "Land": "China",
+  "Sector": "Banken",
+  "BelangEur": 71275937
+ },
+ {
+  "Onderneming": "China Modern Dairy Holdings Ltd",
+  "Land": "China",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 9290959
+ },
+ {
+  "Onderneming": "Chipotle Mexican Grill Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 19551513
+ },
+ {
+  "Onderneming": "Chow Tai Fook Jewellery Group Ltd",
+  "Land": "China",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 14944446
+ },
+ {
+  "Onderneming": "Chubb Ltd",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 13486709
+ },
+ {
+  "Onderneming": "Chubu Electric Power Co Inc",
+  "Land": "Japan",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 22122002
+ },
+ {
+  "Onderneming": "Chugai Pharmaceutical Co Ltd",
+  "Land": "Japan",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 5668795
+ },
+ {
+  "Onderneming": "Chunghwa Telecom Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 16603456
+ },
+ {
+  "Onderneming": "Church & Dwight Co Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 7044128
+ },
+ {
+  "Onderneming": "Cia de Saneamento Basico do Estado de Sao Paulo SA",
+  "Land": "Brazilie",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 10260790
+ },
+ {
+  "Onderneming": "Cia De Sanena Do Parana",
+  "Land": "Brazilie",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 1031394
+ },
+ {
+  "Onderneming": "Cia Energetica de Minas Gerais",
+  "Land": "Brazilie",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 15716251
+ },
+ {
+  "Onderneming": "Cie Financiere Richemont SA",
+  "Land": "Zwitserland",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 75873868
+ },
+ {
+  "Onderneming": "Cigna Group/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 16607539
+ },
+ {
+  "Onderneming": "Cintas Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 45293091
+ },
+ {
+  "Onderneming": "Citigroup Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Banken",
+  "BelangEur": 261920539
+ },
+ {
+  "Onderneming": "Citizens Financial Group Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Banken",
+  "BelangEur": 16728948
+ },
+ {
+  "Onderneming": "Clorox Co/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 22407020
+ },
+ {
+  "Onderneming": "Cloudflare Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 10327105
+ },
+ {
+  "Onderneming": "Coca-Cola HBC AG",
+  "Land": "Italie",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 7195506
+ },
+ {
+  "Onderneming": "Coinbase Global Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 6340854
+ },
+ {
+  "Onderneming": "Colgate-Palmolive Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 209925954
+ },
+ {
+  "Onderneming": "Comcast Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 87555673
+ },
+ {
+  "Onderneming": "Commerzbank AG",
+  "Land": "Duitsland",
+  "Sector": "Banken",
+  "BelangEur": 12707272
+ },
+ {
+  "Onderneming": "Commonwealth Bank of Australia",
+  "Land": "Australie",
+  "Sector": "Banken",
+  "BelangEur": 17819973
+ },
+ {
+  "Onderneming": "Compal Electronics Inc",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 8451445
+ },
+ {
+  "Onderneming": "Compass Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 37609133
+ },
+ {
+  "Onderneming": "Consolidated Edison Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 114975511
+ },
+ {
+  "Onderneming": "Contemporary Amperex Technology Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 187286369
+ },
+ {
+  "Onderneming": "Continental AG",
+  "Land": "Duitsland",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 9743085
+ },
+ {
+  "Onderneming": "Copart Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 1462729
+ },
+ {
+  "Onderneming": "Core & Main Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 20684277
+ },
+ {
+  "Onderneming": "Corning Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 9993597
+ },
+ {
+  "Onderneming": "Corteva Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 70125554
+ },
+ {
+  "Onderneming": "Costco Wholesale Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 106752618
+ },
+ {
+  "Onderneming": "Credit Agricole SA",
+  "Land": "Frankrijk",
+  "Sector": "Banken",
+  "BelangEur": 5777284
+ },
+ {
+  "Onderneming": "CRH PLC",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 11740625
+ },
+ {
+  "Onderneming": "Crowdstrike Holdings Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 9773932
+ },
+ {
+  "Onderneming": "CSL Ltd",
+  "Land": "Australie",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 31743476
+ },
+ {
+  "Onderneming": "CSX Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Transport",
+  "BelangEur": 3757537
+ },
+ {
+  "Onderneming": "Cummins Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 29352233
+ },
+ {
+  "Onderneming": "Curo Group Holdings Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Niet gespecificeerd",
+  "BelangEur": 103844
+ },
+ {
+  "Onderneming": "CVS Health Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 74841727
+ },
+ {
+  "Onderneming": "Daifuku Co Ltd",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 21107858
+ },
+ {
+  "Onderneming": "Dai-ichi Life Holdings Inc",
+  "Land": "Japan",
+  "Sector": "Verzekeringen",
+  "BelangEur": 22548832
+ },
+ {
+  "Onderneming": "Daiichi Sankyo Co Ltd",
+  "Land": "Japan",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 15246027
+ },
+ {
+  "Onderneming": "Daikin Industries Ltd",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 29854533
+ },
+ {
+  "Onderneming": "Danaher Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 75678385
+ },
+ {
+  "Onderneming": "Danone SA",
+  "Land": "Frankrijk",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 240973493
+ },
+ {
+  "Onderneming": "DaShenLin Pharmaceutical Group Co Ltd",
+  "Land": "China",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 2255734
+ },
+ {
+  "Onderneming": "Datadog Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 16981121
+ },
+ {
+  "Onderneming": "DB Insurance Co Ltd",
+  "Land": "Zuid-Korea",
+  "Sector": "Verzekeringen",
+  "BelangEur": 3195955
+ },
+ {
+  "Onderneming": "DBS Group Holdings Ltd",
+  "Land": "Singapore",
+  "Sector": "Banken",
+  "BelangEur": 141864368
+ },
+ {
+  "Onderneming": "Deckers Outdoor Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 81061210
+ },
+ {
+  "Onderneming": "Deere & Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 59826211
+ },
+ {
+  "Onderneming": "Dell Technologies Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 5402191
+ },
+ {
+  "Onderneming": "Delta Electronics Inc",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 72391091
+ },
+ {
+  "Onderneming": "Delta Electronics Thailand PCL",
+  "Land": "Thailand",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 5085544
+ },
+ {
+  "Onderneming": "Denso Corp",
+  "Land": "Japan",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 69506695
+ },
+ {
+  "Onderneming": "Deutsche Bank AG",
+  "Land": "Duitsland",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 73321400
+ },
+ {
+  "Onderneming": "Deutsche Lufthansa AG",
+  "Land": "Duitsland",
+  "Sector": "Transport",
+  "BelangEur": 2343677
+ },
+ {
+  "Onderneming": "Dexcom Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 87912432
+ },
+ {
+  "Onderneming": "Dian Diagnostics Group Co Ltd",
+  "Land": "China",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 1247957
+ },
+ {
+  "Onderneming": "Digicel International Finance Limited",
+  "Land": "Jamaica",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 1687238
+ },
+ {
+  "Onderneming": "Docusign Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 34211590
+ },
+ {
+  "Onderneming": "Dollar General Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 32576441
+ },
+ {
+  "Onderneming": "Dollar Tree Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 60515641
+ },
+ {
+  "Onderneming": "Dollarama Inc",
+  "Land": "Canada",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 56984843
+ },
+ {
+  "Onderneming": "DoorDash Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 108622851
+ },
+ {
+  "Onderneming": "Dover Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 11770589
+ },
+ {
+  "Onderneming": "Dr Reddy's Laboratories Ltd",
+  "Land": "India",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 27772398
+ },
+ {
+  "Onderneming": "DSM-Firmenich AG",
+  "Land": "Zwitserland",
+  "Sector": "Materialen",
+  "BelangEur": 175414942
+ },
+ {
+  "Onderneming": "Dynatrace Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 36722112
+ },
+ {
+  "Onderneming": "E.ON SE",
+  "Land": "Duitsland",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 53129698
+ },
+ {
+  "Onderneming": "Eastern Air Logistics Co Ltd",
+  "Land": "China",
+  "Sector": "Transport",
+  "BelangEur": 5378385
+ },
+ {
+  "Onderneming": "Eaton Corp PLC",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 73164143
+ },
+ {
+  "Onderneming": "Ebara Corp",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 21368858
+ },
+ {
+  "Onderneming": "eBay Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 206818169
+ },
+ {
+  "Onderneming": "Ecolab Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 236808262
+ },
+ {
+  "Onderneming": "Edison International",
+  "Land": "Verenigde Staten",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 55410094
+ },
+ {
+  "Onderneming": "EDP SA",
+  "Land": "Portugal",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 28775387
+ },
+ {
+  "Onderneming": "Edwards Lifesciences Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 93625543
+ },
+ {
+  "Onderneming": "Eiffage SA",
+  "Land": "Frankrijk",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 5677402
+ },
+ {
+  "Onderneming": "Electronic Arts Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 19972825
+ },
+ {
+  "Onderneming": "Elevance Health Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 33062645
+ },
+ {
+  "Onderneming": "Eli Lilly & Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 607672542
+ },
+ {
+  "Onderneming": "E-MART Inc",
+  "Land": "Zuid-Korea",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 4741804
+ },
+ {
+  "Onderneming": "Embraer SA",
+  "Land": "Brazilie",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 1475339
+ },
+ {
+  "Onderneming": "Emerson Electric Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 124587178
+ },
+ {
+  "Onderneming": "Endeavour Mining PLC",
+  "Land": "Burkina Faso",
+  "Sector": "Materialen",
+  "BelangEur": 7832515
+ },
+ {
+  "Onderneming": "Endesa SA",
+  "Land": "Spanje",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 19699439
+ },
+ {
+  "Onderneming": "Enel SpA",
+  "Land": "Italie",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 48798369
+ },
+ {
+  "Onderneming": "Engie SA",
+  "Land": "Frankrijk",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 33027522
+ },
+ {
+  "Onderneming": "Equifax Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 30003450
+ },
+ {
+  "Onderneming": "Equitable Holdings Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 46682719
+ },
+ {
+  "Onderneming": "Erste Group Bank AG",
+  "Land": "Oostenrijk",
+  "Sector": "Banken",
+  "BelangEur": 70858381
+ },
+ {
+  "Onderneming": "EssilorLuxottica SA",
+  "Land": "Frankrijk",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 42394273
+ },
+ {
+  "Onderneming": "Estee Lauder Cos Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 122613571
+ },
+ {
+  "Onderneming": "Eurofins Scientific SE",
+  "Land": "Luxemburg",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 19759522
+ },
+ {
+  "Onderneming": "Eversource Energy",
+  "Land": "Verenigde Staten",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 40683154
+ },
+ {
+  "Onderneming": "Evolution Mining Ltd",
+  "Land": "Australie",
+  "Sector": "Materialen",
+  "BelangEur": 17578366
+ },
+ {
+  "Onderneming": "Exelon Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 41224794
+ },
+ {
+  "Onderneming": "Expeditors International of Washington Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Transport",
+  "BelangEur": 29876603
+ },
+ {
+  "Onderneming": "Experian PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 24563144
+ },
+ {
+  "Onderneming": "F5 Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 77198735
+ },
+ {
+  "Onderneming": "Fairfax Financial Holdings Ltd",
+  "Land": "Canada",
+  "Sector": "Verzekeringen",
+  "BelangEur": 62316547
+ },
+ {
+  "Onderneming": "FANUC Corp",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 14967984
+ },
+ {
+  "Onderneming": "Fast Retailing Co Ltd",
+  "Land": "Japan",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 4856114
+ },
+ {
+  "Onderneming": "Ferguson Enterprises Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 2572912
+ },
+ {
+  "Onderneming": "Ferrovial SE",
+  "Land": "Nederland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 16108423
+ },
+ {
+  "Onderneming": "First Horizon Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Banken",
+  "BelangEur": 75701207
+ },
+ {
+  "Onderneming": "First Solar Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 20848799
+ },
+ {
+  "Onderneming": "FirstRand Ltd",
+  "Land": "Zuid-Afrika",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 23663314
+ },
+ {
+  "Onderneming": "Fiserv Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 18960476
+ },
+ {
+  "Onderneming": "Flex Ltd",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 6002902
+ },
+ {
+  "Onderneming": "Food & Life Cos Ltd",
+  "Land": "Japan",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 5330091
+ },
+ {
+  "Onderneming": "Ford Motor Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 33844383
+ },
+ {
+  "Onderneming": "Ford Otomotiv Sanayi AS",
+  "Land": "Turkije",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 2737030
+ },
+ {
+  "Onderneming": "Fortinet Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 100680142
+ },
+ {
+  "Onderneming": "Fortis Inc/Canada",
+  "Land": "Canada",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 31220517
+ },
+ {
+  "Onderneming": "Fox Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 73762859
+ },
+ {
+  "Onderneming": "Fresenius Medical Care AG",
+  "Land": "Duitsland",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 67374813
+ },
+ {
+  "Onderneming": "Fresenius SE & Co KGaA",
+  "Land": "Duitsland",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 56346886
+ },
+ {
+  "Onderneming": "Fresnillo PLC",
+  "Land": "Mexico",
+  "Sector": "Materialen",
+  "BelangEur": 16776863
+ },
+ {
+  "Onderneming": "Fujikura Ltd",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 65122008
+ },
+ {
+  "Onderneming": "Furukawa Electric Co Ltd",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 57420870
+ },
+ {
+  "Onderneming": "Galp Energia SGPS SA",
+  "Land": "Portugal",
+  "Sector": "Energie",
+  "BelangEur": 99412020
+ },
+ {
+  "Onderneming": "Garmin Ltd",
+  "Land": "Verenigde Staten",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 90660970
+ },
+ {
+  "Onderneming": "Gartner Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 3787476
+ },
+ {
+  "Onderneming": "GE Vernova Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 196744910
+ },
+ {
+  "Onderneming": "GEA Group AG",
+  "Land": "Duitsland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 72743670
+ },
+ {
+  "Onderneming": "Geely Automobile Holdings Ltd",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 63318390
+ },
+ {
+  "Onderneming": "Gen Digital Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 47133910
+ },
+ {
+  "Onderneming": "General Electric Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 97609932
+ },
+ {
+  "Onderneming": "General Mills Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 48421448
+ },
+ {
+  "Onderneming": "General Motors Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 20551675
+ },
+ {
+  "Onderneming": "Genmab A/S",
+  "Land": "Denemarken",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 38869979
+ },
+ {
+  "Onderneming": "George Weston Ltd",
+  "Land": "Canada",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 50442442
+ },
+ {
+  "Onderneming": "Gerdau SA",
+  "Land": "Brazilie",
+  "Sector": "Materialen",
+  "BelangEur": 45262119
+ },
+ {
+  "Onderneming": "Getlink SE",
+  "Land": "Frankrijk",
+  "Sector": "Transport",
+  "BelangEur": 7650065
+ },
+ {
+  "Onderneming": "GigaDevice Semiconductor Inc",
+  "Land": "China",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 27963962
+ },
+ {
+  "Onderneming": "Gilead Sciences Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 181957648
+ },
+ {
+  "Onderneming": "GoDaddy Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 53088322
+ },
+ {
+  "Onderneming": "Gold Fields Ltd",
+  "Land": "Zuid-Afrika",
+  "Sector": "Materialen",
+  "BelangEur": 14440828
+ },
+ {
+  "Onderneming": "Goldman Sachs Group Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 45332734
+ },
+ {
+  "Onderneming": "Goldwind Science & Technology Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 6239435
+ },
+ {
+  "Onderneming": "GoodWe Technologies Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 2208910
+ },
+ {
+  "Onderneming": "Great-West Lifeco Inc",
+  "Land": "Canada",
+  "Sector": "Verzekeringen",
+  "BelangEur": 50856471
+ },
+ {
+  "Onderneming": "Gree Electric Appliances Inc of Zhuhai",
+  "Land": "China",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 31324356
+ },
+ {
+  "Onderneming": "Grupo Financiero Banorte SAB de CV",
+  "Land": "Mexico",
+  "Sector": "Banken",
+  "BelangEur": 43865578
+ },
+ {
+  "Onderneming": "GSK PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 111088977
+ },
+ {
+  "Onderneming": "Guangdong Haid Group Co Ltd",
+  "Land": "China",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 14715662
+ },
+ {
+  "Onderneming": "Haier Smart Home Co Ltd",
+  "Land": "China",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 63990591
+ },
+ {
+  "Onderneming": "Hain Celestial Group Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 172860
+ },
+ {
+  "Onderneming": "Haleon PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 47148500
+ },
+ {
+  "Onderneming": "Hana Financial Group Inc",
+  "Land": "Zuid-Korea",
+  "Sector": "Banken",
+  "BelangEur": 46852830
+ },
+ {
+  "Onderneming": "Hangzhou Shunwang Technology Co Ltd",
+  "Land": "China",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 5051842
+ },
+ {
+  "Onderneming": "Han's Laser Technology Industry Group Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 20597171
+ },
+ {
+  "Onderneming": "Hansoh Pharmaceutical Group Co Ltd",
+  "Land": "China",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 47402372
+ },
+ {
+  "Onderneming": "Hartford Insurance Group Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 122338874
+ },
+ {
+  "Onderneming": "Haseko Corp",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 9488315
+ },
+ {
+  "Onderneming": "HCA Healthcare Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 31712453
+ },
+ {
+  "Onderneming": "HD Hyundai Electric Co Ltd",
+  "Land": "Zuid-Korea",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 11105937
+ },
+ {
+  "Onderneming": "HDFC Bank Ltd",
+  "Land": "India",
+  "Sector": "Banken",
+  "BelangEur": 412792453
+ },
+ {
+  "Onderneming": "Hefei Meiya Optoelectronic Technology Inc",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 5120574
+ },
+ {
+  "Onderneming": "HEICO Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 4157117
+ },
+ {
+  "Onderneming": "Helios Towers PLC",
+  "Land": "Tanzania",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 64360702
+ },
+ {
+  "Onderneming": "Henan Shuanghui Investment & Development Co Ltd",
+  "Land": "China",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 17039398
+ },
+ {
+  "Onderneming": "Hexagon AB",
+  "Land": "Zweden",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 43470915
+ },
+ {
+  "Onderneming": "Hitachi Ltd",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 95758391
+ },
+ {
+  "Onderneming": "Holcim AG",
+  "Land": "Zwitserland",
+  "Sector": "Materialen",
+  "BelangEur": 8957470
+ },
+ {
+  "Onderneming": "Home Depot Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 6856803
+ },
+ {
+  "Onderneming": "Hon Hai Precision Industry Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 41369289
+ },
+ {
+  "Onderneming": "Horiba Ltd",
+  "Land": "Japan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 108022181
+ },
+ {
+  "Onderneming": "Howmet Aerospace Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 4115762
+ },
+ {
+  "Onderneming": "Hoya Corp",
+  "Land": "Japan",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 38495215
+ },
+ {
+  "Onderneming": "HP Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 32799928
+ },
+ {
+  "Onderneming": "HSBC Holdings PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Banken",
+  "BelangEur": 155221810
+ },
+ {
+  "Onderneming": "Hubbell Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 103917467
+ },
+ {
+  "Onderneming": "HubSpot Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 49540535
+ },
+ {
+  "Onderneming": "Humana Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 23998516
+ },
+ {
+  "Onderneming": "HUTCHMED China Ltd",
+  "Land": "China",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 4301599
+ },
+ {
+  "Onderneming": "Hydro One Ltd",
+  "Land": "Canada",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 40182127
+ },
+ {
+  "Onderneming": "Hyundai Mobis Co Ltd",
+  "Land": "Zuid-Korea",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 41175524
+ },
+ {
+  "Onderneming": "iA Financial Corp Inc",
+  "Land": "Canada",
+  "Sector": "Verzekeringen",
+  "BelangEur": 16403582
+ },
+ {
+  "Onderneming": "Iberdrola SA",
+  "Land": "Spanje",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 406067508
+ },
+ {
+  "Onderneming": "ICG PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 13287299
+ },
+ {
+  "Onderneming": "ICICI Bank Ltd",
+  "Land": "India",
+  "Sector": "Banken",
+  "BelangEur": 36505628
+ },
+ {
+  "Onderneming": "IGO Ltd",
+  "Land": "Australie",
+  "Sector": "Materialen",
+  "BelangEur": 38152765
+ },
+ {
+  "Onderneming": "Illinois Tool Works Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 4174800
+ },
+ {
+  "Onderneming": "Illumina Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 164525867
+ },
+ {
+  "Onderneming": "Incyte Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 104726392
+ },
+ {
+  "Onderneming": "Infineon Technologies AG",
+  "Land": "Duitsland",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 146336182
+ },
+ {
+  "Onderneming": "Informa PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 29086127
+ },
+ {
+  "Onderneming": "Infosys Ltd",
+  "Land": "India",
+  "Sector": "Software & Diensten",
+  "BelangEur": 133999982
+ },
+ {
+  "Onderneming": "Infrastrutture Wireless Italiane SpA",
+  "Land": "Italie",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 41111972
+ },
+ {
+  "Onderneming": "ING Groep NV",
+  "Land": "Nederland",
+  "Sector": "Banken",
+  "BelangEur": 71801713
+ },
+ {
+  "Onderneming": "Ingersoll Rand Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 32509441
+ },
+ {
+  "Onderneming": "Innovent Biologics Inc",
+  "Land": "China",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 36497076
+ },
+ {
+  "Onderneming": "Insulet Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 63464818
+ },
+ {
+  "Onderneming": "Intact Financial Corp",
+  "Land": "Canada",
+  "Sector": "Verzekeringen",
+  "BelangEur": 28521931
+ },
+ {
+  "Onderneming": "Intel Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 29208732
+ },
+ {
+  "Onderneming": "Intercontinental Exchange Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 3404683
+ },
+ {
+  "Onderneming": "International Consolidated Airlines Group SA",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Transport",
+  "BelangEur": 12538625
+ },
+ {
+  "Onderneming": "International Flavors & Fragrances Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 49204369
+ },
+ {
+  "Onderneming": "International Games System Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 4357050
+ },
+ {
+  "Onderneming": "International Paper Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 67167389
+ },
+ {
+  "Onderneming": "Intesa Sanpaolo SpA",
+  "Land": "Italie",
+  "Sector": "Banken",
+  "BelangEur": 108527525
+ },
+ {
+  "Onderneming": "Intuit Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 142899863
+ },
+ {
+  "Onderneming": "Intuitive Surgical Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 131545784
+ },
+ {
+  "Onderneming": "IPG Photonics Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 29439796
+ },
+ {
+  "Onderneming": "IQVIA Holdings Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 116241468
+ },
+ {
+  "Onderneming": "Itausa SA",
+  "Land": "Brazilie",
+  "Sector": "Banken",
+  "BelangEur": 4771406
+ },
+ {
+  "Onderneming": "Iwatani Corp",
+  "Land": "Japan",
+  "Sector": "Energie",
+  "BelangEur": 11935010
+ },
+ {
+  "Onderneming": "J Sainsbury PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 27272954
+ },
+ {
+  "Onderneming": "Japan Post Bank Co Ltd",
+  "Land": "Japan",
+  "Sector": "Banken",
+  "BelangEur": 12927190
+ },
+ {
+  "Onderneming": "Japan Post Holdings Co Ltd",
+  "Land": "Japan",
+  "Sector": "Verzekeringen",
+  "BelangEur": 6215964
+ },
+ {
+  "Onderneming": "JBT Marel Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 58734552
+ },
+ {
+  "Onderneming": "JD Health International Inc",
+  "Land": "China",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 48716620
+ },
+ {
+  "Onderneming": "JD Logistics Inc",
+  "Land": "China",
+  "Sector": "Transport",
+  "BelangEur": 13687887
+ },
+ {
+  "Onderneming": "JD.com Inc",
+  "Land": "China",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 52264345
+ },
+ {
+  "Onderneming": "Jeronimo Martins SGPS SA",
+  "Land": "Portugal",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 4911774
+ },
+ {
+  "Onderneming": "Johnson Controls International plc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 261332848
+ },
+ {
+  "Onderneming": "Johnson Electric Holdings Ltd",
+  "Land": "Hongkong",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 11559526
+ },
+ {
+  "Onderneming": "JPMorgan Chase & Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Banken",
+  "BelangEur": 421920402
+ },
+ {
+  "Onderneming": "Kanzhun Ltd",
+  "Land": "China",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 34951496
+ },
+ {
+  "Onderneming": "Kao Corp",
+  "Land": "Japan",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 35364318
+ },
+ {
+  "Onderneming": "Kasikornbank PCL",
+  "Land": "Thailand",
+  "Sector": "Banken",
+  "BelangEur": 59233853
+ },
+ {
+  "Onderneming": "KB Financial Group Inc",
+  "Land": "Zuid-Korea",
+  "Sector": "Banken",
+  "BelangEur": 74479745
+ },
+ {
+  "Onderneming": "KBC Group NV",
+  "Land": "Belgie",
+  "Sector": "Banken",
+  "BelangEur": 17434766
+ },
+ {
+  "Onderneming": "KDDI Corp",
+  "Land": "Japan",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 69661541
+ },
+ {
+  "Onderneming": "Kenvue Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 27865554
+ },
+ {
+  "Onderneming": "Kering SA",
+  "Land": "Frankrijk",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 5383987
+ },
+ {
+  "Onderneming": "Kerry Group PLC",
+  "Land": "Ierland",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 56292210
+ },
+ {
+  "Onderneming": "Keyence Corp",
+  "Land": "Japan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 38363627
+ },
+ {
+  "Onderneming": "Keysight Technologies Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 33997063
+ },
+ {
+  "Onderneming": "KGHM Polska Miedz SA",
+  "Land": "Polen",
+  "Sector": "Materialen",
+  "BelangEur": 2527836
+ },
+ {
+  "Onderneming": "Kimberly-Clark Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 16327781
+ },
+ {
+  "Onderneming": "Kingfisher PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 21187090
+ },
+ {
+  "Onderneming": "Kingsoft Corp Ltd",
+  "Land": "China",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 10415488
+ },
+ {
+  "Onderneming": "Kingspan Group PLC",
+  "Land": "Ierland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 39752853
+ },
+ {
+  "Onderneming": "Kinross Gold Corp",
+  "Land": "Canada",
+  "Sector": "Materialen",
+  "BelangEur": 41576743
+ },
+ {
+  "Onderneming": "KION Group AG",
+  "Land": "Duitsland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 31028293
+ },
+ {
+  "Onderneming": "KLA Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 177130927
+ },
+ {
+  "Onderneming": "Knorr-Bremse AG",
+  "Land": "Duitsland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 111391154
+ },
+ {
+  "Onderneming": "Kongsberg Gruppen ASA",
+  "Land": "Noorwegen",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 12291821
+ },
+ {
+  "Onderneming": "Koninklijke Ahold Delhaize NV",
+  "Land": "Nederland",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 105040400
+ },
+ {
+  "Onderneming": "Koninklijke KPN NV",
+  "Land": "Nederland",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 7922096
+ },
+ {
+  "Onderneming": "Koninklijke Philips NV",
+  "Land": "Nederland",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 68904137
+ },
+ {
+  "Onderneming": "Korea Gas Corp",
+  "Land": "Zuid-Korea",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 4937175
+ },
+ {
+  "Onderneming": "Kroger Co/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 57630877
+ },
+ {
+  "Onderneming": "Krung Thai Bank PCL",
+  "Land": "Thailand",
+  "Sector": "Banken",
+  "BelangEur": 5490244
+ },
+ {
+  "Onderneming": "Kuaishou Technology",
+  "Land": "China",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 32615346
+ },
+ {
+  "Onderneming": "Kurita Water Industries Ltd",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 13365723
+ },
+ {
+  "Onderneming": "Labcorp Holdings Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Niet gespecificeerd",
+  "BelangEur": 36119927
+ },
+ {
+  "Onderneming": "Lam Research Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 212296869
+ },
+ {
+  "Onderneming": "Landis+Gyr Group AG",
+  "Land": "Zwitserland",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 33638716
+ },
+ {
+  "Onderneming": "Legrand SA",
+  "Land": "Frankrijk",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 90679622
+ },
+ {
+  "Onderneming": "LG Chem Ltd",
+  "Land": "Zuid-Korea",
+  "Sector": "Materialen",
+  "BelangEur": 2463862
+ },
+ {
+  "Onderneming": "LG Electronics Inc",
+  "Land": "Zuid-Korea",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 45348254
+ },
+ {
+  "Onderneming": "LG Uplus Corp",
+  "Land": "Zuid-Korea",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 4110715
+ },
+ {
+  "Onderneming": "Li Ning Co Ltd",
+  "Land": "China",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 13944295
+ },
+ {
+  "Onderneming": "Linde PLC",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 180311652
+ },
+ {
+  "Onderneming": "Lion Corp",
+  "Land": "Japan",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 5297534
+ },
+ {
+  "Onderneming": "Lion Finance Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Banken",
+  "BelangEur": 131460919
+ },
+ {
+  "Onderneming": "Lloyds Banking Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Banken",
+  "BelangEur": 28183823
+ },
+ {
+  "Onderneming": "Loblaw Cos Ltd",
+  "Land": "Canada",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 85381138
+ },
+ {
+  "Onderneming": "Loews Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 6011040
+ },
+ {
+  "Onderneming": "Logitech International SA",
+  "Land": "Zwitserland",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 21422020
+ },
+ {
+  "Onderneming": "Lonza Group AG",
+  "Land": "Zwitserland",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 38761495
+ },
+ {
+  "Onderneming": "Lowe's Cos Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 13870832
+ },
+ {
+  "Onderneming": "Lundin Gold Inc",
+  "Land": "Canada",
+  "Sector": "Materialen",
+  "BelangEur": 10977917
+ },
+ {
+  "Onderneming": "Lundin Mining Corp",
+  "Land": "Canada",
+  "Sector": "Materialen",
+  "BelangEur": 79612218
+ },
+ {
+  "Onderneming": "Lynas Rare Earths Ltd",
+  "Land": "Australie",
+  "Sector": "Materialen",
+  "BelangEur": 16783939
+ },
+ {
+  "Onderneming": "Magna International Inc",
+  "Land": "Canada",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 16197800
+ },
+ {
+  "Onderneming": "Malayan Banking Bhd",
+  "Land": "Maleisie",
+  "Sector": "Banken",
+  "BelangEur": 9904056
+ },
+ {
+  "Onderneming": "Manulife Financial Corp",
+  "Land": "Canada",
+  "Sector": "Verzekeringen",
+  "BelangEur": 95727954
+ },
+ {
+  "Onderneming": "Marsh & McLennan Cos Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 42770933
+ },
+ {
+  "Onderneming": "Marvell Technology Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 59503945
+ },
+ {
+  "Onderneming": "Masco Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 3932634
+ },
+ {
+  "Onderneming": "Mastercard Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 299131982
+ },
+ {
+  "Onderneming": "MatsukiyoCocokara & Co",
+  "Land": "Japan",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 10450875
+ },
+ {
+  "Onderneming": "McCormick & Co Inc/MD",
+  "Land": "Verenigde Staten",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 43298057
+ },
+ {
+  "Onderneming": "McKesson Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 71502021
+ },
+ {
+  "Onderneming": "MediaTek Inc",
+  "Land": "Taiwan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 94437383
+ },
+ {
+  "Onderneming": "Medtronic PLC",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 172056551
+ },
+ {
+  "Onderneming": "MEIJI Holdings Co Ltd",
+  "Land": "Japan",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 18359326
+ },
+ {
+  "Onderneming": "Meituan",
+  "Land": "China",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 25164689
+ },
+ {
+  "Onderneming": "MercadoLibre Inc",
+  "Land": "Brazilie",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 125748685
+ },
+ {
+  "Onderneming": "Mercedes-Benz Group AG",
+  "Land": "Duitsland",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 52049093
+ },
+ {
+  "Onderneming": "Merck & Co Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 186784809
+ },
+ {
+  "Onderneming": "Meta Platforms Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 567235635
+ },
+ {
+  "Onderneming": "MetLife Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 45454169
+ },
+ {
+  "Onderneming": "Metro Inc/CN",
+  "Land": "Canada",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 10738862
+ },
+ {
+  "Onderneming": "Mettler-Toledo International Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 62980422
+ },
+ {
+  "Onderneming": "Microchip Technology Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 22794881
+ },
+ {
+  "Onderneming": "Micron Technology Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 95866848
+ },
+ {
+  "Onderneming": "Microsoft Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 2177250281
+ },
+ {
+  "Onderneming": "Midas Intermediate Holdco II LLC / Midas Intermediate Holdco II Finance Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Niet gespecificeerd",
+  "BelangEur": 11812
+ },
+ {
+  "Onderneming": "Midea Group Co Ltd",
+  "Land": "China",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 8741885
+ },
+ {
+  "Onderneming": "Minor International PCL",
+  "Land": "Thailand",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 15500980
+ },
+ {
+  "Onderneming": "Minth Group Ltd",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 3636512
+ },
+ {
+  "Onderneming": "MISUMI Group Inc",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 7308201
+ },
+ {
+  "Onderneming": "Mitsubishi Electric Corp",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 87157487
+ },
+ {
+  "Onderneming": "Mitsubishi Heavy Industries Ltd",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 53994704
+ },
+ {
+  "Onderneming": "Mitsubishi Materials Corp",
+  "Land": "Japan",
+  "Sector": "Materialen",
+  "BelangEur": 9017049
+ },
+ {
+  "Onderneming": "Mitsubishi UFJ Financial Group Inc",
+  "Land": "Japan",
+  "Sector": "Banken",
+  "BelangEur": 47919607
+ },
+ {
+  "Onderneming": "Mizuho Financial Group Inc",
+  "Land": "Japan",
+  "Sector": "Banken",
+  "BelangEur": 34000752
+ },
+ {
+  "Onderneming": "Molina Healthcare Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 10171990
+ },
+ {
+  "Onderneming": "MongoDB Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 21283423
+ },
+ {
+  "Onderneming": "Monolithic Power Systems Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 2374618
+ },
+ {
+  "Onderneming": "Monster Beverage Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 10664210
+ },
+ {
+  "Onderneming": "Montage Technology Co Ltd",
+  "Land": "China",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 31966657
+ },
+ {
+  "Onderneming": "Moody's Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 48418202
+ },
+ {
+  "Onderneming": "Morgan Stanley",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 172028679
+ },
+ {
+  "Onderneming": "MS&AD Insurance Group Holdings Inc",
+  "Land": "Japan",
+  "Sector": "Verzekeringen",
+  "BelangEur": 32430714
+ },
+ {
+  "Onderneming": "MSA Safety Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 73637675
+ },
+ {
+  "Onderneming": "MSCI Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 63458852
+ },
+ {
+  "Onderneming": "MTN Group Ltd",
+  "Land": "Zuid-Afrika",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 40755256
+ },
+ {
+  "Onderneming": "MTU Aero Engines AG",
+  "Land": "Duitsland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 20845806
+ },
+ {
+  "Onderneming": "Muenchener Rueckversicherungs-Gesellschaft AG in Muenchen",
+  "Land": "Duitsland",
+  "Sector": "Verzekeringen",
+  "BelangEur": 55029260
+ },
+ {
+  "Onderneming": "Nasdaq Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 46488918
+ },
+ {
+  "Onderneming": "Naspers Ltd",
+  "Land": "Zuid-Afrika",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 26118991
+ },
+ {
+  "Onderneming": "National Bank of Canada",
+  "Land": "Canada",
+  "Sector": "Banken",
+  "BelangEur": 8888484
+ },
+ {
+  "Onderneming": "NatWest Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Banken",
+  "BelangEur": 80301017
+ },
+ {
+  "Onderneming": "NAVER Corp",
+  "Land": "Zuid-Korea",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 15729461
+ },
+ {
+  "Onderneming": "NEC Corp",
+  "Land": "Japan",
+  "Sector": "Software & Diensten",
+  "BelangEur": 58797073
+ },
+ {
+  "Onderneming": "Nemetschek SE",
+  "Land": "Duitsland",
+  "Sector": "Software & Diensten",
+  "BelangEur": 7543619
+ },
+ {
+  "Onderneming": "Neste Oyj",
+  "Land": "Finland",
+  "Sector": "Energie",
+  "BelangEur": 76242072
+ },
+ {
+  "Onderneming": "Nestle SA",
+  "Land": "Zwitserland",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 71990225
+ },
+ {
+  "Onderneming": "NetApp Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 10887263
+ },
+ {
+  "Onderneming": "NetEase Inc",
+  "Land": "China",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 56499429
+ },
+ {
+  "Onderneming": "Netflix Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 222898124
+ },
+ {
+  "Onderneming": "New Oriental Education & Technology Group Inc",
+  "Land": "China",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 10157379
+ },
+ {
+  "Onderneming": "New Oriental Education & Technology Group Inc",
+  "Land": "Kaaimaneilanden",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 3441665
+ },
+ {
+  "Onderneming": "Newmont Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 183231743
+ },
+ {
+  "Onderneming": "News Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 45726647
+ },
+ {
+  "Onderneming": "NEXTDC Ltd",
+  "Land": "Australie",
+  "Sector": "Software & Diensten",
+  "BelangEur": 90516169
+ },
+ {
+  "Onderneming": "NextEra Energy Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 218134387
+ },
+ {
+  "Onderneming": "Nibe Industrier AB",
+  "Land": "Zweden",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 36064916
+ },
+ {
+  "Onderneming": "Nichirei Corp",
+  "Land": "Japan",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 11678138
+ },
+ {
+  "Onderneming": "NIKE Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 4551296
+ },
+ {
+  "Onderneming": "Ningbo Joyson Electronic Corp",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 2634593
+ },
+ {
+  "Onderneming": "Nippon Yusen KK",
+  "Land": "Japan",
+  "Sector": "Transport",
+  "BelangEur": 14801821
+ },
+ {
+  "Onderneming": "Niterra Co Ltd",
+  "Land": "Japan",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 2380735
+ },
+ {
+  "Onderneming": "Nitto Denko Corp",
+  "Land": "Japan",
+  "Sector": "Materialen",
+  "BelangEur": 5402303
+ },
+ {
+  "Onderneming": "NN Group NV",
+  "Land": "Nederland",
+  "Sector": "Verzekeringen",
+  "BelangEur": 117967472
+ },
+ {
+  "Onderneming": "Nokia Oyj",
+  "Land": "Finland",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 58856256
+ },
+ {
+  "Onderneming": "Nomura Holdings Inc",
+  "Land": "Japan",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 23075911
+ },
+ {
+  "Onderneming": "Norfolk Southern Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Transport",
+  "BelangEur": 8885432
+ },
+ {
+  "Onderneming": "Northern Star Resources Ltd",
+  "Land": "Australie",
+  "Sector": "Materialen",
+  "BelangEur": 61359896
+ },
+ {
+  "Onderneming": "Northern Trust Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 5706437
+ },
+ {
+  "Onderneming": "Novartis AG",
+  "Land": "Zwitserland",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 280458502
+ },
+ {
+  "Onderneming": "Novatek Microelectronics Corp",
+  "Land": "Taiwan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 23634832
+ },
+ {
+  "Onderneming": "Novo Nordisk A/S",
+  "Land": "Denemarken",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 92320436
+ },
+ {
+  "Onderneming": "NTT Inc",
+  "Land": "Japan",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 38976551
+ },
+ {
+  "Onderneming": "Nucor Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 36394869
+ },
+ {
+  "Onderneming": "Nutrien Ltd",
+  "Land": "Canada",
+  "Sector": "Materialen",
+  "BelangEur": 2083955
+ },
+ {
+  "Onderneming": "NVIDIA Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 2286756939
+ },
+ {
+  "Onderneming": "NVR Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 5588567
+ },
+ {
+  "Onderneming": "NXP Semiconductors NV",
+  "Land": "Nederland",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 13547251
+ },
+ {
+  "Onderneming": "Obayashi Corp",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 19370098
+ },
+ {
+  "Onderneming": "Obic Co Ltd",
+  "Land": "Japan",
+  "Sector": "Software & Diensten",
+  "BelangEur": 4561340
+ },
+ {
+  "Onderneming": "Okta Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 22370730
+ },
+ {
+  "Onderneming": "Old Mutual Ltd",
+  "Land": "Zuid-Afrika",
+  "Sector": "Verzekeringen",
+  "BelangEur": 7323999
+ },
+ {
+  "Onderneming": "OmniVision Integrated Circuits Group Inc",
+  "Land": "China",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 19501138
+ },
+ {
+  "Onderneming": "OMV AG",
+  "Land": "Oostenrijk",
+  "Sector": "Energie",
+  "BelangEur": 32818310
+ },
+ {
+  "Onderneming": "ON Semiconductor Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 90584473
+ },
+ {
+  "Onderneming": "Ono Pharmaceutical Co Ltd",
+  "Land": "Japan",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 13154961
+ },
+ {
+  "Onderneming": "Open House Group Co Ltd",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 11416950
+ },
+ {
+  "Onderneming": "Oracle Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 59950031
+ },
+ {
+  "Onderneming": "ORIX Corp",
+  "Land": "Japan",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 10303382
+ },
+ {
+  "Onderneming": "Orsted AS",
+  "Land": "Denemarken",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 62692761
+ },
+ {
+  "Onderneming": "Otis Worldwide Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 34362625
+ },
+ {
+  "Onderneming": "Palantir Technologies Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 95772054
+ },
+ {
+  "Onderneming": "Palo Alto Networks Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 95735380
+ },
+ {
+  "Onderneming": "Panasonic Holdings Corp",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 11573430
+ },
+ {
+  "Onderneming": "Pandora A/S",
+  "Land": "Denemarken",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 16253603
+ },
+ {
+  "Onderneming": "Parker-Hannifin Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 80108884
+ },
+ {
+  "Onderneming": "PayPal Holdings Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 83493963
+ },
+ {
+  "Onderneming": "Pearson PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 35393699
+ },
+ {
+  "Onderneming": "Pentair PLC",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 29618783
+ },
+ {
+  "Onderneming": "PepsiCo Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 90512245
+ },
+ {
+  "Onderneming": "Perfect World Co Ltd/China",
+  "Land": "China",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 1504754
+ },
+ {
+  "Onderneming": "Pfizer Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 99841357
+ },
+ {
+  "Onderneming": "Ping An Bank Co Ltd",
+  "Land": "China",
+  "Sector": "Banken",
+  "BelangEur": 24949873
+ },
+ {
+  "Onderneming": "Pinterest Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 23306776
+ },
+ {
+  "Onderneming": "Pirelli & C SpA",
+  "Land": "Italie",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 12860092
+ },
+ {
+  "Onderneming": "PLS Group Ltd",
+  "Land": "Australie",
+  "Sector": "Materialen",
+  "BelangEur": 4805870
+ },
+ {
+  "Onderneming": "PNC Financial Services Group Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Banken",
+  "BelangEur": 35491831
+ },
+ {
+  "Onderneming": "Pop Mart International Group Ltd",
+  "Land": "China",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 5005973
+ },
+ {
+  "Onderneming": "Poste Italiane SpA",
+  "Land": "Italie",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 41925029
+ },
+ {
+  "Onderneming": "Power Corp of Canada",
+  "Land": "Canada",
+  "Sector": "Verzekeringen",
+  "BelangEur": 32331547
+ },
+ {
+  "Onderneming": "Powertech Technology Inc",
+  "Land": "Taiwan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 1729915
+ },
+ {
+  "Onderneming": "Powszechna Kasa Oszczednosci Bank Polski SA",
+  "Land": "Polen",
+  "Sector": "Banken",
+  "BelangEur": 7817088
+ },
+ {
+  "Onderneming": "Powszechny Zaklad Ubezpieczen SA",
+  "Land": "Polen",
+  "Sector": "Verzekeringen",
+  "BelangEur": 35002464
+ },
+ {
+  "Onderneming": "PPG Industries Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 7037457
+ },
+ {
+  "Onderneming": "PPHE Hotel Group Ltd",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 1514855
+ },
+ {
+  "Onderneming": "Principal Financial Group Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 6800683
+ },
+ {
+  "Onderneming": "Pro Medicus Ltd",
+  "Land": "Australie",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 17647120
+ },
+ {
+  "Onderneming": "Procter & Gamble Co/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 275450008
+ },
+ {
+  "Onderneming": "Progressive Corp/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 17906786
+ },
+ {
+  "Onderneming": "Prosus NV",
+  "Land": "China",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 18566734
+ },
+ {
+  "Onderneming": "Prudential Financial Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 9585453
+ },
+ {
+  "Onderneming": "PTC Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 85422011
+ },
+ {
+  "Onderneming": "Public Power Corp SA",
+  "Land": "Griekenland",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 1014686
+ },
+ {
+  "Onderneming": "Pure Storage Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 44988818
+ },
+ {
+  "Onderneming": "QBE Insurance Group Ltd",
+  "Land": "Australie",
+  "Sector": "Verzekeringen",
+  "BelangEur": 30702928
+ },
+ {
+  "Onderneming": "Qfin Holdings Inc",
+  "Land": "China",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 10757810
+ },
+ {
+  "Onderneming": "Qingdao TGOOD Electric Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 17392251
+ },
+ {
+  "Onderneming": "QUALCOMM Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 147659792
+ },
+ {
+  "Onderneming": "Quest Diagnostics Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 106432571
+ },
+ {
+  "Onderneming": "Rakuten Group Inc",
+  "Land": "Japan",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 4187488
+ },
+ {
+  "Onderneming": "Realtek Semiconductor Corp",
+  "Land": "Taiwan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 14722287
+ },
+ {
+  "Onderneming": "Recruit Holdings Co Ltd",
+  "Land": "Japan",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 137946352
+ },
+ {
+  "Onderneming": "Regeneron Pharmaceuticals Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 164274336
+ },
+ {
+  "Onderneming": "RELX PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 50600492
+ },
+ {
+  "Onderneming": "Renault SA",
+  "Land": "Frankrijk",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 6693388
+ },
+ {
+  "Onderneming": "Republic Services Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 175801479
+ },
+ {
+  "Onderneming": "ResMed Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 13761656
+ },
+ {
+  "Onderneming": "Resona Holdings Inc",
+  "Land": "Japan",
+  "Sector": "Banken",
+  "BelangEur": 10541638
+ },
+ {
+  "Onderneming": "RHB Bank Bhd",
+  "Land": "Maleisie",
+  "Sector": "Banken",
+  "BelangEur": 14469036
+ },
+ {
+  "Onderneming": "Rivian Automotive Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 34821090
+ },
+ {
+  "Onderneming": "ROBLOX Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 14287484
+ },
+ {
+  "Onderneming": "Roche Holding AG",
+  "Land": "Zwitserland",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 244730790
+ },
+ {
+  "Onderneming": "Rockchip Electronics Co Ltd",
+  "Land": "China",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 27099008
+ },
+ {
+  "Onderneming": "Rockwell Automation Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 156972328
+ },
+ {
+  "Onderneming": "Rolls-Royce Holdings PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 34324902
+ },
+ {
+  "Onderneming": "Roper Technologies Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 117371508
+ },
+ {
+  "Onderneming": "Ross Stores Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 13622968
+ },
+ {
+  "Onderneming": "Royal Bank of Canada",
+  "Land": "Canada",
+  "Sector": "Banken",
+  "BelangEur": 37281371
+ },
+ {
+  "Onderneming": "S&P Global Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 94554327
+ },
+ {
+  "Onderneming": "Salesforce Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 140690905
+ },
+ {
+  "Onderneming": "Samsonite Group SA",
+  "Land": "Verenigde Staten",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 11968955
+ },
+ {
+  "Onderneming": "Samsung Biologics Co Ltd",
+  "Land": "Zuid-Korea",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 21151258
+ },
+ {
+  "Onderneming": "Samsung Electronics Co Ltd",
+  "Land": "Zuid-Korea",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 120756172
+ },
+ {
+  "Onderneming": "Sandoz Group AG",
+  "Land": "Zwitserland",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 57563685
+ },
+ {
+  "Onderneming": "Sanofi SA",
+  "Land": "Frankrijk",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 107093448
+ },
+ {
+  "Onderneming": "Sanrio Co Ltd",
+  "Land": "Japan",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 35395936
+ },
+ {
+  "Onderneming": "Sany Heavy Industry Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 26370043
+ },
+ {
+  "Onderneming": "SAP SE",
+  "Land": "Duitsland",
+  "Sector": "Software & Diensten",
+  "BelangEur": 152313642
+ },
+ {
+  "Onderneming": "Saputo Inc",
+  "Land": "Canada",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 27178816
+ },
+ {
+  "Onderneming": "SBI Holdings Inc",
+  "Land": "Japan",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 4942713
+ },
+ {
+  "Onderneming": "SCB X PCL",
+  "Land": "Thailand",
+  "Sector": "Banken",
+  "BelangEur": 12299522
+ },
+ {
+  "Onderneming": "Schneider Electric SE",
+  "Land": "Frankrijk",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 469511073
+ },
+ {
+  "Onderneming": "Scout24 SE",
+  "Land": "Duitsland",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 28142143
+ },
+ {
+  "Onderneming": "SCREEN Holdings Co Ltd",
+  "Land": "Japan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 10232346
+ },
+ {
+  "Onderneming": "Seagate Technology Holdings PLC",
+  "Land": "Ierland",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 16300640
+ },
+ {
+  "Onderneming": "SEEK Ltd",
+  "Land": "Australie",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 8913850
+ },
+ {
+  "Onderneming": "Sekisui Chemical Co Ltd",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 13404795
+ },
+ {
+  "Onderneming": "ServiceNow Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 130708525
+ },
+ {
+  "Onderneming": "Shanghai M&G Stationery Inc",
+  "Land": "China",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 2069252
+ },
+ {
+  "Onderneming": "Shanghai Putailai New Energy Technology Group Co Ltd",
+  "Land": "China",
+  "Sector": "Materialen",
+  "BelangEur": 6676507
+ },
+ {
+  "Onderneming": "Shenzhen Inovance Technology Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 8867871
+ },
+ {
+  "Onderneming": "Shenzhen Kedali Industry Co Ltd",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 9617089
+ },
+ {
+  "Onderneming": "Sherwin-Williams Co/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 38180057
+ },
+ {
+  "Onderneming": "Shimamura Co Ltd",
+  "Land": "Japan",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 6395509
+ },
+ {
+  "Onderneming": "Shimano Inc",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 142833173
+ },
+ {
+  "Onderneming": "Shin-Etsu Chemical Co Ltd",
+  "Land": "Japan",
+  "Sector": "Materialen",
+  "BelangEur": 13219552
+ },
+ {
+  "Onderneming": "Shinhan Financial Group Co Ltd",
+  "Land": "Zuid-Korea",
+  "Sector": "Banken",
+  "BelangEur": 73994868
+ },
+ {
+  "Onderneming": "Shionogi & Co Ltd",
+  "Land": "Japan",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 26785061
+ },
+ {
+  "Onderneming": "Siemens Energy AG",
+  "Land": "Duitsland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 138074238
+ },
+ {
+  "Onderneming": "Sika AG",
+  "Land": "Zwitserland",
+  "Sector": "Materialen",
+  "BelangEur": 22964071
+ },
+ {
+  "Onderneming": "Singapore Exchange Ltd",
+  "Land": "Singapore",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 3966167
+ },
+ {
+  "Onderneming": "Singapore Technologies Engineering Ltd",
+  "Land": "Singapore",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 40546202
+ },
+ {
+  "Onderneming": "Singapore Telecommunications Ltd",
+  "Land": "Singapore",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 71331126
+ },
+ {
+  "Onderneming": "Sinoma International Engineering Co",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 3301868
+ },
+ {
+  "Onderneming": "SK hynix Inc",
+  "Land": "Zuid-Korea",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 128239986
+ },
+ {
+  "Onderneming": "SK Square Co Ltd",
+  "Land": "Zuid-Korea",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 34473614
+ },
+ {
+  "Onderneming": "Skandinaviska Enskilda Banken AB",
+  "Land": "Zweden",
+  "Sector": "Banken",
+  "BelangEur": 5718472
+ },
+ {
+  "Onderneming": "Skanska AB",
+  "Land": "Zweden",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 22862622
+ },
+ {
+  "Onderneming": "Skylark Holdings Co Ltd",
+  "Land": "Japan",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 13195744
+ },
+ {
+  "Onderneming": "SMC Corp",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 13578822
+ },
+ {
+  "Onderneming": "Snowflake Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 9792520
+ },
+ {
+  "Onderneming": "Societe Generale SA",
+  "Land": "Frankrijk",
+  "Sector": "Banken",
+  "BelangEur": 72133185
+ },
+ {
+  "Onderneming": "Sodexo SA",
+  "Land": "Frankrijk",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 18043162
+ },
+ {
+  "Onderneming": "SoftBank Corp",
+  "Land": "Japan",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 90157484
+ },
+ {
+  "Onderneming": "SoftBank Group Corp",
+  "Land": "Japan",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 15727161
+ },
+ {
+  "Onderneming": "SolarEdge Technologies Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 16224511
+ },
+ {
+  "Onderneming": "Sompo Holdings Inc",
+  "Land": "Japan",
+  "Sector": "Verzekeringen",
+  "BelangEur": 15249510
+ },
+ {
+  "Onderneming": "Sony Group Corp",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 81763487
+ },
+ {
+  "Onderneming": "Spotify Technology SA",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 33417587
+ },
+ {
+  "Onderneming": "Sprouts Farmers Market Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 43904753
+ },
+ {
+  "Onderneming": "SS&C Technologies Holdings Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 61520397
+ },
+ {
+  "Onderneming": "SSAB AB",
+  "Land": "Zweden",
+  "Sector": "Materialen",
+  "BelangEur": 8036437
+ },
+ {
+  "Onderneming": "Standard Bank Group Ltd",
+  "Land": "Zuid-Afrika",
+  "Sector": "Banken",
+  "BelangEur": 9997178
+ },
+ {
+  "Onderneming": "Standard Chartered PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Banken",
+  "BelangEur": 23697123
+ },
+ {
+  "Onderneming": "Stantec Inc",
+  "Land": "Canada",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 39340313
+ },
+ {
+  "Onderneming": "State Street Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 44327394
+ },
+ {
+  "Onderneming": "Steel Dynamics Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Materialen",
+  "BelangEur": 73926485
+ },
+ {
+  "Onderneming": "Stryker Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 37514773
+ },
+ {
+  "Onderneming": "Sugi Holdings Co Ltd",
+  "Land": "Japan",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 9652426
+ },
+ {
+  "Onderneming": "Sumitomo Chemical Co Ltd",
+  "Land": "Japan",
+  "Sector": "Materialen",
+  "BelangEur": 20664131
+ },
+ {
+  "Onderneming": "Sumitomo Electric Industries Ltd",
+  "Land": "Japan",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 25136569
+ },
+ {
+  "Onderneming": "Sumitomo Mitsui Financial Group Inc",
+  "Land": "Japan",
+  "Sector": "Banken",
+  "BelangEur": 41841941
+ },
+ {
+  "Onderneming": "Suncorp Group Ltd",
+  "Land": "Australie",
+  "Sector": "Verzekeringen",
+  "BelangEur": 13175456
+ },
+ {
+  "Onderneming": "SUNeVision Holdings Ltd",
+  "Land": "Hongkong",
+  "Sector": "Software & Diensten",
+  "BelangEur": 1032585
+ },
+ {
+  "Onderneming": "Sungrow Power Supply Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 41095118
+ },
+ {
+  "Onderneming": "Sunrun Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 120124653
+ },
+ {
+  "Onderneming": "Suzano SA",
+  "Land": "Brazilie",
+  "Sector": "Materialen",
+  "BelangEur": 20409102
+ },
+ {
+  "Onderneming": "Suzuki Motor Corp",
+  "Land": "Japan",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 7107899
+ },
+ {
+  "Onderneming": "Synchrony Financial",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 124036957
+ },
+ {
+  "Onderneming": "Synnex Technology International Corp",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 3971212
+ },
+ {
+  "Onderneming": "Synopsys Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 201693037
+ },
+ {
+  "Onderneming": "Sysco Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 3536392
+ },
+ {
+  "Onderneming": "Taisei Corp",
+  "Land": "Japan",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 26923765
+ },
+ {
+  "Onderneming": "Taiwan Mobile Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 2849088
+ },
+ {
+  "Onderneming": "Taiwan Semiconductor Manufacturing Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 1082290774
+ },
+ {
+  "Onderneming": "Takeda Pharmaceutical Co Ltd",
+  "Land": "Japan",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 95875735
+ },
+ {
+  "Onderneming": "TAL Education Group",
+  "Land": "China",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 23295574
+ },
+ {
+  "Onderneming": "Target Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 89710022
+ },
+ {
+  "Onderneming": "TC Energy Corp",
+  "Land": "Canada",
+  "Sector": "Energie",
+  "BelangEur": 96509962
+ },
+ {
+  "Onderneming": "TE Connectivity PLC",
+  "Land": "Ierland",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 26596654
+ },
+ {
+  "Onderneming": "Techtronic Industries Co Ltd",
+  "Land": "Hongkong",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 16433372
+ },
+ {
+  "Onderneming": "Tele2 AB",
+  "Land": "Zweden",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 4018121
+ },
+ {
+  "Onderneming": "Telefonaktiebolaget LM Ericsson",
+  "Land": "Zweden",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 54022740
+ },
+ {
+  "Onderneming": "Telefonica Brasil SA",
+  "Land": "Brazilie",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 8090241
+ },
+ {
+  "Onderneming": "Telefonica SA",
+  "Land": "Spanje",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 10518391
+ },
+ {
+  "Onderneming": "Telenor ASA",
+  "Land": "Noorwegen",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 26569124
+ },
+ {
+  "Onderneming": "Telia Co AB",
+  "Land": "Zweden",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 3669524
+ },
+ {
+  "Onderneming": "Telstra Group Ltd",
+  "Land": "Australie",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 6368587
+ },
+ {
+  "Onderneming": "Teradyne Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 19664193
+ },
+ {
+  "Onderneming": "Terna - Rete Elettrica Nazionale",
+  "Land": "Italie",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 60303506
+ },
+ {
+  "Onderneming": "Terumo Corp",
+  "Land": "Japan",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 40588657
+ },
+ {
+  "Onderneming": "Tesco PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Consumenten Basisgoederen Distributie & Detailhandel",
+  "BelangEur": 43700372
+ },
+ {
+  "Onderneming": "Tesla Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 370052032
+ },
+ {
+  "Onderneming": "Tetra Tech Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 91894574
+ },
+ {
+  "Onderneming": "Thermo Fisher Scientific Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 408502752
+ },
+ {
+  "Onderneming": "Thomson Reuters Corp",
+  "Land": "Canada",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 3928458
+ },
+ {
+  "Onderneming": "Tianqi Lithium Corp",
+  "Land": "China",
+  "Sector": "Materialen",
+  "BelangEur": 5486238
+ },
+ {
+  "Onderneming": "TIM SA/Brazil",
+  "Land": "Brazilie",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 21384063
+ },
+ {
+  "Onderneming": "Tingyi Cayman Islands Holding Corp",
+  "Land": "China",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 7333498
+ },
+ {
+  "Onderneming": "TJX Cos Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 129037109
+ },
+ {
+  "Onderneming": "TMBThanachart Bank PCL",
+  "Land": "Thailand",
+  "Sector": "Banken",
+  "BelangEur": 2207225
+ },
+ {
+  "Onderneming": "T-Mobile US Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 38622117
+ },
+ {
+  "Onderneming": "Tokio Marine Holdings Inc",
+  "Land": "Japan",
+  "Sector": "Verzekeringen",
+  "BelangEur": 49799737
+ },
+ {
+  "Onderneming": "Tokyo Electron Ltd",
+  "Land": "Japan",
+  "Sector": "Halfgeleiders & Halfgeleiderapparatuur",
+  "BelangEur": 76250441
+ },
+ {
+  "Onderneming": "Tokyo Gas Co Ltd",
+  "Land": "Japan",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 33932326
+ },
+ {
+  "Onderneming": "TOMRA Systems ASA",
+  "Land": "Noorwegen",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 146870207
+ },
+ {
+  "Onderneming": "Tomy Co Ltd",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 5301123
+ },
+ {
+  "Onderneming": "Tongcheng Travel Holdings Ltd",
+  "Land": "China",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 5833550
+ },
+ {
+  "Onderneming": "Toyota Motor Corp",
+  "Land": "Japan",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 15007180
+ },
+ {
+  "Onderneming": "Tractor Supply Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 16294671
+ },
+ {
+  "Onderneming": "Trade Desk Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 5349146
+ },
+ {
+  "Onderneming": "Trane Technologies PLC",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 255469892
+ },
+ {
+  "Onderneming": "TransDigm Group Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 3892907
+ },
+ {
+  "Onderneming": "Transmissora Alianca de Energia Eletrica S/A",
+  "Land": "Brazilie",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 18817140
+ },
+ {
+  "Onderneming": "Travelers Cos Inc/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Verzekeringen",
+  "BelangEur": 98024696
+ },
+ {
+  "Onderneming": "Trimble Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 61299060
+ },
+ {
+  "Onderneming": "Trip.com Group Ltd",
+  "Land": "China",
+  "Sector": "Consumentendiensten",
+  "BelangEur": 14299481
+ },
+ {
+  "Onderneming": "Turkcell Iletisim Hizmetleri AS",
+  "Land": "Turkije",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 21459988
+ },
+ {
+  "Onderneming": "Twilio Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 83936315
+ },
+ {
+  "Onderneming": "Uber Technologies Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Transport",
+  "BelangEur": 78967015
+ },
+ {
+  "Onderneming": "UBS Group AG",
+  "Land": "Zwitserland",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 63403422
+ },
+ {
+  "Onderneming": "UCB SA",
+  "Land": "Belgie",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 18025753
+ },
+ {
+  "Onderneming": "Ulta Beauty Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 61637921
+ },
+ {
+  "Onderneming": "Umicore SA",
+  "Land": "Belgie",
+  "Sector": "Materialen",
+  "BelangEur": 62711594
+ },
+ {
+  "Onderneming": "UniCredit SpA",
+  "Land": "Italie",
+  "Sector": "Banken",
+  "BelangEur": 156794688
+ },
+ {
+  "Onderneming": "Unilever PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Huishoudelijke & Persoonlijke Producten",
+  "BelangEur": 163487764
+ },
+ {
+  "Onderneming": "Union Pacific Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Transport",
+  "BelangEur": 17384108
+ },
+ {
+  "Onderneming": "United Utilities Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 9620527
+ },
+ {
+  "Onderneming": "UnitedHealth Group Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 114435697
+ },
+ {
+  "Onderneming": "UPM-Kymmene Oyj",
+  "Land": "Finland",
+  "Sector": "Materialen",
+  "BelangEur": 42232467
+ },
+ {
+  "Onderneming": "US Bancorp",
+  "Land": "Verenigde Staten",
+  "Sector": "Banken",
+  "BelangEur": 11441653
+ },
+ {
+  "Onderneming": "Veeva Systems Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Gezondheidszorg Apparatuur & Diensten",
+  "BelangEur": 113059927
+ },
+ {
+  "Onderneming": "Veolia Environnement SA",
+  "Land": "Frankrijk",
+  "Sector": "Nutsbedrijven",
+  "BelangEur": 32148213
+ },
+ {
+  "Onderneming": "Veralto Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 133315239
+ },
+ {
+  "Onderneming": "VeriSign Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 27188804
+ },
+ {
+  "Onderneming": "Verisk Analytics Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 27826735
+ },
+ {
+  "Onderneming": "Verizon Communications Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 76746979
+ },
+ {
+  "Onderneming": "Vertex Pharmaceuticals Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 118447996
+ },
+ {
+  "Onderneming": "Vertiv Holdings Co",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 66647641
+ },
+ {
+  "Onderneming": "Vestas Wind Systems A/S",
+  "Land": "Denemarken",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 334417324
+ },
+ {
+  "Onderneming": "Vipshop Holdings Ltd",
+  "Land": "China",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 5018782
+ },
+ {
+  "Onderneming": "Visa Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 409569378
+ },
+ {
+  "Onderneming": "Vodacom Group Ltd",
+  "Land": "Zuid-Afrika",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 6808167
+ },
+ {
+  "Onderneming": "Vodafone Group PLC",
+  "Land": "Verenigd Koninkrijk",
+  "Sector": "Telecommunicatiediensten",
+  "BelangEur": 123140224
+ },
+ {
+  "Onderneming": "Volkswagen AG",
+  "Land": "Duitsland",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 2723572
+ },
+ {
+  "Onderneming": "Walt Disney Co/The",
+  "Land": "Verenigde Staten",
+  "Sector": "Media & Entertainment",
+  "BelangEur": 46468184
+ },
+ {
+  "Onderneming": "Wartsila OYJ Abp",
+  "Land": "Finland",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 27088406
+ },
+ {
+  "Onderneming": "Waste Connections Inc",
+  "Land": "Canada",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 63257561
+ },
+ {
+  "Onderneming": "Waste Connections Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 6108324
+ },
+ {
+  "Onderneming": "Waste Management Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 28666220
+ },
+ {
+  "Onderneming": "WEG SA",
+  "Land": "Brazilie",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 6084391
+ },
+ {
+  "Onderneming": "West Japan Railway Co",
+  "Land": "Japan",
+  "Sector": "Transport",
+  "BelangEur": 4688427
+ },
+ {
+  "Onderneming": "Western Digital Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 73525091
+ },
+ {
+  "Onderneming": "Westinghouse Air Brake Technologies Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 100085141
+ },
+ {
+  "Onderneming": "WH Group Ltd",
+  "Land": "Hongkong",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 41724699
+ },
+ {
+  "Onderneming": "Williams-Sonoma Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Consumenten Discretionaire Distributie & Detailhandel",
+  "BelangEur": 73782631
+ },
+ {
+  "Onderneming": "Wipro Ltd",
+  "Land": "India",
+  "Sector": "Software & Diensten",
+  "BelangEur": 3901139
+ },
+ {
+  "Onderneming": "Wistron Corp",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 4115097
+ },
+ {
+  "Onderneming": "Wolters Kluwer NV",
+  "Land": "Nederland",
+  "Sector": "Commerciële & Professionele Diensten",
+  "BelangEur": 26205973
+ },
+ {
+  "Onderneming": "Woori Financial Group Inc",
+  "Land": "Zuid-Korea",
+  "Sector": "Banken",
+  "BelangEur": 28667590
+ },
+ {
+  "Onderneming": "WSP Global Inc",
+  "Land": "Canada",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 11980657
+ },
+ {
+  "Onderneming": "WuXi AppTec Co Ltd",
+  "Land": "China",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 28682534
+ },
+ {
+  "Onderneming": "Wuxi Biologics Cayman Inc",
+  "Land": "China",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 27067479
+ },
+ {
+  "Onderneming": "WW Grainger Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 38602424
+ },
+ {
+  "Onderneming": "XPeng Inc",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 17214326
+ },
+ {
+  "Onderneming": "Xylem Inc/NY",
+  "Land": "Verenigde Staten",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 211791352
+ },
+ {
+  "Onderneming": "Yadea Group Holdings Ltd",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 21045118
+ },
+ {
+  "Onderneming": "Yakult Honsha Co Ltd",
+  "Land": "Japan",
+  "Sector": "Voedsel en Drank",
+  "BelangEur": 5896165
+ },
+ {
+  "Onderneming": "Yamaha Corp",
+  "Land": "Japan",
+  "Sector": "Duurzame Consumentengoederen & Kleding",
+  "BelangEur": 6442628
+ },
+ {
+  "Onderneming": "Yang Ming Marine Transport Corp",
+  "Land": "Taiwan",
+  "Sector": "Transport",
+  "BelangEur": 8007426
+ },
+ {
+  "Onderneming": "Yara International ASA",
+  "Land": "Noorwegen",
+  "Sector": "Materialen",
+  "BelangEur": 41887158
+ },
+ {
+  "Onderneming": "Yokogawa Electric Corp",
+  "Land": "Japan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 39806115
+ },
+ {
+  "Onderneming": "Yokohama Financial Group Inc",
+  "Land": "Japan",
+  "Sector": "Banken",
+  "BelangEur": 3601074
+ },
+ {
+  "Onderneming": "Yuanta Financial Holding Co Ltd",
+  "Land": "Taiwan",
+  "Sector": "Financiële Dienstverlening",
+  "BelangEur": 8940504
+ },
+ {
+  "Onderneming": "Yutong Bus Co Ltd",
+  "Land": "China",
+  "Sector": "Kapitaalgoederen",
+  "BelangEur": 11512209
+ },
+ {
+  "Onderneming": "Zebra Technologies Corp",
+  "Land": "Verenigde Staten",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 5616834
+ },
+ {
+  "Onderneming": "Zhejiang Leapmotor Technology Co Ltd",
+  "Land": "China",
+  "Sector": "Auto's & Componenten",
+  "BelangEur": 35059275
+ },
+ {
+  "Onderneming": "Zhen Ding Technology Holding Ltd",
+  "Land": "Taiwan",
+  "Sector": "Technologie Hardware & Apparatuur",
+  "BelangEur": 9800984
+ },
+ {
+  "Onderneming": "Zoetis Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Farmaceutica, Biotechnologie & Levenswetenschappen",
+  "BelangEur": 55217352
+ },
+ {
+  "Onderneming": "Zoom Communications Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 176908056
+ },
+ {
+  "Onderneming": "Zscaler Inc",
+  "Land": "Verenigde Staten",
+  "Sector": "Software & Diensten",
+  "BelangEur": 52814498
+ }
+]

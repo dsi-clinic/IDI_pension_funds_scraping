@@ -1,13 +1,12 @@
 """BPL Pension Scraper.
 
-Scrapes BPL pension, a Dutch pension company for employees in agriculture or
-green energy. Scraper navigates to the downloads page of the BPL website, and
-uses playwright and requests to download the pdf. Then, it loads the pdf with
-pdfplumber and sorts through entries with regular expressions. Lastly, the
-data is formatted and exported as a TSV. No manual steps needed unless the
-website or format changes.
+Scrapes BPL Pensioen, a Dutch pension fund for employees in agriculture
+and green energy. Navigates the BPL downloads page with Playwright,
+fetches the most recent investment overview PDF, parses each line with a
+single row regex, and writes a TSV.
 """
 
+import datetime
 import re
 
 import pandas as pd
@@ -17,106 +16,62 @@ from playwright.sync_api import sync_playwright
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "BPL Pension"
+_HOLDINGS_URL = "https://www.bplpensioen.nl/beleggen"
+_CURRENCY = "EUR"
+_MULTIPLIER = "x1_000"
+
+# One row of the holdings table. Edge cases: issuer names contain
+# punctuation; the value column may include internal spaces (e.g.
+# "12 345,00") that we strip out before emitting.
+_ROW_PATTERN = re.compile(
+    r"\n(?P<issuer>[A-Za-z\d /&+\-\.]+) "
+    r"(?P<ownership>\d{1,3},\d{2}%) "
+    r"(?P<value>[\d\. ]+) "
+)
+
 
 @register("bpl")
 def scrape_bpl() -> None:
-    """Scrape BPL Pensioen (Netherlands, agriculture/green-energy pension) and write a TSV under ``data/bpl/<YYYY-MM-DD>/``.
+    """Scrape BPL Pensioen (Netherlands) and write a TSV under ``data/disclosures/bpl/<YYYY-MM-DD>/``."""
+    today = datetime.date.today()
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(
+            headless=True, slow_mo=1, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_HOLDINGS_URL)
 
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # -----------------/Setup and get PDF with playwright/-----------------#
+        # Cookie banner ("Weigeren" = Refuse) doesn't always appear in
+        # headless mode; swallow the timeout when it's missing.
+        try:
+            page.get_by_role("button", name="Weigeren").click(timeout=5000)
+        except Exception:
+            pass
 
-    # Create path for files
-    path = utils.create_path("bpl")
-    # Website url
-    url = "https://www.bplpensioen.nl/beleggen"
+        page.get_by_role("button", name="Verslagen en rapportages").click()
+        link_button = page.get_by_role("link", name="Beleggingsoverzicht")
+        pdf_path = utils.get_pdf("bpl", today, page, link_button, browser)
 
-    # Start playwright instance
-    playwright = sync_playwright().start()
+    with pdfplumber.open(pdf_path) as pdf:
+        report_date = utils.get_pdf_date(pdf)
+        text = "".join((p.extract_text() or "") for p in pdf.pages)
 
-    # Establish page and browser
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=1, channel="chromium"
-    )
-    page = browser.new_page()
-
-    # Go to page that leads to PDF
-    page.goto(url)
-
-    # Refuse cookies (Sometimes doesn't show in headless mode)
-    try:
-        cookies_button = page.get_by_role("button", name="Weigeren")  # Refuse
-        cookies_button.click()
-    except Exception:
-        pass
-
-    # Expand list
-    list_button = page.get_by_role(
-        "button", name="Verslagen en rapportages"
-    )  # Reports
-    list_button.click()
-
-    # Save button that leads to pdf preview
-    link_button = page.get_by_role(
-        "link", name="Beleggingsoverzicht"
-    )  # Investment overview
-
-    # Download pdf (returns pdf path)
-    pdf_path = utils.get_pdf("bpl", page, link_button, browser, path)
-
-    # Stop playwright instance
-    playwright.stop()
-
-    # -------------------/Find valid entries/-----------------#
-
-    # Open pdf
-    pdf = pdfplumber.open(pdf_path)
-
-    # Extract all text into one string
-    text = ""
-    for p in pdf.pages:
-        text = text + p.extract_text()
-
-    # Regex follows schema of an entry in one column. Edge cases: Symbols in issuer, and occasional spaces in value number.
-    pattern = re.compile(
-        "\n(?P<issuer>[A-Za-z\\d /&+\\-\\.]+) (?P<stock>\\d{1,3},\\d{2}%) (?P<value>[\\d\\. ]+) "
-    )
-
-    # Setup constants for entries
-    shareholder = "BPL Pension"
-    report_date = utils.get_pdf_date(pdf)
-    currency = "EUR"
-    multiplier = "x1_000"
-    entries = []
-
-    # Apply regex, and format every match
-    matches = re.findall(pattern, text)
-    for m in matches:
-        # Store groups in seperate variables
-        issuer, stock, value = m
-        # Remove any empty spaces in values (edge case)
-        value = value.replace(" ", "")
-        # Format one entry in accordance to IDI schema
-        entry = [
-            shareholder,
-            issuer,
+    rows = [
+        [
+            _PENSION_NAME,
+            m["issuer"],
             report_date,
-            value,
-            multiplier,
-            currency,
-            stock,
-            url,
+            m["value"].replace(" ", ""),
+            _MULTIPLIER,
+            _CURRENCY,
+            m["ownership"],
+            _HOLDINGS_URL,
         ]
-        # Append entry
-        entries.append(entry)
-
-    # ----------/Export data/-------#
-
-    # Create dataframe in accordance to IDI schema (matches entry format)
+        for m in _ROW_PATTERN.finditer(text)
+    ]
     df = pd.DataFrame(
-        entries,
+        rows,
         columns=[
             "Shareholder - Name",
             "Issuer - Name",
@@ -128,9 +83,8 @@ def scrape_bpl() -> None:
             "Data Source URL",
         ],
     )
-    utils.export_df(df, "bpl", path)
+    utils.export_data(df, "bpl", today)
 
 
-# --------/Run function locally--------/#
 if __name__ == "__main__":
     scrape_bpl()

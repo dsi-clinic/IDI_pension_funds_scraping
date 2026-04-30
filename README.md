@@ -1,22 +1,40 @@
-# IDI - Scraping Pension Funds
-This repository contains pythonic scrapers for the shareholding disclosures of various pension funds, to be used by <a href="https://www.inclusivedevelopment.net/" target="_blank">Inclusive Development International</a>.<br><br>
+# IDI — Scraping Pension Funds
 
+A command-line tool that scrapes shareholding disclosures from pension funds for [Inclusive Development International](https://www.inclusivedevelopment.net/).
 
-Scrapers are exposed through the `idi-scrape` command, installed automatically by `uv sync`. Run every registered scraper with `idi-scrape run`, run a subset by name with e.g. `idi-scrape run amf ap2`, or print the available names with `idi-scrape list`. Individual scrapers can also still be invoked directly from **src/pipeline/scrapers/** for debugging.
+## Getting started
 
-Once run, files will be output to the **data folder** underneath the shareholder name and date ran.
+You need [Python 3](https://www.python.org/downloads/) and [uv](https://docs.astral.sh/uv/getting-started/installation/). The `sampension` scraper additionally requires [Tesseract OCR](https://tesseract-ocr.github.io/tessdoc/Installation.html); skip it if you don't need that fund.
 
-Lastly, **archive/wip_scrapers** contains works in progress, old, and un-automated scrapers.<br><br>
+```bash
+git clone <this-repo>
+cd IDI_pension_funds_scraping
+uv sync
+```
 
-All python dependencies can be downloaded via <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank">UV.</a>
-Additionally, <a href="https://tesseract-ocr.github.io/tessdoc/Installation.html" target="_blank">Tesseract OCR.</a> is needed to run certain scrapers. 
+## Running scrapers
 
-To download dependencies:
-1. Ensure <a href="https://www.python.org/downloads/" target="_blank">Python3</a> and a code editor are installed to your system
-2. Install UV (click the link above)
-3. Install tesseract OCR (click the link above and search for your operating system. If a prebuilt installer is available, it is reccomended.)
+| Action | Command |
+|---|---|
+| List every registered scraper | `uv run idi-scrape list` |
+| Run every scraper | `uv run idi-scrape run` |
+| Run a subset by name | `uv run idi-scrape run amf railov` |
 
-To run this project:
-1. Clone this github repository in your code editor
-2. In the terminal, run the command "uv sync" to download dependencies. (Make sure your working directory is set to the main repository folder.)
-3. Run every scraper with `uv run idi-scrape run`, a subset with `uv run idi-scrape run <name> [<name> ...]`, or list the available scrapers with `uv run idi-scrape list`.
+For debugging, individual scrapers can also be invoked directly from [src/pipeline/scrapers/](src/pipeline/scrapers/).
+
+## Output layout
+
+```
+data/disclosures/<scraper>/<YYYY-MM-DD>/
+    raw/      original downloaded source (PDF, HTML, JSON, …)
+    clean/    processed TSV(s)
+```
+
+Scrapers that produce multiple outputs (e.g. `ap3`) suffix each file with a sub-name — for example `clean/ap3_swedish.tsv`.
+
+## Repository layout
+
+- [src/pipeline/](src/pipeline/) — the CLI entry point, scraper registry, shared utilities, and one module per scraper.
+- [data/](data/) — scraped output and supplemental reference data (e.g. the Dutch country list used by `bpfbouw`).
+- [archive/wip_scrapers/](archive/wip_scrapers/) — works in progress, old, and un-automated scrapers.
+- [log.log](log.log) — written by the CLI on every run; check this first when a scraper fails.

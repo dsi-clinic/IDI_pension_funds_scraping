@@ -1,17 +1,24 @@
 """AP3 Scraper.
 
-Scrapes AP3, a manager for the Swedish public's pension assets. Scraper
-navigates to AP3 data page, searching for the most recent pdfs in the
-categories: Swedish, foreign, fixed, and private, downloading them, and
-returning a list of directories. Then, one-by-one the pdfs are parsed through
-to find matching entries, the entries are formatted into dataframes, and
-exported to TSVs. No manual steps needed unless the website or format changes.
+Scrapes AP3 (Sweden), which manages Swedish public pension assets. AP3
+publishes four per-category PDFs every six months: Swedish stocks, foreign
+stocks, fixed income, and private equity. This scraper finds the most
+recent PDF for each category, downloads them, and emits one TSV per
+category.
 
-Note: This scraper creates four PDFs and four TSVs.
+Note: AP3 changed the layout of the equity reports at some point. The
+Swedish, Foreign, and Fixed PDFs no longer carry a Bloomberg ticker
+column, the row order is now ``<currency> <type> <name> ...``, and section
+types are uppercase ("EQUITY") instead of mixed case ("Equity"). The
+patterns and parsers in this module reflect the *current* format
+(retrieved 2026-04-30); re-measure them if AP3 changes the layout again.
 """
 
 import datetime
 import re
+from collections import defaultdict
+from collections.abc import Iterator
+from pathlib import Path
 
 import pandas as pd
 import pdfplumber
@@ -21,324 +28,414 @@ from playwright.sync_api import sync_playwright
 from pipeline import utils
 from pipeline.registry import register
 
+_PENSION_NAME = "AP3"
+_REPORTS_URL = (
+    "https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper"
+)
+
+# AP3 publishes new reports every six months. If neither half-year is up
+# yet for the current year, walk backwards a few years; bounded so a
+# permanent URL change can't loop forever.
+_MAX_YEARS_BACK = 5
+
+_CATEGORIES = ("swedish", "foreign", "fixed", "private")
+
+
+def _link_pattern(category: str, year: int) -> re.Pattern[str]:
+    """Build a regex that matches a category PDF URL for ``year``.
+
+    The original scraper used a character class (``[december0-9-]``) by
+    mistake, which matches any sequence of those letters and digits
+    rather than the literal word "december".
+
+    Args:
+        category: One of the names in ``_CATEGORIES``.
+        year: Four-digit year to match in the URL.
+
+    Returns:
+        Compiled, case-insensitive ``re.Pattern`` for that (category, year).
+    """
+    return re.compile(
+        rf".+{category}.+(?:december|june)[-_\d]*{year}\.pdf",
+        re.IGNORECASE,
+    )
+
+
+# --- Row regexes ------------------------------------------------------------
+#
+# Each Swedish, Fixed, and Private PDF is laid out so that text-extracted
+# rows are unambiguous: numeric fields use comma-thousands or no separator
+# at all, so a single row regex per file works.
+#
+# Foreign is different — it uses *space*-separated thousands (European
+# style). On a text dump that makes the boundary between the "Units" and
+# "Value" columns ambiguous, so Foreign uses word-position-based parsing
+# below instead of a row regex.
+
+_SWEDISH_PATTERN = re.compile(
+    r"^(?P<currency>[A-Z]{3}) "
+    r"(?P<sectype>EQUITY|FUND EQ) "
+    r"(?P<issuer>.+?) "
+    r"(?P<units>\d+) "
+    r"(?P<value>\d{1,3}(?:,\d{3})*) "
+    r"(?P<ownership>\d+\.\d+) "
+    r"(?P<voting>\d+\.\d+) "
+    r"(?P<isin>[A-Z0-9]{12})$",
+    re.MULTILINE,
+)
+
+_FIXED_PATTERN = re.compile(
+    r"^(?P<currency>[A-Z]{3}) "
+    r"(?P<sectype>Corporates|Governments & Sovereigns|Mortgages & Agencies|FUND FI|Bond) "
+    r"(?P<issuer>.+?) "
+    r"(?P<value>\d{1,3}(?:,\d{3})*) "
+    r"(?P<maturity>\d{1,2}/\d{1,2}/\d{4}) "
+    r"(?P<isin>[A-Z0-9]{12})$",
+    re.MULTILINE,
+)
+
+# TODO(student): the value group below is fixed at exactly two digits
+# (\d{2}). For a private-equity market value that almost certainly drops
+# real rows. Verify against a few rows of the actual PDF and widen to
+# \d{1,3}(?:,\d{3})* (matching the other patterns) if appropriate.
+_PRIVATE_PATTERN = re.compile(
+    r"(?P<issuer>[A-Za-z\-\.\d\| /&,()]+) "
+    r"(?P<currency>[A-Z]{3}) "
+    r"(?P<value>\d{2}) "
+    r"(?P<vintage_year>\d{4})"
+)
+
+# --- Foreign-specific column geometry ---------------------------------------
+#
+# The Foreign report's columns are right-aligned and share an x-band, so
+# we group words by their y-coordinate (one row = one shared y) and assign
+# each word to a column based on x. Boundaries derived from the header
+# row's word positions on a recent report; re-measure if the layout shifts.
+_FOREIGN_COLUMNS: tuple[tuple[float, float, str], ...] = (
+    (0, 100, "currency"),
+    (100, 170, "sectype"),
+    (170, 410, "issuer"),
+    (410, 450, "units"),
+    (450, 520, "value"),
+    (520, 580, "ownership"),
+    (580, 630, "voting"),
+    (630, 1000, "isin"),
+)
+
+
+def _column_of(x: float) -> str | None:
+    """Return the column name covering x-coordinate ``x``, or ``None``.
+
+    Args:
+        x: Word x0 from pdfplumber.
+
+    Returns:
+        Column name from ``_FOREIGN_COLUMNS`` whose ``[x0, x1)`` range
+        contains ``x``, or ``None`` when no column covers it.
+    """
+    for x0, x1, name in _FOREIGN_COLUMNS:
+        if x0 <= x < x1:
+            return name
+    return None
+
+
+def _foreign_rows(pdf_path: Path) -> Iterator[dict[str, str]]:
+    """Yield one dict per data row in the Foreign holdings PDF.
+
+    Words on the page are grouped by their (rounded) top y-coordinate so
+    that one shared y maps to one row, then each word is bucketed into a
+    column by its x-coordinate. Rows that don't look like holdings (e.g.
+    the report header, the column header) are filtered out.
+
+    Args:
+        pdf_path: Path to the downloaded Foreign PDF.
+
+    Yields:
+        ``dict[column_name -> joined_text]`` for each holdings row.
+    """
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            lines: dict[int, list[dict]] = defaultdict(list)
+            for word in page.extract_words():
+                lines[round(word["top"])].append(word)
+            for top in sorted(lines):
+                cells: dict[str, list[str]] = defaultdict(list)
+                for word in sorted(lines[top], key=lambda w: w["x0"]):
+                    column = _column_of(word["x0"])
+                    if column is not None:
+                        cells[column].append(word["text"])
+                row = {col: " ".join(parts) for col, parts in cells.items()}
+                currency = row.get("currency", "")
+                isin = row.get("isin", "")
+                if (
+                    len(currency) == 3
+                    and currency.isalpha()
+                    and currency.isupper()
+                    and len(isin) == 12
+                ):
+                    yield row
+
+
+def _find_report_links() -> dict[str, str]:
+    """Visit AP3's reports page and return a per-category URL map.
+
+    Returns:
+        Mapping from each name in ``_CATEGORIES`` to the most recent
+        matching PDF URL.
+
+    Raises:
+        RuntimeError: If any category can't be located within
+            ``_MAX_YEARS_BACK`` years.
+    """
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True, slow_mo=1, channel="chromium"
+        )
+        page = browser.new_page()
+        page.goto(_REPORTS_URL)
+        # Cookie banner doesn't always appear in headless mode; if it isn't
+        # there the click times out, so swallow that case.
+        try:
+            page.get_by_role(
+                "button", name="Only accept necessary"
+            ).click(timeout=5000)
+        except Exception:
+            pass
+        hrefs = [
+            link.get_attribute("href")
+            for link in page.get_by_role("link").all()
+        ]
+        browser.close()
+
+    valid_hrefs = [h for h in hrefs if h]
+
+    links: dict[str, str] = {}
+    for category in _CATEGORIES:
+        year = datetime.date.today().year
+        for _ in range(_MAX_YEARS_BACK):
+            pattern = _link_pattern(category, year)
+            for href in valid_hrefs:
+                match = pattern.search(href)
+                if match:
+                    links[category] = match.group()
+                    break
+            if category in links:
+                break
+            year -= 1
+        if category not in links:
+            raise RuntimeError(
+                f"AP3: did not find a {category!r} report within "
+                f"{_MAX_YEARS_BACK} years — the URL scheme may have changed."
+            )
+    return links
+
+
+def _pdf_text(pdf_path: Path) -> tuple[str, str]:
+    """Read a PDF and return its concatenated text plus the report date.
+
+    Args:
+        pdf_path: Path to the PDF on disk.
+
+    Returns:
+        A tuple ``(full_text, report_date)`` where ``full_text`` is every
+        page's text concatenated (empty pages skipped) and ``report_date``
+        is pulled from the PDF's ``CreationDate`` metadata.
+    """
+    with pdfplumber.open(pdf_path) as pdf:
+        report_date = utils.get_pdf_date(pdf)
+        text = "".join((page.extract_text() or "") for page in pdf.pages)
+    return text, report_date
+
+
+def _pdf_report_date(pdf_path: Path) -> str:
+    """Return the report date from a PDF's metadata.
+
+    Args:
+        pdf_path: Path to the PDF on disk.
+
+    Returns:
+        The report date as a ``YYYY-MM-DD`` string.
+    """
+    with pdfplumber.open(pdf_path) as pdf:
+        return utils.get_pdf_date(pdf)
+
+
+def _parse_swedish(pdf_path: Path) -> pd.DataFrame:
+    """Parse the Swedish-stocks PDF into an IDI-shaped DataFrame.
+
+    Args:
+        pdf_path: Path to the downloaded Swedish PDF.
+
+    Returns:
+        DataFrame with one row per holding, in IDI column order.
+    """
+    text, report_date = _pdf_text(pdf_path)
+    rows = [
+        [
+            _PENSION_NAME,
+            m["issuer"],
+            m["sectype"],
+            m["isin"],
+            report_date,
+            m["value"],
+            m["currency"],
+            "",  # Ticker — current PDF has an empty Bloomberg column.
+            m["units"],
+            _REPORTS_URL,
+        ]
+        for m in _SWEDISH_PATTERN.finditer(text)
+    ]
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "Shareholder - Name",
+            "Issuer - Name",
+            "Security - Type",
+            "Security - ISIN",
+            "Security - Report Date",
+            "Security - Market Value",
+            "Security - Market Value - Currency Code",
+            "Stock - Ticker",
+            "Stock - Number of Shares",
+            "Data Source URL",
+        ],
+    )
+
+
+def _parse_foreign(pdf_path: Path) -> pd.DataFrame:
+    """Parse the foreign-stocks PDF into an IDI-shaped DataFrame.
+
+    Foreign uses space-separated thousands, so this parser reconstructs
+    rows from word x-positions rather than a single row regex (see
+    ``_foreign_rows``).
+
+    Args:
+        pdf_path: Path to the downloaded foreign PDF.
+
+    Returns:
+        DataFrame with one row per holding, in IDI column order.
+    """
+    report_date = _pdf_report_date(pdf_path)
+    rows = [
+        [
+            _PENSION_NAME,
+            row["issuer"],
+            row["sectype"],
+            row["isin"],
+            report_date,
+            row["value"],
+            row["currency"],
+            "",  # Ticker — current PDF has an empty Bloomberg column.
+            row["units"],
+            _REPORTS_URL,
+        ]
+        for row in _foreign_rows(pdf_path)
+    ]
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "Shareholder - Name",
+            "Issuer - Name",
+            "Security - Type",
+            "Security - ISIN",
+            "Security - Report Date",
+            "Security - Market Value",
+            "Security - Market Value - Currency Code",
+            "Stock - Ticker",
+            "Stock - Number of Shares",
+            "Data Source URL",
+        ],
+    )
+
+
+def _parse_fixed(pdf_path: Path) -> pd.DataFrame:
+    """Parse the fixed-income PDF into an IDI-shaped DataFrame.
+
+    Args:
+        pdf_path: Path to the downloaded fixed-income PDF.
+
+    Returns:
+        DataFrame with one row per holding, in IDI column order.
+    """
+    text, report_date = _pdf_text(pdf_path)
+    rows = [
+        [_PENSION_NAME, m["issuer"], m["sectype"], report_date, m["value"], _REPORTS_URL]
+        for m in _FIXED_PATTERN.finditer(text)
+    ]
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "Shareholder - Name",
+            "Issuer - Name",
+            "Security - Type",
+            "Security - Report Date",
+            "Security - Market Value",
+            "Data Source URL",
+        ],
+    )
+
+
+def _parse_private(pdf_path: Path) -> pd.DataFrame:
+    """Parse the private-equity PDF into an IDI-shaped DataFrame.
+
+    Args:
+        pdf_path: Path to the downloaded private-equity PDF.
+
+    Returns:
+        DataFrame with one row per holding, in IDI column order.
+    """
+    text, report_date = _pdf_text(pdf_path)
+    rows = [
+        [
+            _PENSION_NAME,
+            issuer,
+            report_date,
+            value,
+            "x1_000_000",
+            currency,
+            vintage_year,
+            _REPORTS_URL,
+        ]
+        for issuer, currency, value, vintage_year in (
+            _PRIVATE_PATTERN.findall(text)
+        )
+    ]
+    return pd.DataFrame(
+        rows,
+        columns=[
+            "Shareholder - Name",
+            "Issuer - Name",
+            "Security - Report Date",
+            "Security - Market Value",
+            "Security - Market Value - Multiplier",
+            "Security - Market Value - Currency Code",
+            "Private Equity - Vintage year",
+            "Data Source URL",
+        ],
+    )
+
+
+_PARSERS = {
+    "swedish": _parse_swedish,
+    "foreign": _parse_foreign,
+    "fixed": _parse_fixed,
+    "private": _parse_private,
+}
+
 
 @register("ap3")
 def scrape_ap3() -> None:
-    """Scrape AP3 (Sweden) Swedish, foreign, fixed-income, and private holdings into four TSVs under ``data/ap3/<YYYY-MM-DD>/``.
-
-    Raises:
-        Exception: Propagates network, parsing, or I/O failures to the
-            caller; the CLI logs and continues with the next scraper.
-    """
-    # ----------------------------/Setup/------------------------------#
-
-    # Set constants, create path
-    shareholder = "AP3"
-    url = "https://www.ap3.se/en/forvaltning/ap3s-portfolj/ap3s-vardepapper"
-    path = utils.create_path("ap3")
-
-    # Start playwright
-    playwright = sync_playwright().start()
-
-    # Establish page and browser
-    browser = playwright.chromium.launch(
-        headless=True, slow_mo=1, channel="chromium"
-    )
-    page = browser.new_page()
-
-    # Go to page that leads to PDF
-    page.goto(url)
-
-    # Accept Cookies
-    cookies_button = page.get_by_role("button", name="Only accept necessary")
-    cookies_button.click()
-
-    # --------------/Find Links to Download/--------------#
-
-    # Get metadata of all links on page
-    link_locators = page.get_by_role("link").all()
-
-    # Desired pdfs, and empty list to append desired links to
-    wanted_pdfs = ["swedish", "foreign", "fixed", "private"]
-    pdf_links = []
-
-    # Loop through wanted pdfs, searching for the most recent version with regex
-    for w_pdf in wanted_pdfs:
-        # Setup vars for 1 pdf loop
-        year = int(datetime.date.today().year)
-        link_append = ""
-
-        # Until link append is found, loop through regex, each time checking one year back
-        while not link_append:
-            # Search for anything; followed by keyword; followed by anything; followed by specific month, symbols, numbers; followed by year; followed by .pdf
-            dec_pat = (
-                ".+" + w_pdf + ".+" + r"[december0-9\-]+" + str(year) + r"\.pdf"
-            )
-            june_pat = (
-                ".+" + w_pdf + ".+" + r"[june0-9\-]+" + str(year) + r"\.pdf"
-            )
-
-            # Search through every link
-            for link in link_locators:
-                link = link.get_attribute("href")
-
-                # Search for december pattern, if not found, search for june pattern
-                match = re.search(dec_pat, link)
-                if not match:
-                    match = re.search(june_pat, link)
-
-                # If match, move on to next pdf
-                if match:
-                    link_append = match.group()
-                    pdf_links.append(link_append)
-                    break
-
-            # If failed, go back a year
-            year -= 1
-
-    # ---------------/Download PDFs/----------------#
-
-    # List for paths to pdfs
-    pdf_paths = []
-
-    # Loop through each link, downloading each and saving the directory
-    for index, pdf in enumerate(pdf_links, start=0):
-        # Get data on pdf
-        r = requests.get(pdf)
-
-        # Piece together path and save
-        filename = "raw_ap3_" + wanted_pdfs[index] + ".pdf"
-        pdf_path = path / filename
-        pdf_paths.append(pdf_path)
-
-        # Copy data
-        with open(pdf_path, "wb") as f:
-            for chunk in r.iter_content(chunk_size=8192):
-                if chunk:
-                    f.write(chunk)
-
-    # Stop playwright
-    playwright.stop()
-
-    # --------------------------/Scrape Swedish/--------------------------#
-
-    # Open context manager for raw_ap3_swedish.pdf
-    with pdfplumber.open(pdf_paths[0]) as pdf:
-        # Get date of pdf
-        report_date = utils.get_pdf_date(pdf)
-
-        # Extract text into one string
-        text = ""
-        for page in pdf.pages:
-            text = text + page.extract_text()
-
-        # Search for: Names and symbols; Space; All caps letters or digits followed by a space and "SS"; Space; Search for types of equity with or statement; Space; 3 capital letters; Minimum of 1 digit, followed by any number of groups of digits of 3 (non capturing), followed by a period and 2 digits; Space; Search for numbers the same way but without the periods; Space?; Any number of all caps letters or digits (?)
-        swedish_pattern = re.compile(
-            r"(?P<issuer>[A-Za-z\-\.\d\| /&,()]+) (?P<ticker>[A-Z\d]+ SS) (?P<sectype>Equity|Fund EQ) (?P<currency>[A-Z]{3}) (?P<shares>\d{1,3}(?:,\d{1,3})*\.\d{2}) (?P<value>\d{1,3}(?:,\d{1,3})*) ?(?P<isin>[A-Z0-9]+)?"
+    """Scrape AP3 (Sweden) Swedish, foreign, fixed-income, and private holdings into four TSVs."""
+    today = datetime.date.today()
+    links = _find_report_links()
+    for category in _CATEGORIES:
+        response = requests.get(links[category], stream=True)
+        pdf_path = utils.download_file(
+            response, "ap3", today, "pdf", subname=category
         )
-
-        # Find all matches in string
-        entries = []
-        matches = re.findall(swedish_pattern, text)
-        for match in matches:
-            # Access groups
-            issuer, ticker, sectype, currency, shares, value, isin = match
-            # Order variables in 1 entry
-            append_list = [
-                shareholder,
-                issuer,
-                sectype,
-                isin,
-                report_date,
-                value,
-                currency,
-                ticker,
-                shares,
-                url,
-            ]
-            # Append entry
-            entries.append(append_list)
-
-        # Create dataframe according to IDI schema, and export
-        df_swedish = pd.DataFrame(
-            entries,
-            columns=[
-                "Shareholder - Name",
-                "Issuer - Name",
-                "Security - Type",
-                "Security - ISIN",
-                "Security - Report Date",
-                "Security - Market Value",
-                "Security - Market Value - Currency Code",
-                "Stock - Ticker",
-                "Stock - Number of Shares",
-                "Data Source URL",
-            ],
-        )
-        utils.export_df(df_swedish, "ap3_swedish", path)
-
-    # --------------------------/Scrape Foreign/--------------------------#
-
-    # Open context manager for raw_ap3_foreign.pdf
-    with pdfplumber.open(pdf_paths[1]) as pdf:
-        # Get date of pdf
-        report_date = utils.get_pdf_date(pdf)
-
-        # Extract text into one string
-        text = ""
-        for page in pdf.pages:
-            text = text + page.extract_text()
-
-        # Search for: Any number of letters and symbols; Space; Letters,digits,dashes followed by 2 capital letters; Space; An or statement for security type; Space; 3 capital letters; Space; Groups of 1-3 numbers seperated by commas and ending with a period and 2 numbers; Space; Capital letters and digits (Optional)
-        foreign_pattern = re.compile(
-            r"(?P<issuer>[A-Z\-\./& ]+) (?P<ticker>[A-Z\d/]+ [A-Z]{2}) (?P<sectype>Equity|Fund EQ) (?P<currency>[A-Z]{3}) (?P<shares>\d{1,3}(?:,\d{1,3})*\.\d{2}) (?P<value>\d{1,3}(?:,\d{1,3})*) (?P<isin>[A-Z0-9]+)?"
-        )
-
-        # Find all matches in string
-        entries = []
-        matches = re.findall(foreign_pattern, text)
-        for match in matches:
-            # Access groups
-            issuer, ticker, sectype, currency, shares, value, isin = match
-            # Order variables in 1 entry
-            append_list = [
-                shareholder,
-                issuer,
-                sectype,
-                isin,
-                report_date,
-                value,
-                currency,
-                ticker,
-                shares,
-                url,
-            ]
-            # Append entry
-            entries.append(append_list)
-
-        # Create dataframe according to IDI schema, and export
-        df_foreign = pd.DataFrame(
-            entries,
-            columns=[
-                "Shareholder - Name",
-                "Issuer - Name",
-                "Security - Type",
-                "Security - ISIN",
-                "Security - Report Date",
-                "Security - Market Value",
-                "Security - Market Value - Currency Code",
-                "Stock - Ticker",
-                "Stock - Number of Shares",
-                "Data Source URL",
-            ],
-        )
-        utils.export_df(df_foreign, "ap3_foreign", path)
-
-    # --------------------------/Scrape Fixed/--------------------------#
-
-    # Open context manager for raw_ap3_fixed.pdf
-    with pdfplumber.open(pdf_paths[2]) as pdf:
-        # Get pdf date
-        report_date = utils.get_pdf_date(pdf)
-
-        # Extract pages to a string
-        text = ""
-        for page in pdf.pages:
-            text = text + page.extract_text()
-
-        # Searches for: Letters and symbols, but must start with a capital letter; Space; Or statement for security type; At least one group of digits ranging from 1-3 seperated by commas. Lines end here
-        fixed_pattern = re.compile(
-            r"(?P<issuer>^[A-Z][A-Za-z\-\./& ]+) (?P<sectype>Corporates|Governments & Sovereigns|Mortgages & Agencies|FUND FI|Bond) (?P<value>\d{1,3}(?:,\d{1,3})*)$",
-            re.MULTILINE,
-        )
-
-        # Find all matches in string
-        matches = re.findall(fixed_pattern, text)
-        entries = []
-        for match in matches:
-            # Access groups
-            issuer, sectype, value = match
-            # Order variables in 1 entry
-            append_list = [
-                shareholder,
-                issuer,
-                sectype,
-                report_date,
-                value,
-                url,
-            ]
-            # Append entry
-            entries.append(append_list)
-
-        # Create dataframe according to IDI schema, and export
-        df_fixed = pd.DataFrame(
-            entries,
-            columns=[
-                "Shareholder - Name",
-                "Issuer - Name",
-                "Security - Type",
-                "Security - Report Date",
-                "Security - Market Value",
-                "Data Source URL",
-            ],
-        )
-        utils.export_df(df_fixed, "ap3_fixed", path)
-
-    # --------------------------/Scrape Private/--------------------------#
-
-    # Open context manager for raw_ap3_private.pdf
-    with pdfplumber.open(pdf_paths[3]) as pdf:
-        # Set constants
-        report_date = utils.get_pdf_date(pdf)
-        multiplier = "x1_000_000"
-
-        # Extract text to single string
-        text = ""
-        for page in pdf.pages:
-            text = text + page.extract_text()
-
-        # Search for: Letters, digits, symbols; Space; 3 all caps letters; Space; 2 digits; Space; 4 Digits
-        private_pattern = re.compile(
-            r"(?P<issuer>[A-Za-z\-\.\d\| /&,()]+) (?P<currency>[A-Z]{3}) (?P<value>\d{2}) (?P<vintage_year>\d{4})"
-        )
-
-        # Find all matches in string
-        entries = []
-        matches = re.findall(private_pattern, text)
-        for match in matches:
-            # Access Groups
-            issuer, currency, value, vintage_year = match
-            # Order groups in 1 entry
-            append_list = [
-                shareholder,
-                issuer,
-                report_date,
-                value,
-                multiplier,
-                currency,
-                vintage_year,
-                url,
-            ]
-            # Append entry
-            entries.append(append_list)
-
-        # Create dataframe according to IDI schema, and export
-        df_private = pd.DataFrame(
-            entries,
-            columns=[
-                "Shareholder - Name",
-                "Issuer - Name",
-                "Security - Report Date",
-                "Security - Market Value",
-                "Security - Market Value - Multiplier",
-                "Security - Market Value - Currency Code",
-                "Private Equity - Vintage year",
-                "Data Source URL",
-            ],
-        )
-        utils.export_df(df_private, "ap3_private", path)
+        df = _PARSERS[category](pdf_path)
+        utils.export_data(df, "ap3", today, subname=category)
 
 
-# ---------/Scrape Locally/---------#
 if __name__ == "__main__":
     scrape_ap3()
