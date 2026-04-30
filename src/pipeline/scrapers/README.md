@@ -1,5 +1,5 @@
-# Individual scripts
-Purpose - To document the high level approach taken to each individual script. Sections ordered in alphabetical order.
+# Individual scrapers
+Purpose - To document the high-level approach taken in each individual scraper. Sections ordered alphabetically.
 
 # Scrapers
 ### amf.py
@@ -59,30 +59,17 @@ Scraper for sampension, a Danish company that invests in "labor market and compa
 ### vervoer.py
 Scrapes Pensioenfonds Vervoer, a nonprofit pension fund in transport, based in the Netherlands. Scraper navigates to pdf preview and downloads, then extracts and formats text to be filtered out with regular expressions. Additional filtering and formatting done in tandum as entries are prepared to be exported. Exports to TSV. No manual steps needed unless the website or format changes.
 
-### zorg&welzjin.py
+### zorg_welzjin.py
 Scrapes Pensionefonds Zorg & Welzjin, a Dutch pension fund for "health, mental, and social inerests." Scraper contains 3 functions, 2 for formatting data and 1 main scraping function. The main function uses a combination of while loops and requests to find the proper JSON files to download from the dynamic HTML website. When found, the files are downloaded, loaded in as dataframes, entries are formatted, and then columns are reordered in new DFs according to IDI schema. Each JSON and dataframe (.tsv) is saved as seperate files (10 files created if scraper ran to full extent). Right now, only tested for December quarter. Depending on future report dates, the dictionary "quarters" may need to be adjusted. Other than that, no manual steps needed unless format of JSON request links or format of data within JSONs change.
 
-# Other
-### data_cleanup.py
-Script to clean up data output folder. Sorts through directories to find data output folders specifically, then loops through each folder to group dates into quarters. Then, picks the earliest month from each quarter to keep, with the latest day used as a tiebreaker. Lastly, all other files are deleted. Currently not meant to be called as a function.
+# Shared helpers
+Reusable helpers live in the `pipeline.utils` package (one level up, in `../utils/`):
 
-### functions.py
-Custom functions module, to be called from other scripts to streamline aspects that repeat logic.
-
-##### create_path(name)
-Creates a folder and returns a path object in the format "name\YYYY-MM-DD"
-
-##### get_pdf(filename, page, link_button, browser=None, path=None)
-Downloads a pdf if given the button/link on a webpage that leads to a PDF preview. Returns path to pdf.
-
-##### export_df(df, filename, path)
-Exports dataframe to TSV with pandas.
-
-##### get_pdf_date(pdf)
-Uses pdfplumber to get pdf creation date. Takes pdf object, returns string in format of "YYYY-MM-DD."
-
-##### convert_month(month)
-Convert month as a word into formatted digit (DD)
-
-##### download_file(request, full_filename, path, chunk_size=8192)
-Download a file by copying data with binary.
+- **files.py**
+  - `create_path(name)` — create and return `data/<name>/YYYY-MM-DD/`
+  - `get_pdf(filename, page, link_button, browser, path=None)` — download a PDF opened in a Google PDF preview popup
+  - `export_df(df, filename, path=None)` — write a pandas DataFrame as a TSV
+  - `download_file(request, full_filename, path, chunk_size=8192)` — stream a request body to disk in binary chunks
+- **parsing.py**
+  - `get_pdf_date(pdf)` — extract `YYYY-MM-DD` from a pdfplumber PDF's `CreationDate`
+  - `convert_month(month, offset=None)` — convert a month name to its zero-padded number string

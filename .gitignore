@@ -20,8 +20,3 @@ no_track/
 
 #Mac DS Store
 .DS_Store
-
-#Don't track scraped data (Date folders remain empty, won't be tracked either)
-#*.tsv
-#*.csv
-#*.pdf
